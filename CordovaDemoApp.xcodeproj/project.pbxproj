@@ -20,7 +20,6 @@
 		C1CF69F8281F42E7003B7872 /* DemoApplicationServerEmulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF69F7281F42E7003B7872 /* DemoApplicationServerEmulation.swift */; };
 		C1CF69FA281F4600003B7872 /* DemoApplicationMainAppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF69F9281F4600003B7872 /* DemoApplicationMainAppAPI.swift */; };
 		C1D4D1C72828841F00480EAC /* MiniappView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4D1C62828841F00480EAC /* MiniappView.swift */; };
-		C1D4D1E22828966400480EAC /* android.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1C92828966400480EAC /* android.json */; };
 		C1D4D1E42828966400480EAC /* condo.js in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1CD2828966400480EAC /* condo.js */; };
 		C1D4D1E72828966400480EAC /* Condo.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D4D1D22828966400480EAC /* Condo.m */; };
 		C1D4D1E82828966400480EAC /* Condo.java in Sources */ = {isa = PBXBuildFile; fileRef = C1D4D1D42828966400480EAC /* Condo.java */; };
@@ -54,7 +53,6 @@
 		C1CF69F7281F42E7003B7872 /* DemoApplicationServerEmulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApplicationServerEmulation.swift; sourceTree = "<group>"; };
 		C1CF69F9281F4600003B7872 /* DemoApplicationMainAppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApplicationMainAppAPI.swift; sourceTree = "<group>"; };
 		C1D4D1C62828841F00480EAC /* MiniappView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniappView.swift; sourceTree = "<group>"; };
-		C1D4D1C92828966400480EAC /* android.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = android.json; sourceTree = "<group>"; };
 		C1D4D1CB2828966400480EAC /* plugin.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = plugin.xml; sourceTree = "<group>"; };
 		C1D4D1CD2828966400480EAC /* condo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = condo.js; sourceTree = "<group>"; };
 		C1D4D1CE2828966400480EAC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 		C1D4D1C82828966400480EAC /* plugins */ = {
 			isa = PBXGroup;
 			children = (
-				C1D4D1C92828966400480EAC /* android.json */,
 				C1D4D1CA2828966400480EAC /* cordova-plugin-condo */,
 				C1D4D1D52828966400480EAC /* fetch.json */,
 				C1D4D1D62828966400480EAC /* cordova-plugin-whitelist */,
@@ -334,7 +331,6 @@
 				C1D4D1EC2828966400480EAC /* RELEASENOTES.md in Resources */,
 				C1D4D1EF2828966400480EAC /* package.json in Resources */,
 				C1D4D1E42828966400480EAC /* condo.js in Resources */,
-				C1D4D1E22828966400480EAC /* android.json in Resources */,
 				C1D4D1EB2828966400480EAC /* plugin.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

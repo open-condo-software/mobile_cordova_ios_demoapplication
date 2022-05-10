@@ -13,7 +13,6 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "devDependencies": {
-    "cordova-android": "^9.1.0",
     "cordova-ios": "^6.2.0",
     "cordova-js": "^4.2.4",
     "cordova-plugin-condo": "git+https://github.com/open-condo-software/mobile_cordova_plugin_condo.git",
@@ -22,11 +21,11 @@
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-condo": {}
     },
     "platforms": [
-      "ios",
-      "android"
+      "ios"
     ]
   },
   "dependencies": {
