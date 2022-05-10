@@ -12,8 +12,8 @@ enum MiniappPresentationStyle: String {
     case push
     case push_with_navigation
     case present
-    case pesent_fullscreen
-    case pesent_fullscreen_with_navigation
+    case present_fullscreen
+    case present_fullscreen_with_navigation
 }
 
 class ViewController: UIViewController {
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         ctr.view.backgroundColor = .white
         ctr.wwwFolderName = "www"
         
-        var presentationStyle = MiniappPresentationStyle.pesent_fullscreen
+        var presentationStyle = MiniappPresentationStyle.present_fullscreen
         if let configPath = Bundle.main.path(forResource: "native_config", ofType: "json", inDirectory: "www") {
             let configUrl = URL(fileURLWithPath: configPath)
             if let data = try? Data(contentsOf: configUrl) {
@@ -102,11 +102,11 @@ class ViewController: UIViewController {
         case .present:
             currentMiniappPresented = true
             self.present(ctr, animated: true)
-        case .pesent_fullscreen:
+        case .present_fullscreen:
             currentMiniappPresented = true
             ctr.modalPresentationStyle = .fullScreen
             self.present(ctr, animated: true)
-        case .pesent_fullscreen_with_navigation:
+        case .present_fullscreen_with_navigation:
             currentMiniappPresented = true
             ctr.modalPresentationStyle = .fullScreen
             self.present(ctr, animated: true)
