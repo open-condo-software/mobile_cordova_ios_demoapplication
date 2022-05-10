@@ -1,0 +1,22 @@
+PODS:
+  - Cordova (6.2.0):
+    - Cordova/Cordova (= 6.2.0)
+  - Cordova/Cordova (6.2.0)
+  - Wormholy (1.6.5)
+
+DEPENDENCIES:
+  - Cordova
+  - Wormholy
+
+SPEC REPOS:
+  trunk:
+    - Cordova
+    - Wormholy
+
+SPEC CHECKSUMS:
+  Cordova: 7e83572fd98d1391ce92d93c081ce8d99d8cb014
+  Wormholy: 3252bc3e55a1847ef9a0976c1377bd77bf3635fa
+
+PODFILE CHECKSUM: 458f8e95ca70e0ea0f1491e1461d9aa3b77a0eaa
+
+COCOAPODS: 1.11.2

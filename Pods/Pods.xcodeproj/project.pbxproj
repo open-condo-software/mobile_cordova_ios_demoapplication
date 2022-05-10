@@ -1,0 +1,1303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01F13A9ED9E419BA9570653639F133CF /* NSDictionary+CordovaPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 888C542E913AFCDBDBC1B87C7C12D897 /* NSDictionary+CordovaPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0496E7FAA26B24DA18937A4524CCCA7F /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A538497D320EB86F85D32B912DCD51 /* RequestModel.swift */; };
+		0514FCE6C64ADACA6745A4CC96A273D4 /* RequestModelBeautifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C058484EE61AB4B2313CFAFCA479B7 /* RequestModelBeautifier.swift */; };
+		0E5DE9D5B603975F35188D58031551C6 /* CDVAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E5FC6D64D0307503937B70224430EB9 /* CDVAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		139AA0CB6E22813FFF3698C31F20140F /* NSDictionary+CordovaPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CB91F8DE0F6088119CADDD4E84B87B /* NSDictionary+CordovaPreferences.m */; };
+		14444EE6D043BB9C66D5BF03D707828E /* CDVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BEC811D40788E84540036D2164E77D /* CDVViewController.m */; };
+		1A7655CE0DE384F7779C8BAE6ADF2EAA /* CDVGestureHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F0084B0A7FB9ABA4DBB2DCF46DA955F /* CDVGestureHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1EEDAD12DDDC3142EE57080A9A27A63E /* ShareUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BDD435D085A2609698AABC02E0B99D /* ShareUtils.swift */; };
+		1F08D48FF086891936310E25E9E5DF5E /* CDVLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = EE1AB2B4624E634FF4EB72597BDC8EDF /* CDVLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		263106EA3D8265BD84AA81C2FAA702E4 /* CustomHTTPProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24F61837AD821A078FB49B4531E7C5B /* CustomHTTPProtocol.swift */; };
+		2D88D6A79862A326D5702110DD10AD56 /* Wormholy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66949EDB14710948D90B9BD08ED059B0 /* Wormholy.swift */; };
+		3071E866E6836BAFC29634DCB143E536 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2936117555B858A8856F0B45FC1F51D1 /* CDVLogger.m */; };
+		329D1E331CFDE43F39F2F27277A2AF55 /* WormholyConstructor.m in Sources */ = {isa = PBXBuildFile; fileRef = DF29DE8A9C27B7177648A1BDE5281877 /* WormholyConstructor.m */; };
+		347383930C68087843A4824DB7FA31FF /* CDVPlugin+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E99352F4B24705D0E50A2ED9E3C994F /* CDVPlugin+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3583E169DE91630E5FE4CDE896C8E984 /* CDVAvailabilityDeprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = B4DFFED2D586E94C86E810E7EAEF5BEB /* CDVAvailabilityDeprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		361B54C0F300A06F044C9D709E981587 /* Pods-CordovaDemoApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E86129A83414DD95869C3DEF3C3665B1 /* Pods-CordovaDemoApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3704C09AB953CEBF39C7C2B96E5B060A /* CDVTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F3DBFF6F84770251AC85FEA50F398F /* CDVTimer.m */; };
+		372607E850DA60CE4077D075478893D5 /* CDV.h in Headers */ = {isa = PBXBuildFile; fileRef = 711686C68836016C0C79FF2B12CCC8A4 /* CDV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37C241264893C04ABFCB123FB86AB2FD /* WHLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D004A346423676F44768311795D02 /* WHLabel.swift */; };
+		3908D5A3F69A7F521721DA6EF8B6DB87 /* WHBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F581B6CA0017FF12A7690D804BBA8E68 /* WHBundle.swift */; };
+		3B6383E7F8D659C88BC6C14B5FF0E998 /* CDVInvokedUrlCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 69F2D828372C7174D5855B7EADC991DB /* CDVInvokedUrlCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D446DC58E076E81007BA96F8959B616 /* CDVHandleOpenURL.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F4DC82835F23A0AD28AA12446669C5 /* CDVHandleOpenURL.m */; };
+		3D96722FFAFA9FFFA92796DEBDF60DB1 /* WHDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5FB3A3A54CC9E5B536F6D2BEDC383 /* WHDate.swift */; };
+		3E9EC5E741D104D87387618F660244D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9015D3617F04BCB065EB3D944FF2D31D /* Foundation.framework */; };
+		3F13CD6C381635E4AAF1145DA738C6E1 /* CDVWebViewEngineProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AD952FFB38ED724DC0C2296E80929092 /* CDVWebViewEngineProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		400C7AE826CDAEB8321CC822E9C0D2CC /* InputStream+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0D00BF8F1A6BF233EEF86F9013E3D4 /* InputStream+Utils.swift */; };
+		40DD495E828068CCFC26AC8D8705B9F2 /* CDVCommandDelegateImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E31C9AD2F7459E597BB5DEC1A08B6C8 /* CDVCommandDelegateImpl.m */; };
+		486C1ABC3B387152D5D6FB7FF27F4291 /* Flow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD39BCBAC68E558F188BA809916BEA0A /* Flow.storyboard */; };
+		4A5A50CEF493427DC76CAD28B484620B /* Pods-CordovaDemoApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D262A38C034A394D7D3A03F885866F /* Pods-CordovaDemoApp-dummy.m */; };
+		4BA4814575EB8ACAEB44F16D0F3CBB00 /* Wormholy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1155FB7F5E1F7FB1E9D5FA1E52D168F5 /* Wormholy-dummy.m */; };
+		52FBC3AC26D25DFD8C5136C83E01498E /* CDVWhitelist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D5FF486E5AEF175DD42214E216F9D54 /* CDVWhitelist.m */; };
+		5AA2AEE3948CA5C4C20976602B178CE1 /* CDVJSON_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0C39C0018B76D29CDC3E78F98C913D /* CDVJSON_private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5B0FEAEB0385C632E303BFABAF6AA156 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232D89B7A5720FDC95C7B0E61FB70D75 /* RequestCell.swift */; };
+		604E3B61C35284F4EC04A8B78EE43DC0 /* CDVDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 768ED8460515EC55C6CA38C9E1F8BA0B /* CDVDebug.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		61234708D305AA3A88A4382F3100811C /* RequestTitleSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AB5C9288B464DB96368CAFC1C71C290 /* RequestTitleSectionView.xib */; };
+		621D2423B32796051CA9DBB8CE6AA1AC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6328384A8DA1DBD14F3673D7271C407 /* AssetsLibrary.framework */; };
+		631EBD2B565C1B7DCDD0AB717F0F1D25 /* CDVURLSchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1761786393A05FC801B02CE89B2580DB /* CDVURLSchemeHandler.m */; };
+		6A795EC73F636B5EAAA443CD1A666277 /* WHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F30220DC173AE570CFFF9D7A722B8 /* WHBaseViewController.swift */; };
+		6EC7DC62BDAF027121003FD09B4329A1 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4ECDFC679935B62918E18F804CAB03 /* Section.swift */; };
+		6F04A7B593B195D28F21C9D8B3254DE2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E8118DE028854E38AEBE22315A173 /* Colors.swift */; };
+		708C65AC8DEA19B924ED06A72D869EE5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881FF04C9F880D59E8558E79CA83D3F0 /* Config.swift */; };
+		70BA5ACC7EB3C17AD55506C9C06CAB13 /* NSMutableArray+QueueAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F934D635EA64BC1D93C3D4847F4F4079 /* NSMutableArray+QueueAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71A54EDB25D29B2574AA6C212E3962D6 /* CDVConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C2127C09B778D94BB2043EC9F78045C4 /* CDVConfigParser.m */; };
+		720D17097D4F0CDDE89C4B21C0553355 /* RequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72D315750DB9FF736112760A650639 /* RequestDetailViewController.swift */; };
+		73712654212E65A0F0FFC552DA10F896 /* Cordova.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FF391BB1A5594A2C60C6913E8265EB5 /* Cordova.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74BF16160537FCBEBE26A6A757044CB3 /* WHTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08D553A5A064777A7679ED8DB152399 /* WHTextView.swift */; };
+		7553F05CCE9E29A47E84A9814CA54340 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9015D3617F04BCB065EB3D944FF2D31D /* Foundation.framework */; };
+		756A5458DF9CD92AD7316E35789C24ED /* CDVWebViewUIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CAA3BBC60D771107DB0F5EB33990DC /* CDVWebViewUIDelegate.m */; };
+		771451D6C03A920595217E9CB5791E36 /* CDVWebViewProcessPoolFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD1ADAB866676A002115490A5412A9 /* CDVWebViewProcessPoolFactory.m */; };
+		78C5B92ED8DB5F0683B18C4BF333A26C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC72A9B438BD163F65E0698FA4B75766 /* MobileCoreServices.framework */; };
+		7A0FB45903F5D13513E6D537353D4648 /* CDVWhitelist.h in Headers */ = {isa = PBXBuildFile; fileRef = 5457308F86B2F584CD63CEBE86D114BA /* CDVWhitelist.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FF4011775A6621749EBF58B9F3B37E5 /* Postman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE67992F94A414D7C89A3BF4A3543A /* Postman.swift */; };
+		819D7772B0023FA47CFF4B071E8C0682 /* CDVWebViewEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = D888FD99D8A3F0A2289C58A18ED9AF20 /* CDVWebViewEngine.m */; };
+		83C60180EEA0FD6B7F22FF74E2DCAFC6 /* WormholyMethodSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = B728A9DD674A927803BD79AEC0C1D97A /* WormholyMethodSwizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		841BC9A6B15C2D0EB73A2645E9CC0021 /* RequestResponseExportOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF850D1E6F6FC3E8C1DDAB27EA0D06A /* RequestResponseExportOption.swift */; };
+		894A27335D68985160A02F2E000F402C /* CDVPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 4078657555472AA22DEEE340FB6E533F /* CDVPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		895043425CF51685DF0357576CB36C55 /* CDVGestureHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B39F560D84BFCC4D84D387892031436 /* CDVGestureHandler.m */; };
+		8A492E15AC13DD3A4832B77238057EB2 /* WHTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F947FC0C6A280A600C3F79CDDF04F0 /* WHTableView.swift */; };
+		8A7A1BC68F5CF770015DBDC7631E677F /* BodyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520366755CB5CB4823AF3BD6EFF4CF6B /* BodyDetailViewController.swift */; };
+		8B3389A026234FD4BF2D8370BF364553 /* CDVURLSchemeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E5E83C64B9DE101F667EC765180AB5A /* CDVURLSchemeHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8CD80D320A437048D1469AA382719CED /* Wormholy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 186A488C0D1CD4E5C9CB77403264904E /* Wormholy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DEF009B5322DFFF7E3E72D457C8098F /* NSMutableArray+QueueAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 531D7FEF4D9869B50A0B9A48AF99309E /* NSMutableArray+QueueAdditions.m */; };
+		9000003347A315E78EFE8CF6B485FCAA /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AA4F6D6A273C3C55C7963A72961FB7 /* FileHandler.swift */; };
+		9348B34237AE2975E20AA8D604F1423D /* WHString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3B7EB8F5B4EB5C8EB3F21827C65624 /* WHString.swift */; };
+		935557E2ED1490E3CE73179D1E175332 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B64B86761B6BAB4636E9DFCFBBACF /* TextTableViewCell.swift */; };
+		9533B35D99EE91ADC4B8BF86FB3F5604 /* CDVCommandQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AF07D91006212108CE6F86A6F779A77 /* CDVCommandQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97BAD5386DB86E57C8121DC5BB9EB7EA /* NSURLSessionConfiguration+Wormholy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7486ADBE8AE51BC933445EABF3710528 /* NSURLSessionConfiguration+Wormholy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99672F2A0C2FAE07CF0FE78048C26925 /* CDVTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = AFE0FA7AC63BDA0DE9E6D4E7BA9E0505 /* CDVTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A5170499060E960F4356A9D224905DD /* CDVIntentAndNavigationFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C270F9542D925DF45BB87687E03451F /* CDVIntentAndNavigationFilter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9C29C9F73F2B840D4297C878785E5F0E /* CDVInvokedUrlCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = A366E5160008A4570B7520663259A6AF /* CDVInvokedUrlCommand.m */; };
+		9DEE63C23DD68C1A3D5B2D37C3A4AE48 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275D3925737472D94AF1E365B164DDCD /* TextTableViewCell.xib */; };
+		9DFA4F6696D67BF19C8722997A51498A /* CDVAvailability.h in Headers */ = {isa = PBXBuildFile; fileRef = 00CA808BBE9B3C3A8BB024D25A40EB14 /* CDVAvailability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A208CE5A4C552C3C87FC29C8C694502C /* CDVWebViewUIDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1525D6867D6ED15C33DE011200D70A26 /* CDVWebViewUIDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3E3D2041C73803C99AB97FF2CA51C79 /* CDVLaunchScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B2FFD03B90E262537A35331CE1543C71 /* CDVLaunchScreen.m */; };
+		A4C9EB97F20B7C24E713C0050829D6E2 /* Wormholy-Wormholy in Resources */ = {isa = PBXBuildFile; fileRef = AA92ED38E716E03D3FC758C810953B95 /* Wormholy-Wormholy */; };
+		A58E9DB777534AE321CBBC1AC336B29A /* CDVHandleOpenURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 164ECFD51E09443B1203D6AB77A54EE8 /* CDVHandleOpenURL.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A63E618214C11DFD86BEEB5D2DFD0355 /* WHCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC2F2116F3E6DF2A04C32960C4C5CFD /* WHCollectionView.swift */; };
+		AAE7DCE3029A5FB9DF1A3DAC68460D30 /* CDVLaunchScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = BB17007D2B0CD7DEA6AE050C0571D0DA /* CDVLaunchScreen.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B040B041DC89B07DE24B89973FC6276B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 331274363C067DCE41A9392E9B95C0CD /* AVFoundation.framework */; };
+		B37F7F4D7F80B0AE812017DAE2C495EB /* CDVPluginResult.h in Headers */ = {isa = PBXBuildFile; fileRef = A43A65787D2D69690E9EAFCABC70C7F1 /* CDVPluginResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B44E7EEF87BF99B3A42C85119DF0AC63 /* RequestTitleSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A892B1CCD49DF5FF4B91B3D8900CA96 /* RequestTitleSectionView.swift */; };
+		B5CCAA12D451B5A2DA163D5697787FA1 /* NSURLSessionConfiguration+Wormholy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF283D613098C603B983BDB863485C1 /* NSURLSessionConfiguration+Wormholy.m */; };
+		B6210AD9F8DD8C4515F6476023BEB054 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB9B95C766FAFF47358AE8826D94C83 /* CoreLocation.framework */; };
+		B8449264DCFDD227FC91A0E290563A43 /* CDVCommandDelegateImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B7840F749B99C485624CF261D3D5E15 /* CDVCommandDelegateImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA746FE274B45095BFCF1FFF7A7E0A9D /* CustomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04CAE19E616D2F682BBB325023058CE /* CustomActivity.swift */; };
+		BBB34288DA32EC91B33C6C258039770E /* WHNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA354EDDA69890F238F2F39185171361 /* WHNavigationController.swift */; };
+		BDE773EB7BA73CAE5FF58588B01D2140 /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1122B0C4A83C5830395CE0AD8FC0A378 /* RequestsViewController.swift */; };
+		BF99A4D6EE41547D5C064A5A973E4823 /* CDVPluginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B77CC35E4B72F75629D1CF277C9116A /* CDVPluginResult.m */; };
+		C2295D3A9296079498EF6831DD064EA7 /* WHView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8D58433C5E524B3B94F6C51EF0AC4D /* WHView.swift */; };
+		C6432217A3FA712A8F7F62C5D9323B62 /* CDVScreenOrientationDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E27F4EF100FF07C7E0CFADA67D4503B7 /* CDVScreenOrientationDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8CF8C6165A03E8CA5375BF8A56459AC /* CDVIntentAndNavigationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = C2017A9F4E1994D697078BC5A62A6F00 /* CDVIntentAndNavigationFilter.m */; };
+		C8EBF824F0F4CE48994357DD9B4F3E69 /* CDVCommandQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 22078B0332DE118ACFE47651CDAF1866 /* CDVCommandQueue.m */; };
+		CDAFDCEF50F1EEF4FEA3425AA214B58D /* CDVConfigParser.h in Headers */ = {isa = PBXBuildFile; fileRef = CA9A4606B0687813502036C102533E8A /* CDVConfigParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE621418B2C17A4153856F4FD9B1AF72 /* CDVPlugin+Resources.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCF7697A8CD9D741D7A16969D63F3B4 /* CDVPlugin+Resources.m */; };
+		D0EF79A6293F8CCBC3B44A3EE9E39CB8 /* CDVWebViewProcessPoolFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 55D57434EDCE54869DEAB46C5AA40E40 /* CDVWebViewProcessPoolFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D22B1B6048FF533A75EE3C02858F01F8 /* Wormholy.h in Headers */ = {isa = PBXBuildFile; fileRef = ABEA64623AF165E73BC8A3F191E50BA9 /* Wormholy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2BB9BDBC913B118CD6E243C5D72E521 /* ActionableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6AE613DD8BE6F2A2D2BA3734F91F8E8 /* ActionableTableViewCell.xib */; };
+		D475921FD42C5F9AF0CDC4A5F4FE4055 /* ActionableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38561FEF090F88BA335008DF5C454B5 /* ActionableTableViewCell.swift */; };
+		D4AA83B55907BAFF61483A404992A6E2 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6CFC9A6957A9532B6578141C110DE3 /* Storage.swift */; };
+		D9D3046BAE5F1EDECA3D4DC401DC8100 /* Cordova-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3DD94136BABFD8E14E36F5BF6D9685C /* Cordova-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEAAF1DB35FB3F9FDAB6CACC90B882E3 /* WormholyMethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 175F68092ECC30C8C516F6F37B797D71 /* WormholyMethodSwizzling.m */; };
+		EA9C7B81D09034D9CEF8ED1A38CAD8F8 /* CDVWebViewEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = D01156D66D5742BE9F56D571CF33DC29 /* CDVWebViewEngine.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EFE04F30AA58139E62FF7D6D9BE7B473 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9015D3617F04BCB065EB3D944FF2D31D /* Foundation.framework */; };
+		F0DFF473FC9759495AB97C1641CB627E /* CDVViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E558CD4FBE265870616ACE3E5EAD10B /* CDVViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F15292A15221E489FBEAD919E094F6E7 /* CDVJSON_private.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E23A49AF769ED068DF18B047981F78 /* CDVJSON_private.m */; };
+		F2CE366BB66FE58D9D0EC971BA28064F /* Cordova-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D76BAC763DB0783464DB7FBB26BB6F4A /* Cordova-dummy.m */; };
+		F3087F3A03D7846C09F13B599636BCBE /* CDVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E542C5E1B37936514F0BB841647969 /* CDVAppDelegate.m */; };
+		F6701805E870FB1E2D35E0532B2DA463 /* RequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3360A700FD02F2CEF05588C43B8FCD30 /* RequestCell.xib */; };
+		F6722E9D11E39C37DF2BF4C68FDA919E /* CDVPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 42565CDBA380A92B8C32C76437E99E17 /* CDVPlugin.m */; };
+		F968E4E85E4D990F6654109C7408BECE /* CDVCommandDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 842A4A7D3523F37AF6434599CF2EFD4B /* CDVCommandDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC5BDEA4202FEC75A1CF2EE01B24F2BA /* CDVPlugin+Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = 75256A850E7BF65AFE6C15C65AB2734E /* CDVPlugin+Resources.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6A3C7982796544B6E6117991E0501826 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E73ED39761329414C06DD4486C5058E;
+			remoteInfo = Wormholy;
+		};
+		8FA9595A0910E794D3499E13495BD5D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93CEC7FFB57A497DE49471C5D9517C13;
+			remoteInfo = "Wormholy-Wormholy";
+		};
+		B8D6CA55FB0021FA777C7050508476CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D4BD106DFFA3F977FA81CADB7B29B92;
+			remoteInfo = Cordova;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00CA808BBE9B3C3A8BB024D25A40EB14 /* CDVAvailability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVAvailability.h; path = CordovaLib/Classes/Public/CDVAvailability.h; sourceTree = "<group>"; };
+		0379B2F7BEBAA4F5D40A7CEB86DD95DD /* Wormholy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Wormholy-Info.plist"; sourceTree = "<group>"; };
+		03D5207A0404F480566379B8B4A93C04 /* Pods-CordovaDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CordovaDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		0A892B1CCD49DF5FF4B91B3D8900CA96 /* RequestTitleSectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTitleSectionView.swift; path = Sources/UI/Sections/RequestTitleSectionView.swift; sourceTree = "<group>"; };
+		0E31C9AD2F7459E597BB5DEC1A08B6C8 /* CDVCommandDelegateImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVCommandDelegateImpl.m; path = CordovaLib/Classes/Public/CDVCommandDelegateImpl.m; sourceTree = "<group>"; };
+		1122B0C4A83C5830395CE0AD8FC0A378 /* RequestsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestsViewController.swift; path = Sources/UI/RequestsViewController.swift; sourceTree = "<group>"; };
+		1155FB7F5E1F7FB1E9D5FA1E52D168F5 /* Wormholy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Wormholy-dummy.m"; sourceTree = "<group>"; };
+		1525D6867D6ED15C33DE011200D70A26 /* CDVWebViewUIDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVWebViewUIDelegate.h; path = CordovaLib/Classes/Private/Plugins/CDVWebViewEngine/CDVWebViewUIDelegate.h; sourceTree = "<group>"; };
+		164ECFD51E09443B1203D6AB77A54EE8 /* CDVHandleOpenURL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVHandleOpenURL.h; path = CordovaLib/Classes/Private/Plugins/CDVHandleOpenURL/CDVHandleOpenURL.h; sourceTree = "<group>"; };
+		175F68092ECC30C8C516F6F37B797D71 /* WormholyMethodSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WormholyMethodSwizzling.m; path = Sources/Objc/WormholyMethodSwizzling.m; sourceTree = "<group>"; };
+		1761786393A05FC801B02CE89B2580DB /* CDVURLSchemeHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVURLSchemeHandler.m; path = CordovaLib/Classes/Public/CDVURLSchemeHandler.m; sourceTree = "<group>"; };
+		186A488C0D1CD4E5C9CB77403264904E /* Wormholy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Wormholy-umbrella.h"; sourceTree = "<group>"; };
+		1A4F7B96E5B48DF06A3D8E7BBE1F1EA5 /* Wormholy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Wormholy.release.xcconfig; sourceTree = "<group>"; };
+		1C270F9542D925DF45BB87687E03451F /* CDVIntentAndNavigationFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVIntentAndNavigationFilter.h; path = CordovaLib/Classes/Private/Plugins/CDVIntentAndNavigationFilter/CDVIntentAndNavigationFilter.h; sourceTree = "<group>"; };
+		1D5FF486E5AEF175DD42214E216F9D54 /* CDVWhitelist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVWhitelist.m; path = CordovaLib/Classes/Public/CDVWhitelist.m; sourceTree = "<group>"; };
+		22078B0332DE118ACFE47651CDAF1866 /* CDVCommandQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVCommandQueue.m; path = CordovaLib/Classes/Public/CDVCommandQueue.m; sourceTree = "<group>"; };
+		232D89B7A5720FDC95C7B0E61FB70D75 /* RequestCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestCell.swift; path = Sources/UI/Cells/RequestCell.swift; sourceTree = "<group>"; };
+		24AC5112EB7B34FD7406996A4040AE96 /* Wormholy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Wormholy-prefix.pch"; sourceTree = "<group>"; };
+		2530BC414137FF7A53A0368B476547B9 /* Wormholy */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Wormholy; path = Wormholy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25CAA3BBC60D771107DB0F5EB33990DC /* CDVWebViewUIDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVWebViewUIDelegate.m; path = CordovaLib/Classes/Private/Plugins/CDVWebViewEngine/CDVWebViewUIDelegate.m; sourceTree = "<group>"; };
+		275D3925737472D94AF1E365B164DDCD /* TextTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TextTableViewCell.xib; path = Sources/UI/Cells/TextTableViewCell.xib; sourceTree = "<group>"; };
+		2936117555B858A8856F0B45FC1F51D1 /* CDVLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVLogger.m; path = CordovaLib/Classes/Private/Plugins/CDVLogger/CDVLogger.m; sourceTree = "<group>"; };
+		29F3DBFF6F84770251AC85FEA50F398F /* CDVTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVTimer.m; path = CordovaLib/Classes/Public/CDVTimer.m; sourceTree = "<group>"; };
+		2B77CC35E4B72F75629D1CF277C9116A /* CDVPluginResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVPluginResult.m; path = CordovaLib/Classes/Public/CDVPluginResult.m; sourceTree = "<group>"; };
+		2E3B7EB8F5B4EB5C8EB3F21827C65624 /* WHString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WHString.swift; path = Sources/Subclasses/WHString.swift; sourceTree = "<group>"; };
+		2F0084B0A7FB9ABA4DBB2DCF46DA955F /* CDVGestureHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVGestureHandler.h; path = CordovaLib/Classes/Private/Plugins/CDVGestureHandler/CDVGestureHandler.h; sourceTree = "<group>"; };
+		317E6E97393177328DB7ED575E43EF3D /* Cordova.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cordova.release.xcconfig; sourceTree = "<group>"; };
+		331274363C067DCE41A9392E9B95C0CD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		3360A700FD02F2CEF05588C43B8FCD30 /* RequestCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = RequestCell.xib; path = Sources/UI/Cells/RequestCell.xib; sourceTree = "<group>"; };
+		33E23A49AF769ED068DF18B047981F78 /* CDVJSON_private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVJSON_private.m; path = CordovaLib/Classes/Private/CDVJSON_private.m; sourceTree = "<group>"; };
+		36AF9B73C70D4EAEEE9CC5423F391A6F /* Pods-CordovaDemoApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CordovaDemoApp-frameworks.sh"; sourceTree = "<group>"; };
+		3B0D00BF8F1A6BF233EEF86F9013E3D4 /* InputStream+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "InputStream+Utils.swift"; path = "Sources/Utils/InputStream+Utils.swift"; sourceTree = "<group>"; };
+		3C1B64B86761B6BAB4636E9DFCFBBACF /* TextTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextTableViewCell.swift; path = Sources/UI/Cells/TextTableViewCell.swift; sourceTree = "<group>"; };
+		3E5E83C64B9DE101F667EC765180AB5A /* CDVURLSchemeHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVURLSchemeHandler.h; path = CordovaLib/Classes/Public/CDVURLSchemeHandler.h; sourceTree = "<group>"; };
+		3FF283D613098C603B983BDB863485C1 /* NSURLSessionConfiguration+Wormholy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLSessionConfiguration+Wormholy.m"; path = "Sources/Objc/NSURLSessionConfiguration+Wormholy.m"; sourceTree = "<group>"; };
+		3FF391BB1A5594A2C60C6913E8265EB5 /* Cordova.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Cordova.h; path = CordovaLib/Cordova/Cordova.h; sourceTree = "<group>"; };
+		4078657555472AA22DEEE340FB6E533F /* CDVPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVPlugin.h; path = CordovaLib/Classes/Public/CDVPlugin.h; sourceTree = "<group>"; };
+		42565CDBA380A92B8C32C76437E99E17 /* CDVPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVPlugin.m; path = CordovaLib/Classes/Public/CDVPlugin.m; sourceTree = "<group>"; };
+		4E5FC6D64D0307503937B70224430EB9 /* CDVAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVAppDelegate.h; path = CordovaLib/Classes/Public/CDVAppDelegate.h; sourceTree = "<group>"; };
+		50F947FC0C6A280A600C3F79CDDF04F0 /* WHTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WHTableView.swift; path = Sources/Subclasses/WHTableView.swift; sourceTree = "<group>"; };
+		520366755CB5CB4823AF3BD6EFF4CF6B /* BodyDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BodyDetailViewController.swift; path = Sources/UI/BodyDetailViewController.swift; sourceTree = "<group>"; };
+		52AE67992F94A414D7C89A3BF4A3543A /* Postman.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Postman.swift; path = Sources/Models/Postman/Postman.swift; sourceTree = "<group>"; };
+		531D7FEF4D9869B50A0B9A48AF99309E /* NSMutableArray+QueueAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+QueueAdditions.m"; path = "CordovaLib/Classes/Public/NSMutableArray+QueueAdditions.m"; sourceTree = "<group>"; };
+		5457308F86B2F584CD63CEBE86D114BA /* CDVWhitelist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVWhitelist.h; path = CordovaLib/Classes/Public/CDVWhitelist.h; sourceTree = "<group>"; };
+		55D57434EDCE54869DEAB46C5AA40E40 /* CDVWebViewProcessPoolFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVWebViewProcessPoolFactory.h; path = CordovaLib/Classes/Public/CDVWebViewProcessPoolFactory.h; sourceTree = "<group>"; };
+		5A0C39C0018B76D29CDC3E78F98C913D /* CDVJSON_private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVJSON_private.h; path = CordovaLib/Classes/Private/CDVJSON_private.h; sourceTree = "<group>"; };
+		601D9718ABE6C10339106362E86A7964 /* Pods-CordovaDemoApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CordovaDemoApp.modulemap"; sourceTree = "<group>"; };
+		66949EDB14710948D90B9BD08ED059B0 /* Wormholy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Wormholy.swift; path = Sources/Wormholy.swift; sourceTree = "<group>"; };
+		66D262A38C034A394D7D3A03F885866F /* Pods-CordovaDemoApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CordovaDemoApp-dummy.m"; sourceTree = "<group>"; };
+		69F2D828372C7174D5855B7EADC991DB /* CDVInvokedUrlCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVInvokedUrlCommand.h; path = CordovaLib/Classes/Public/CDVInvokedUrlCommand.h; sourceTree = "<group>"; };
+		6B39F560D84BFCC4D84D387892031436 /* CDVGestureHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVGestureHandler.m; path = CordovaLib/Classes/Private/Plugins/CDVGestureHandler/CDVGestureHandler.m; sourceTree = "<group>"; };
+		711686C68836016C0C79FF2B12CCC8A4 /* CDV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDV.h; path = CordovaLib/Classes/Public/CDV.h; sourceTree = "<group>"; };
+		7486ADBE8AE51BC933445EABF3710528 /* NSURLSessionConfiguration+Wormholy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLSessionConfiguration+Wormholy.h"; path = "Sources/Objc/NSURLSessionConfiguration+Wormholy.h"; sourceTree = "<group>"; };
+		752391CF2641743E9F27D4A59B8A03D7 /* Pods-CordovaDemoApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CordovaDemoApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		75256A850E7BF65AFE6C15C65AB2734E /* CDVPlugin+Resources.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CDVPlugin+Resources.h"; path = "CordovaLib/Classes/Public/CDVPlugin+Resources.h"; sourceTree = "<group>"; };
+		768ED8460515EC55C6CA38C9E1F8BA0B /* CDVDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVDebug.h; path = CordovaLib/Classes/Private/CDVDebug.h; sourceTree = "<group>"; };
+		7AF07D91006212108CE6F86A6F779A77 /* CDVCommandQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVCommandQueue.h; path = CordovaLib/Classes/Public/CDVCommandQueue.h; sourceTree = "<group>"; };
+		7B7840F749B99C485624CF261D3D5E15 /* CDVCommandDelegateImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVCommandDelegateImpl.h; path = CordovaLib/Classes/Public/CDVCommandDelegateImpl.h; sourceTree = "<group>"; };
+		7E8D58433C5E524B3B94F6C51EF0AC4D /* WHView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WHView.swift; path = Sources/Subclasses/WHView.swift; sourceTree = "<group>"; };
+		80BDD435D085A2609698AABC02E0B99D /* ShareUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShareUtils.swift; path = Sources/Utils/ShareUtils.swift; sourceTree = "<group>"; };
+		81CB91F8DE0F6088119CADDD4E84B87B /* NSDictionary+CordovaPreferences.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+CordovaPreferences.m"; path = "CordovaLib/Classes/Public/NSDictionary+CordovaPreferences.m"; sourceTree = "<group>"; };
+		842A4A7D3523F37AF6434599CF2EFD4B /* CDVCommandDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVCommandDelegate.h; path = CordovaLib/Classes/Public/CDVCommandDelegate.h; sourceTree = "<group>"; };
+		865E8118DE028854E38AEBE22315A173 /* Colors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = "Sources/Support Files/Colors.swift"; sourceTree = "<group>"; };
+		881FF04C9F880D59E8558E79CA83D3F0 /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Config.swift; path = "Sources/Support Files/Config.swift"; sourceTree = "<group>"; };
+		888C542E913AFCDBDBC1B87C7C12D897 /* NSDictionary+CordovaPreferences.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+CordovaPreferences.h"; path = "CordovaLib/Classes/Public/NSDictionary+CordovaPreferences.h"; sourceTree = "<group>"; };
+		8A60CF9310DCF3A177BC2AFA1ED2AF87 /* Cordova-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cordova-Info.plist"; sourceTree = "<group>"; };
+		8E99352F4B24705D0E50A2ED9E3C994F /* CDVPlugin+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CDVPlugin+Private.h"; path = "CordovaLib/Classes/Private/CDVPlugin+Private.h"; sourceTree = "<group>"; };
+		9015D3617F04BCB065EB3D944FF2D31D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		923D004A346423676F44768311795D02 /* WHLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WHLabel.swift; path = Sources/Subclasses/WHLabel.swift; sourceTree = "<group>"; };
+		92B5FB3A3A54CC9E5B536F6D2BEDC383 /* WHDate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WHDate.swift; path = Sources/Subclasses/WHDate.swift; sourceTree = "<group>"; };
+		9445D27411E5546C56E74A70C93B662D /* Cordova-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cordova-prefix.pch"; sourceTree = "<group>"; };
+		95D57A1F01FEC211DDFC08D7CB1ED831 /* ResourceBundle-Wormholy-Wormholy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Wormholy-Wormholy-Info.plist"; sourceTree = "<group>"; };
+		992F30220DC173AE570CFFF9D7A722B8 /* WHBaseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WHBaseViewController.swift; path = Sources/Subclasses/WHBaseViewController.swift; sourceTree = "<group>"; };
+		9AB5C9288B464DB96368CAFC1C71C290 /* RequestTitleSectionView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = RequestTitleSectionView.xib; path = Sources/UI/Sections/RequestTitleSectionView.xib; sourceTree = "<group>"; };
+		9AF850D1E6F6FC3E8C1DDAB27EA0D06A /* RequestResponseExportOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestResponseExportOption.swift; path = Sources/Utils/RequestResponseExportOption.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E558CD4FBE265870616ACE3E5EAD10B /* CDVViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVViewController.h; path = CordovaLib/Classes/Public/CDVViewController.h; sourceTree = "<group>"; };
+		A04CAE19E616D2F682BBB325023058CE /* CustomActivity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomActivity.swift; path = Sources/Subclasses/CustomActivity.swift; sourceTree = "<group>"; };
+		A366E5160008A4570B7520663259A6AF /* CDVInvokedUrlCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVInvokedUrlCommand.m; path = CordovaLib/Classes/Public/CDVInvokedUrlCommand.m; sourceTree = "<group>"; };
+		A43A65787D2D69690E9EAFCABC70C7F1 /* CDVPluginResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVPluginResult.h; path = CordovaLib/Classes/Public/CDVPluginResult.h; sourceTree = "<group>"; };
+		A6AE613DD8BE6F2A2D2BA3734F91F8E8 /* ActionableTableViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ActionableTableViewCell.xib; path = Sources/UI/Cells/ActionableTableViewCell.xib; sourceTree = "<group>"; };
+		AA92ED38E716E03D3FC758C810953B95 /* Wormholy-Wormholy */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Wormholy-Wormholy"; path = Wormholy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB9B95C766FAFF47358AE8826D94C83 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		ABEA64623AF165E73BC8A3F191E50BA9 /* Wormholy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Wormholy.h; path = Sources/Wormholy.h; sourceTree = "<group>"; };
+		AD952FFB38ED724DC0C2296E80929092 /* CDVWebViewEngineProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVWebViewEngineProtocol.h; path = CordovaLib/Classes/Public/CDVWebViewEngineProtocol.h; sourceTree = "<group>"; };
+		ADCF7697A8CD9D741D7A16969D63F3B4 /* CDVPlugin+Resources.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CDVPlugin+Resources.m"; path = "CordovaLib/Classes/Public/CDVPlugin+Resources.m"; sourceTree = "<group>"; };
+		AF72D315750DB9FF736112760A650639 /* RequestDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestDetailViewController.swift; path = Sources/UI/RequestDetailViewController.swift; sourceTree = "<group>"; };
+		AFE0FA7AC63BDA0DE9E6D4E7BA9E0505 /* CDVTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVTimer.h; path = CordovaLib/Classes/Public/CDVTimer.h; sourceTree = "<group>"; };
+		B2FFD03B90E262537A35331CE1543C71 /* CDVLaunchScreen.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVLaunchScreen.m; path = CordovaLib/Classes/Private/Plugins/CDVLaunchScreen/CDVLaunchScreen.m; sourceTree = "<group>"; };
+		B4DFFED2D586E94C86E810E7EAEF5BEB /* CDVAvailabilityDeprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVAvailabilityDeprecated.h; path = CordovaLib/Classes/Public/CDVAvailabilityDeprecated.h; sourceTree = "<group>"; };
+		B56B3158C7A1580A22D90AA1F796A829 /* Wormholy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Wormholy.debug.xcconfig; sourceTree = "<group>"; };
+		B67D15A9A7B2DE78041227581F642F32 /* Cordova.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cordova.debug.xcconfig; sourceTree = "<group>"; };
+		B728A9DD674A927803BD79AEC0C1D97A /* WormholyMethodSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WormholyMethodSwizzling.h; path = Sources/Objc/WormholyMethodSwizzling.h; sourceTree = "<group>"; };
+		B7F4DC82835F23A0AD28AA12446669C5 /* CDVHandleOpenURL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVHandleOpenURL.m; path = CordovaLib/Classes/Private/Plugins/CDVHandleOpenURL/CDVHandleOpenURL.m; sourceTree = "<group>"; };
+		B9A538497D320EB86F85D32B912DCD51 /* RequestModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModel.swift; path = Sources/Models/RequestModel.swift; sourceTree = "<group>"; };
+		BB17007D2B0CD7DEA6AE050C0571D0DA /* CDVLaunchScreen.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVLaunchScreen.h; path = CordovaLib/Classes/Private/Plugins/CDVLaunchScreen/CDVLaunchScreen.h; sourceTree = "<group>"; };
+		BC72A9B438BD163F65E0698FA4B75766 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		C2017A9F4E1994D697078BC5A62A6F00 /* CDVIntentAndNavigationFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVIntentAndNavigationFilter.m; path = CordovaLib/Classes/Private/Plugins/CDVIntentAndNavigationFilter/CDVIntentAndNavigationFilter.m; sourceTree = "<group>"; };
+		C2127C09B778D94BB2043EC9F78045C4 /* CDVConfigParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVConfigParser.m; path = CordovaLib/Classes/Public/CDVConfigParser.m; sourceTree = "<group>"; };
+		C24F61837AD821A078FB49B4531E7C5B /* CustomHTTPProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomHTTPProtocol.swift; path = Sources/CustomHTTPProtocol.swift; sourceTree = "<group>"; };
+		C38561FEF090F88BA335008DF5C454B5 /* ActionableTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionableTableViewCell.swift; path = Sources/UI/Cells/ActionableTableViewCell.swift; sourceTree = "<group>"; };
+		CA9A4606B0687813502036C102533E8A /* CDVConfigParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVConfigParser.h; path = CordovaLib/Classes/Public/CDVConfigParser.h; sourceTree = "<group>"; };
+		CD39BCBAC68E558F188BA809916BEA0A /* Flow.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = Flow.storyboard; path = Sources/UI/Flow.storyboard; sourceTree = "<group>"; };
+		CD4ECDFC679935B62918E18F804CAB03 /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Sources/Models/Section.swift; sourceTree = "<group>"; };
+		D01156D66D5742BE9F56D571CF33DC29 /* CDVWebViewEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVWebViewEngine.h; path = CordovaLib/Classes/Private/Plugins/CDVWebViewEngine/CDVWebViewEngine.h; sourceTree = "<group>"; };
+		D08D553A5A064777A7679ED8DB152399 /* WHTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WHTextView.swift; path = Sources/Subclasses/WHTextView.swift; sourceTree = "<group>"; };
+		D2AA4F6D6A273C3C55C7963A72961FB7 /* FileHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileHandler.swift; path = Sources/Utils/FileHandler.swift; sourceTree = "<group>"; };
+		D3DD94136BABFD8E14E36F5BF6D9685C /* Cordova-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cordova-umbrella.h"; sourceTree = "<group>"; };
+		D4BEC811D40788E84540036D2164E77D /* CDVViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVViewController.m; path = CordovaLib/Classes/Public/CDVViewController.m; sourceTree = "<group>"; };
+		D76BAC763DB0783464DB7FBB26BB6F4A /* Cordova-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cordova-dummy.m"; sourceTree = "<group>"; };
+		D888FD99D8A3F0A2289C58A18ED9AF20 /* CDVWebViewEngine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVWebViewEngine.m; path = CordovaLib/Classes/Private/Plugins/CDVWebViewEngine/CDVWebViewEngine.m; sourceTree = "<group>"; };
+		D9075A1CE38497E822C8539D4FD83608 /* Pods-CordovaDemoApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CordovaDemoApp"; path = Pods_CordovaDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA09AFF17CE17389D18AE5D5028C063 /* Pods-CordovaDemoApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CordovaDemoApp-Info.plist"; sourceTree = "<group>"; };
+		DC6CFC9A6957A9532B6578141C110DE3 /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Sources/Storage.swift; sourceTree = "<group>"; };
+		DF29DE8A9C27B7177648A1BDE5281877 /* WormholyConstructor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WormholyConstructor.m; path = Sources/Objc/WormholyConstructor.m; sourceTree = "<group>"; };
+		E1C058484EE61AB4B2313CFAFCA479B7 /* RequestModelBeautifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModelBeautifier.swift; path = Sources/Utils/RequestModelBeautifier.swift; sourceTree = "<group>"; };
+		E27432D24D80F7407F68780135A58C9B /* Cordova */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cordova; path = Cordova.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E27F4EF100FF07C7E0CFADA67D4503B7 /* CDVScreenOrientationDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVScreenOrientationDelegate.h; path = CordovaLib/Classes/Public/CDVScreenOrientationDelegate.h; sourceTree = "<group>"; };
+		E5BA4E922AAE5C2E9B066AFA4D0244AC /* Cordova.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cordova.modulemap; sourceTree = "<group>"; };
+		E86129A83414DD95869C3DEF3C3665B1 /* Pods-CordovaDemoApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CordovaDemoApp-umbrella.h"; sourceTree = "<group>"; };
+		EA354EDDA69890F238F2F39185171361 /* WHNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WHNavigationController.swift; path = Sources/Subclasses/WHNavigationController.swift; sourceTree = "<group>"; };
+		EAC2F2116F3E6DF2A04C32960C4C5CFD /* WHCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WHCollectionView.swift; path = Sources/Subclasses/WHCollectionView.swift; sourceTree = "<group>"; };
+		EE1AB2B4624E634FF4EB72597BDC8EDF /* CDVLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CDVLogger.h; path = CordovaLib/Classes/Private/Plugins/CDVLogger/CDVLogger.h; sourceTree = "<group>"; };
+		EE951DD2CB8D70587C819DCD70D55B63 /* Pods-CordovaDemoApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CordovaDemoApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EEFD1ADAB866676A002115490A5412A9 /* CDVWebViewProcessPoolFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVWebViewProcessPoolFactory.m; path = CordovaLib/Classes/Public/CDVWebViewProcessPoolFactory.m; sourceTree = "<group>"; };
+		F0E542C5E1B37936514F0BB841647969 /* CDVAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CDVAppDelegate.m; path = CordovaLib/Classes/Public/CDVAppDelegate.m; sourceTree = "<group>"; };
+		F581B6CA0017FF12A7690D804BBA8E68 /* WHBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WHBundle.swift; path = Sources/Subclasses/WHBundle.swift; sourceTree = "<group>"; };
+		F6328384A8DA1DBD14F3673D7271C407 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		F934D635EA64BC1D93C3D4847F4F4079 /* NSMutableArray+QueueAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+QueueAdditions.h"; path = "CordovaLib/Classes/Public/NSMutableArray+QueueAdditions.h"; sourceTree = "<group>"; };
+		FA833908E87FD737421BD568C5FA1F3F /* Wormholy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Wormholy.modulemap; sourceTree = "<group>"; };
+		FC7B6C68B1F26FEDC2196ADB53CBBEF8 /* Pods-CordovaDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CordovaDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23AA44FC1B26C8EC146A403F8A3D9756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				621D2423B32796051CA9DBB8CE6AA1AC /* AssetsLibrary.framework in Frameworks */,
+				B040B041DC89B07DE24B89973FC6276B /* AVFoundation.framework in Frameworks */,
+				B6210AD9F8DD8C4515F6476023BEB054 /* CoreLocation.framework in Frameworks */,
+				EFE04F30AA58139E62FF7D6D9BE7B473 /* Foundation.framework in Frameworks */,
+				78C5B92ED8DB5F0683B18C4BF333A26C /* MobileCoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E8272A7223B175F1A0101B0AB1E6745 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E9EC5E741D104D87387618F660244D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94CCD16FFAE6806C4A244C5EC7EFF3E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7553F05CCE9E29A47E84A9814CA54340 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C97EC820517577CDD2604169EA2338EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FEF77957C16FAE79704AA341FB7EF3C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				95D57A1F01FEC211DDFC08D7CB1ED831 /* ResourceBundle-Wormholy-Wormholy-Info.plist */,
+				FA833908E87FD737421BD568C5FA1F3F /* Wormholy.modulemap */,
+				1155FB7F5E1F7FB1E9D5FA1E52D168F5 /* Wormholy-dummy.m */,
+				0379B2F7BEBAA4F5D40A7CEB86DD95DD /* Wormholy-Info.plist */,
+				24AC5112EB7B34FD7406996A4040AE96 /* Wormholy-prefix.pch */,
+				186A488C0D1CD4E5C9CB77403264904E /* Wormholy-umbrella.h */,
+				B56B3158C7A1580A22D90AA1F796A829 /* Wormholy.debug.xcconfig */,
+				1A4F7B96E5B48DF06A3D8E7BBE1F1EA5 /* Wormholy.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Wormholy";
+			sourceTree = "<group>";
+		};
+		27E8C13A7E5F1A2EE9F21F29EA61CFB5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E1244013EE59A39A4B055E4E7DC4FE1 /* Cordova */,
+				F958A769CF1473D9B89BD58508F7E694 /* Wormholy */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3B55625FF1279168FB40166FA5AD1CA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A6AE613DD8BE6F2A2D2BA3734F91F8E8 /* ActionableTableViewCell.xib */,
+				CD39BCBAC68E558F188BA809916BEA0A /* Flow.storyboard */,
+				3360A700FD02F2CEF05588C43B8FCD30 /* RequestCell.xib */,
+				9AB5C9288B464DB96368CAFC1C71C290 /* RequestTitleSectionView.xib */,
+				275D3925737472D94AF1E365B164DDCD /* TextTableViewCell.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4E1244013EE59A39A4B055E4E7DC4FE1 /* Cordova */ = {
+			isa = PBXGroup;
+			children = (
+				B0F597972BE1F824C3E8A6514CC29E8F /* Cordova */,
+				C54A9624FF0646B1C2D8DB52995A8C1D /* Support Files */,
+			);
+			name = Cordova;
+			path = Cordova;
+			sourceTree = "<group>";
+		};
+		91C2BF5D7F455A564A18E02FF2A9D552 /* Pods-CordovaDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				601D9718ABE6C10339106362E86A7964 /* Pods-CordovaDemoApp.modulemap */,
+				EE951DD2CB8D70587C819DCD70D55B63 /* Pods-CordovaDemoApp-acknowledgements.markdown */,
+				752391CF2641743E9F27D4A59B8A03D7 /* Pods-CordovaDemoApp-acknowledgements.plist */,
+				66D262A38C034A394D7D3A03F885866F /* Pods-CordovaDemoApp-dummy.m */,
+				36AF9B73C70D4EAEEE9CC5423F391A6F /* Pods-CordovaDemoApp-frameworks.sh */,
+				DAA09AFF17CE17389D18AE5D5028C063 /* Pods-CordovaDemoApp-Info.plist */,
+				E86129A83414DD95869C3DEF3C3665B1 /* Pods-CordovaDemoApp-umbrella.h */,
+				FC7B6C68B1F26FEDC2196ADB53CBBEF8 /* Pods-CordovaDemoApp.debug.xcconfig */,
+				03D5207A0404F480566379B8B4A93C04 /* Pods-CordovaDemoApp.release.xcconfig */,
+			);
+			name = "Pods-CordovaDemoApp";
+			path = "Target Support Files/Pods-CordovaDemoApp";
+			sourceTree = "<group>";
+		};
+		94B359FFB3203E8EE8EE11CF5261C7D3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				91C2BF5D7F455A564A18E02FF2A9D552 /* Pods-CordovaDemoApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B0F597972BE1F824C3E8A6514CC29E8F /* Cordova */ = {
+			isa = PBXGroup;
+			children = (
+				711686C68836016C0C79FF2B12CCC8A4 /* CDV.h */,
+				4E5FC6D64D0307503937B70224430EB9 /* CDVAppDelegate.h */,
+				F0E542C5E1B37936514F0BB841647969 /* CDVAppDelegate.m */,
+				00CA808BBE9B3C3A8BB024D25A40EB14 /* CDVAvailability.h */,
+				B4DFFED2D586E94C86E810E7EAEF5BEB /* CDVAvailabilityDeprecated.h */,
+				842A4A7D3523F37AF6434599CF2EFD4B /* CDVCommandDelegate.h */,
+				7B7840F749B99C485624CF261D3D5E15 /* CDVCommandDelegateImpl.h */,
+				0E31C9AD2F7459E597BB5DEC1A08B6C8 /* CDVCommandDelegateImpl.m */,
+				7AF07D91006212108CE6F86A6F779A77 /* CDVCommandQueue.h */,
+				22078B0332DE118ACFE47651CDAF1866 /* CDVCommandQueue.m */,
+				CA9A4606B0687813502036C102533E8A /* CDVConfigParser.h */,
+				C2127C09B778D94BB2043EC9F78045C4 /* CDVConfigParser.m */,
+				768ED8460515EC55C6CA38C9E1F8BA0B /* CDVDebug.h */,
+				2F0084B0A7FB9ABA4DBB2DCF46DA955F /* CDVGestureHandler.h */,
+				6B39F560D84BFCC4D84D387892031436 /* CDVGestureHandler.m */,
+				164ECFD51E09443B1203D6AB77A54EE8 /* CDVHandleOpenURL.h */,
+				B7F4DC82835F23A0AD28AA12446669C5 /* CDVHandleOpenURL.m */,
+				1C270F9542D925DF45BB87687E03451F /* CDVIntentAndNavigationFilter.h */,
+				C2017A9F4E1994D697078BC5A62A6F00 /* CDVIntentAndNavigationFilter.m */,
+				69F2D828372C7174D5855B7EADC991DB /* CDVInvokedUrlCommand.h */,
+				A366E5160008A4570B7520663259A6AF /* CDVInvokedUrlCommand.m */,
+				5A0C39C0018B76D29CDC3E78F98C913D /* CDVJSON_private.h */,
+				33E23A49AF769ED068DF18B047981F78 /* CDVJSON_private.m */,
+				BB17007D2B0CD7DEA6AE050C0571D0DA /* CDVLaunchScreen.h */,
+				B2FFD03B90E262537A35331CE1543C71 /* CDVLaunchScreen.m */,
+				EE1AB2B4624E634FF4EB72597BDC8EDF /* CDVLogger.h */,
+				2936117555B858A8856F0B45FC1F51D1 /* CDVLogger.m */,
+				4078657555472AA22DEEE340FB6E533F /* CDVPlugin.h */,
+				42565CDBA380A92B8C32C76437E99E17 /* CDVPlugin.m */,
+				8E99352F4B24705D0E50A2ED9E3C994F /* CDVPlugin+Private.h */,
+				75256A850E7BF65AFE6C15C65AB2734E /* CDVPlugin+Resources.h */,
+				ADCF7697A8CD9D741D7A16969D63F3B4 /* CDVPlugin+Resources.m */,
+				A43A65787D2D69690E9EAFCABC70C7F1 /* CDVPluginResult.h */,
+				2B77CC35E4B72F75629D1CF277C9116A /* CDVPluginResult.m */,
+				E27F4EF100FF07C7E0CFADA67D4503B7 /* CDVScreenOrientationDelegate.h */,
+				AFE0FA7AC63BDA0DE9E6D4E7BA9E0505 /* CDVTimer.h */,
+				29F3DBFF6F84770251AC85FEA50F398F /* CDVTimer.m */,
+				3E5E83C64B9DE101F667EC765180AB5A /* CDVURLSchemeHandler.h */,
+				1761786393A05FC801B02CE89B2580DB /* CDVURLSchemeHandler.m */,
+				9E558CD4FBE265870616ACE3E5EAD10B /* CDVViewController.h */,
+				D4BEC811D40788E84540036D2164E77D /* CDVViewController.m */,
+				D01156D66D5742BE9F56D571CF33DC29 /* CDVWebViewEngine.h */,
+				D888FD99D8A3F0A2289C58A18ED9AF20 /* CDVWebViewEngine.m */,
+				AD952FFB38ED724DC0C2296E80929092 /* CDVWebViewEngineProtocol.h */,
+				55D57434EDCE54869DEAB46C5AA40E40 /* CDVWebViewProcessPoolFactory.h */,
+				EEFD1ADAB866676A002115490A5412A9 /* CDVWebViewProcessPoolFactory.m */,
+				1525D6867D6ED15C33DE011200D70A26 /* CDVWebViewUIDelegate.h */,
+				25CAA3BBC60D771107DB0F5EB33990DC /* CDVWebViewUIDelegate.m */,
+				5457308F86B2F584CD63CEBE86D114BA /* CDVWhitelist.h */,
+				1D5FF486E5AEF175DD42214E216F9D54 /* CDVWhitelist.m */,
+				3FF391BB1A5594A2C60C6913E8265EB5 /* Cordova.h */,
+				888C542E913AFCDBDBC1B87C7C12D897 /* NSDictionary+CordovaPreferences.h */,
+				81CB91F8DE0F6088119CADDD4E84B87B /* NSDictionary+CordovaPreferences.m */,
+				F934D635EA64BC1D93C3D4847F4F4079 /* NSMutableArray+QueueAdditions.h */,
+				531D7FEF4D9869B50A0B9A48AF99309E /* NSMutableArray+QueueAdditions.m */,
+			);
+			name = Cordova;
+			sourceTree = "<group>";
+		};
+		B94D7768568A9992200DB461E8CF687F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAB2BEEACA314D2DD21D9E98AD3CC76D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C54A9624FF0646B1C2D8DB52995A8C1D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5BA4E922AAE5C2E9B066AFA4D0244AC /* Cordova.modulemap */,
+				D76BAC763DB0783464DB7FBB26BB6F4A /* Cordova-dummy.m */,
+				8A60CF9310DCF3A177BC2AFA1ED2AF87 /* Cordova-Info.plist */,
+				9445D27411E5546C56E74A70C93B662D /* Cordova-prefix.pch */,
+				D3DD94136BABFD8E14E36F5BF6D9685C /* Cordova-umbrella.h */,
+				B67D15A9A7B2DE78041227581F642F32 /* Cordova.debug.xcconfig */,
+				317E6E97393177328DB7ED575E43EF3D /* Cordova.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Cordova";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				B94D7768568A9992200DB461E8CF687F /* Frameworks */,
+				27E8C13A7E5F1A2EE9F21F29EA61CFB5 /* Pods */,
+				E902BA31DBCEED8DD1322BD97841ECAE /* Products */,
+				94B359FFB3203E8EE8EE11CF5261C7D3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E902BA31DBCEED8DD1322BD97841ECAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E27432D24D80F7407F68780135A58C9B /* Cordova */,
+				D9075A1CE38497E822C8539D4FD83608 /* Pods-CordovaDemoApp */,
+				2530BC414137FF7A53A0368B476547B9 /* Wormholy */,
+				AA92ED38E716E03D3FC758C810953B95 /* Wormholy-Wormholy */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAB2BEEACA314D2DD21D9E98AD3CC76D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F6328384A8DA1DBD14F3673D7271C407 /* AssetsLibrary.framework */,
+				331274363C067DCE41A9392E9B95C0CD /* AVFoundation.framework */,
+				ABB9B95C766FAFF47358AE8826D94C83 /* CoreLocation.framework */,
+				9015D3617F04BCB065EB3D944FF2D31D /* Foundation.framework */,
+				BC72A9B438BD163F65E0698FA4B75766 /* MobileCoreServices.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F958A769CF1473D9B89BD58508F7E694 /* Wormholy */ = {
+			isa = PBXGroup;
+			children = (
+				C38561FEF090F88BA335008DF5C454B5 /* ActionableTableViewCell.swift */,
+				520366755CB5CB4823AF3BD6EFF4CF6B /* BodyDetailViewController.swift */,
+				865E8118DE028854E38AEBE22315A173 /* Colors.swift */,
+				881FF04C9F880D59E8558E79CA83D3F0 /* Config.swift */,
+				A04CAE19E616D2F682BBB325023058CE /* CustomActivity.swift */,
+				C24F61837AD821A078FB49B4531E7C5B /* CustomHTTPProtocol.swift */,
+				D2AA4F6D6A273C3C55C7963A72961FB7 /* FileHandler.swift */,
+				3B0D00BF8F1A6BF233EEF86F9013E3D4 /* InputStream+Utils.swift */,
+				7486ADBE8AE51BC933445EABF3710528 /* NSURLSessionConfiguration+Wormholy.h */,
+				3FF283D613098C603B983BDB863485C1 /* NSURLSessionConfiguration+Wormholy.m */,
+				52AE67992F94A414D7C89A3BF4A3543A /* Postman.swift */,
+				232D89B7A5720FDC95C7B0E61FB70D75 /* RequestCell.swift */,
+				AF72D315750DB9FF736112760A650639 /* RequestDetailViewController.swift */,
+				B9A538497D320EB86F85D32B912DCD51 /* RequestModel.swift */,
+				E1C058484EE61AB4B2313CFAFCA479B7 /* RequestModelBeautifier.swift */,
+				9AF850D1E6F6FC3E8C1DDAB27EA0D06A /* RequestResponseExportOption.swift */,
+				1122B0C4A83C5830395CE0AD8FC0A378 /* RequestsViewController.swift */,
+				0A892B1CCD49DF5FF4B91B3D8900CA96 /* RequestTitleSectionView.swift */,
+				CD4ECDFC679935B62918E18F804CAB03 /* Section.swift */,
+				80BDD435D085A2609698AABC02E0B99D /* ShareUtils.swift */,
+				DC6CFC9A6957A9532B6578141C110DE3 /* Storage.swift */,
+				3C1B64B86761B6BAB4636E9DFCFBBACF /* TextTableViewCell.swift */,
+				992F30220DC173AE570CFFF9D7A722B8 /* WHBaseViewController.swift */,
+				F581B6CA0017FF12A7690D804BBA8E68 /* WHBundle.swift */,
+				EAC2F2116F3E6DF2A04C32960C4C5CFD /* WHCollectionView.swift */,
+				92B5FB3A3A54CC9E5B536F6D2BEDC383 /* WHDate.swift */,
+				923D004A346423676F44768311795D02 /* WHLabel.swift */,
+				EA354EDDA69890F238F2F39185171361 /* WHNavigationController.swift */,
+				2E3B7EB8F5B4EB5C8EB3F21827C65624 /* WHString.swift */,
+				50F947FC0C6A280A600C3F79CDDF04F0 /* WHTableView.swift */,
+				D08D553A5A064777A7679ED8DB152399 /* WHTextView.swift */,
+				7E8D58433C5E524B3B94F6C51EF0AC4D /* WHView.swift */,
+				ABEA64623AF165E73BC8A3F191E50BA9 /* Wormholy.h */,
+				66949EDB14710948D90B9BD08ED059B0 /* Wormholy.swift */,
+				DF29DE8A9C27B7177648A1BDE5281877 /* WormholyConstructor.m */,
+				B728A9DD674A927803BD79AEC0C1D97A /* WormholyMethodSwizzling.h */,
+				175F68092ECC30C8C516F6F37B797D71 /* WormholyMethodSwizzling.m */,
+				3B55625FF1279168FB40166FA5AD1CA6 /* Resources */,
+				1FEF77957C16FAE79704AA341FB7EF3C /* Support Files */,
+			);
+			name = Wormholy;
+			path = Wormholy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		088C9F4AADC3E9AF286EE814DA701862 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97BAD5386DB86E57C8121DC5BB9EB7EA /* NSURLSessionConfiguration+Wormholy.h in Headers */,
+				D22B1B6048FF533A75EE3C02858F01F8 /* Wormholy.h in Headers */,
+				8CD80D320A437048D1469AA382719CED /* Wormholy-umbrella.h in Headers */,
+				83C60180EEA0FD6B7F22FF74E2DCAFC6 /* WormholyMethodSwizzling.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A4BF224D9E096D5E91B51C062562AF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				361B54C0F300A06F044C9D709E981587 /* Pods-CordovaDemoApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB0565E553573486738B3FB3AE92281C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372607E850DA60CE4077D075478893D5 /* CDV.h in Headers */,
+				0E5DE9D5B603975F35188D58031551C6 /* CDVAppDelegate.h in Headers */,
+				9DFA4F6696D67BF19C8722997A51498A /* CDVAvailability.h in Headers */,
+				3583E169DE91630E5FE4CDE896C8E984 /* CDVAvailabilityDeprecated.h in Headers */,
+				F968E4E85E4D990F6654109C7408BECE /* CDVCommandDelegate.h in Headers */,
+				B8449264DCFDD227FC91A0E290563A43 /* CDVCommandDelegateImpl.h in Headers */,
+				9533B35D99EE91ADC4B8BF86FB3F5604 /* CDVCommandQueue.h in Headers */,
+				CDAFDCEF50F1EEF4FEA3425AA214B58D /* CDVConfigParser.h in Headers */,
+				604E3B61C35284F4EC04A8B78EE43DC0 /* CDVDebug.h in Headers */,
+				1A7655CE0DE384F7779C8BAE6ADF2EAA /* CDVGestureHandler.h in Headers */,
+				A58E9DB777534AE321CBBC1AC336B29A /* CDVHandleOpenURL.h in Headers */,
+				9A5170499060E960F4356A9D224905DD /* CDVIntentAndNavigationFilter.h in Headers */,
+				3B6383E7F8D659C88BC6C14B5FF0E998 /* CDVInvokedUrlCommand.h in Headers */,
+				5AA2AEE3948CA5C4C20976602B178CE1 /* CDVJSON_private.h in Headers */,
+				AAE7DCE3029A5FB9DF1A3DAC68460D30 /* CDVLaunchScreen.h in Headers */,
+				1F08D48FF086891936310E25E9E5DF5E /* CDVLogger.h in Headers */,
+				894A27335D68985160A02F2E000F402C /* CDVPlugin.h in Headers */,
+				347383930C68087843A4824DB7FA31FF /* CDVPlugin+Private.h in Headers */,
+				FC5BDEA4202FEC75A1CF2EE01B24F2BA /* CDVPlugin+Resources.h in Headers */,
+				B37F7F4D7F80B0AE812017DAE2C495EB /* CDVPluginResult.h in Headers */,
+				C6432217A3FA712A8F7F62C5D9323B62 /* CDVScreenOrientationDelegate.h in Headers */,
+				99672F2A0C2FAE07CF0FE78048C26925 /* CDVTimer.h in Headers */,
+				8B3389A026234FD4BF2D8370BF364553 /* CDVURLSchemeHandler.h in Headers */,
+				F0DFF473FC9759495AB97C1641CB627E /* CDVViewController.h in Headers */,
+				EA9C7B81D09034D9CEF8ED1A38CAD8F8 /* CDVWebViewEngine.h in Headers */,
+				3F13CD6C381635E4AAF1145DA738C6E1 /* CDVWebViewEngineProtocol.h in Headers */,
+				D0EF79A6293F8CCBC3B44A3EE9E39CB8 /* CDVWebViewProcessPoolFactory.h in Headers */,
+				A208CE5A4C552C3C87FC29C8C694502C /* CDVWebViewUIDelegate.h in Headers */,
+				7A0FB45903F5D13513E6D537353D4648 /* CDVWhitelist.h in Headers */,
+				73712654212E65A0F0FFC552DA10F896 /* Cordova.h in Headers */,
+				D9D3046BAE5F1EDECA3D4DC401DC8100 /* Cordova-umbrella.h in Headers */,
+				01F13A9ED9E419BA9570653639F133CF /* NSDictionary+CordovaPreferences.h in Headers */,
+				70BA5ACC7EB3C17AD55506C9C06CAB13 /* NSMutableArray+QueueAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		210D56CD79055A0ACDE151149B5D3BCB /* Pods-CordovaDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E30EF7359A1B4B30FDD25087979D19E4 /* Build configuration list for PBXNativeTarget "Pods-CordovaDemoApp" */;
+			buildPhases = (
+				42A4BF224D9E096D5E91B51C062562AF /* Headers */,
+				A99389EC1BF8EDD76C680B8BA979C775 /* Sources */,
+				94CCD16FFAE6806C4A244C5EC7EFF3E6 /* Frameworks */,
+				9714C26F0EF769E69765D87CAF17C1EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CCC5077770C149AD8EC92587A05C90C /* PBXTargetDependency */,
+				4CD37C7EF12DF9C1EA866766A21683F9 /* PBXTargetDependency */,
+			);
+			name = "Pods-CordovaDemoApp";
+			productName = Pods_CordovaDemoApp;
+			productReference = D9075A1CE38497E822C8539D4FD83608 /* Pods-CordovaDemoApp */;
+			productType = "com.apple.product-type.framework";
+		};
+		2D4BD106DFFA3F977FA81CADB7B29B92 /* Cordova */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F96294D89AA51FBDFABCE0B3E51FBD7 /* Build configuration list for PBXNativeTarget "Cordova" */;
+			buildPhases = (
+				EB0565E553573486738B3FB3AE92281C /* Headers */,
+				44D51463CE9A1019943E2E8A53DF0C02 /* Sources */,
+				23AA44FC1B26C8EC146A403F8A3D9756 /* Frameworks */,
+				858DDE94D5B2672CC7133B3A85E05C92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cordova;
+			productName = Cordova;
+			productReference = E27432D24D80F7407F68780135A58C9B /* Cordova */;
+			productType = "com.apple.product-type.framework";
+		};
+		3E73ED39761329414C06DD4486C5058E /* Wormholy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4FC1F2DCD724C0C62379A878C2FD7D1 /* Build configuration list for PBXNativeTarget "Wormholy" */;
+			buildPhases = (
+				088C9F4AADC3E9AF286EE814DA701862 /* Headers */,
+				332727A5393C8A001AA7B35FA5D4C20E /* Sources */,
+				3E8272A7223B175F1A0101B0AB1E6745 /* Frameworks */,
+				9BDCFC4F0A5DBB4FF94EDBE487DB6C3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24580A20A8A521429D290E82F5468DCD /* PBXTargetDependency */,
+			);
+			name = Wormholy;
+			productName = Wormholy;
+			productReference = 2530BC414137FF7A53A0368B476547B9 /* Wormholy */;
+			productType = "com.apple.product-type.framework";
+		};
+		93CEC7FFB57A497DE49471C5D9517C13 /* Wormholy-Wormholy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A55CB94A9BC09F9FCBC4EC34327D371E /* Build configuration list for PBXNativeTarget "Wormholy-Wormholy" */;
+			buildPhases = (
+				4E72007A361181B248B4F3716E3E41C1 /* Sources */,
+				C97EC820517577CDD2604169EA2338EC /* Frameworks */,
+				072B9CF25F2B8C1D9460DD14289C2411 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wormholy-Wormholy";
+			productName = Wormholy;
+			productReference = AA92ED38E716E03D3FC758C810953B95 /* Wormholy-Wormholy */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = E902BA31DBCEED8DD1322BD97841ECAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D4BD106DFFA3F977FA81CADB7B29B92 /* Cordova */,
+				210D56CD79055A0ACDE151149B5D3BCB /* Pods-CordovaDemoApp */,
+				3E73ED39761329414C06DD4486C5058E /* Wormholy */,
+				93CEC7FFB57A497DE49471C5D9517C13 /* Wormholy-Wormholy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		072B9CF25F2B8C1D9460DD14289C2411 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2BB9BDBC913B118CD6E243C5D72E521 /* ActionableTableViewCell.xib in Resources */,
+				486C1ABC3B387152D5D6FB7FF27F4291 /* Flow.storyboard in Resources */,
+				F6701805E870FB1E2D35E0532B2DA463 /* RequestCell.xib in Resources */,
+				61234708D305AA3A88A4382F3100811C /* RequestTitleSectionView.xib in Resources */,
+				9DEE63C23DD68C1A3D5B2D37C3A4AE48 /* TextTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		858DDE94D5B2672CC7133B3A85E05C92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9714C26F0EF769E69765D87CAF17C1EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BDCFC4F0A5DBB4FF94EDBE487DB6C3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4C9EB97F20B7C24E713C0050829D6E2 /* Wormholy-Wormholy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		332727A5393C8A001AA7B35FA5D4C20E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D475921FD42C5F9AF0CDC4A5F4FE4055 /* ActionableTableViewCell.swift in Sources */,
+				8A7A1BC68F5CF770015DBDC7631E677F /* BodyDetailViewController.swift in Sources */,
+				6F04A7B593B195D28F21C9D8B3254DE2 /* Colors.swift in Sources */,
+				708C65AC8DEA19B924ED06A72D869EE5 /* Config.swift in Sources */,
+				BA746FE274B45095BFCF1FFF7A7E0A9D /* CustomActivity.swift in Sources */,
+				263106EA3D8265BD84AA81C2FAA702E4 /* CustomHTTPProtocol.swift in Sources */,
+				9000003347A315E78EFE8CF6B485FCAA /* FileHandler.swift in Sources */,
+				400C7AE826CDAEB8321CC822E9C0D2CC /* InputStream+Utils.swift in Sources */,
+				B5CCAA12D451B5A2DA163D5697787FA1 /* NSURLSessionConfiguration+Wormholy.m in Sources */,
+				7FF4011775A6621749EBF58B9F3B37E5 /* Postman.swift in Sources */,
+				5B0FEAEB0385C632E303BFABAF6AA156 /* RequestCell.swift in Sources */,
+				720D17097D4F0CDDE89C4B21C0553355 /* RequestDetailViewController.swift in Sources */,
+				0496E7FAA26B24DA18937A4524CCCA7F /* RequestModel.swift in Sources */,
+				0514FCE6C64ADACA6745A4CC96A273D4 /* RequestModelBeautifier.swift in Sources */,
+				841BC9A6B15C2D0EB73A2645E9CC0021 /* RequestResponseExportOption.swift in Sources */,
+				BDE773EB7BA73CAE5FF58588B01D2140 /* RequestsViewController.swift in Sources */,
+				B44E7EEF87BF99B3A42C85119DF0AC63 /* RequestTitleSectionView.swift in Sources */,
+				6EC7DC62BDAF027121003FD09B4329A1 /* Section.swift in Sources */,
+				1EEDAD12DDDC3142EE57080A9A27A63E /* ShareUtils.swift in Sources */,
+				D4AA83B55907BAFF61483A404992A6E2 /* Storage.swift in Sources */,
+				935557E2ED1490E3CE73179D1E175332 /* TextTableViewCell.swift in Sources */,
+				6A795EC73F636B5EAAA443CD1A666277 /* WHBaseViewController.swift in Sources */,
+				3908D5A3F69A7F521721DA6EF8B6DB87 /* WHBundle.swift in Sources */,
+				A63E618214C11DFD86BEEB5D2DFD0355 /* WHCollectionView.swift in Sources */,
+				3D96722FFAFA9FFFA92796DEBDF60DB1 /* WHDate.swift in Sources */,
+				37C241264893C04ABFCB123FB86AB2FD /* WHLabel.swift in Sources */,
+				BBB34288DA32EC91B33C6C258039770E /* WHNavigationController.swift in Sources */,
+				9348B34237AE2975E20AA8D604F1423D /* WHString.swift in Sources */,
+				8A492E15AC13DD3A4832B77238057EB2 /* WHTableView.swift in Sources */,
+				74BF16160537FCBEBE26A6A757044CB3 /* WHTextView.swift in Sources */,
+				C2295D3A9296079498EF6831DD064EA7 /* WHView.swift in Sources */,
+				2D88D6A79862A326D5702110DD10AD56 /* Wormholy.swift in Sources */,
+				4BA4814575EB8ACAEB44F16D0F3CBB00 /* Wormholy-dummy.m in Sources */,
+				329D1E331CFDE43F39F2F27277A2AF55 /* WormholyConstructor.m in Sources */,
+				DEAAF1DB35FB3F9FDAB6CACC90B882E3 /* WormholyMethodSwizzling.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44D51463CE9A1019943E2E8A53DF0C02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3087F3A03D7846C09F13B599636BCBE /* CDVAppDelegate.m in Sources */,
+				40DD495E828068CCFC26AC8D8705B9F2 /* CDVCommandDelegateImpl.m in Sources */,
+				C8EBF824F0F4CE48994357DD9B4F3E69 /* CDVCommandQueue.m in Sources */,
+				71A54EDB25D29B2574AA6C212E3962D6 /* CDVConfigParser.m in Sources */,
+				895043425CF51685DF0357576CB36C55 /* CDVGestureHandler.m in Sources */,
+				3D446DC58E076E81007BA96F8959B616 /* CDVHandleOpenURL.m in Sources */,
+				C8CF8C6165A03E8CA5375BF8A56459AC /* CDVIntentAndNavigationFilter.m in Sources */,
+				9C29C9F73F2B840D4297C878785E5F0E /* CDVInvokedUrlCommand.m in Sources */,
+				F15292A15221E489FBEAD919E094F6E7 /* CDVJSON_private.m in Sources */,
+				A3E3D2041C73803C99AB97FF2CA51C79 /* CDVLaunchScreen.m in Sources */,
+				3071E866E6836BAFC29634DCB143E536 /* CDVLogger.m in Sources */,
+				F6722E9D11E39C37DF2BF4C68FDA919E /* CDVPlugin.m in Sources */,
+				CE621418B2C17A4153856F4FD9B1AF72 /* CDVPlugin+Resources.m in Sources */,
+				BF99A4D6EE41547D5C064A5A973E4823 /* CDVPluginResult.m in Sources */,
+				3704C09AB953CEBF39C7C2B96E5B060A /* CDVTimer.m in Sources */,
+				631EBD2B565C1B7DCDD0AB717F0F1D25 /* CDVURLSchemeHandler.m in Sources */,
+				14444EE6D043BB9C66D5BF03D707828E /* CDVViewController.m in Sources */,
+				819D7772B0023FA47CFF4B071E8C0682 /* CDVWebViewEngine.m in Sources */,
+				771451D6C03A920595217E9CB5791E36 /* CDVWebViewProcessPoolFactory.m in Sources */,
+				756A5458DF9CD92AD7316E35789C24ED /* CDVWebViewUIDelegate.m in Sources */,
+				52FBC3AC26D25DFD8C5136C83E01498E /* CDVWhitelist.m in Sources */,
+				F2CE366BB66FE58D9D0EC971BA28064F /* Cordova-dummy.m in Sources */,
+				139AA0CB6E22813FFF3698C31F20140F /* NSDictionary+CordovaPreferences.m in Sources */,
+				8DEF009B5322DFFF7E3E72D457C8098F /* NSMutableArray+QueueAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E72007A361181B248B4F3716E3E41C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A99389EC1BF8EDD76C680B8BA979C775 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A5A50CEF493427DC76CAD28B484620B /* Pods-CordovaDemoApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24580A20A8A521429D290E82F5468DCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Wormholy-Wormholy";
+			target = 93CEC7FFB57A497DE49471C5D9517C13 /* Wormholy-Wormholy */;
+			targetProxy = 8FA9595A0910E794D3499E13495BD5D3 /* PBXContainerItemProxy */;
+		};
+		4CCC5077770C149AD8EC92587A05C90C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cordova;
+			target = 2D4BD106DFFA3F977FA81CADB7B29B92 /* Cordova */;
+			targetProxy = B8D6CA55FB0021FA777C7050508476CB /* PBXContainerItemProxy */;
+		};
+		4CD37C7EF12DF9C1EA866766A21683F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Wormholy;
+			target = 3E73ED39761329414C06DD4486C5058E /* Wormholy */;
+			targetProxy = 6A3C7982796544B6E6117991E0501826 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D2ED34DCB28393F6C51CDEB599E08AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A4F7B96E5B48DF06A3D8E7BBE1F1EA5 /* Wormholy.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Wormholy/Wormholy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Wormholy/Wormholy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Wormholy/Wormholy.modulemap";
+				PRODUCT_MODULE_NAME = Wormholy;
+				PRODUCT_NAME = Wormholy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		101B523F413AEA3B9C1E37F065E7FF7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 317E6E97393177328DB7ED575E43EF3D /* Cordova.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cordova/Cordova-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cordova/Cordova-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Cordova/Cordova.modulemap";
+				PRODUCT_MODULE_NAME = Cordova;
+				PRODUCT_NAME = Cordova;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		87CAD21206F01CF9F435444E32170D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B56B3158C7A1580A22D90AA1F796A829 /* Wormholy.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Wormholy";
+				IBSC_MODULE = Wormholy;
+				INFOPLIST_FILE = "Target Support Files/Wormholy/ResourceBundle-Wormholy-Wormholy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = Wormholy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		8B089B7CAE3110CAE8EFBB063995AB4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B56B3158C7A1580A22D90AA1F796A829 /* Wormholy.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Wormholy/Wormholy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Wormholy/Wormholy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Wormholy/Wormholy.modulemap";
+				PRODUCT_MODULE_NAME = Wormholy;
+				PRODUCT_NAME = Wormholy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		92486E5E72E54FAF60E1A7D022C21B10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		934ED2B84836A780113D1F63484628B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9E3974ABF16A8362B845E2580C037C7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03D5207A0404F480566379B8B4A93C04 /* Pods-CordovaDemoApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CordovaDemoApp/Pods-CordovaDemoApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CordovaDemoApp/Pods-CordovaDemoApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A5421C24EF8ED89682F41CBBC42255CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B67D15A9A7B2DE78041227581F642F32 /* Cordova.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Cordova/Cordova-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cordova/Cordova-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Cordova/Cordova.modulemap";
+				PRODUCT_MODULE_NAME = Cordova;
+				PRODUCT_NAME = Cordova;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C2603781B6C20500E7A8C9FA1150BBB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC7B6C68B1F26FEDC2196ADB53CBBEF8 /* Pods-CordovaDemoApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CordovaDemoApp/Pods-CordovaDemoApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CordovaDemoApp/Pods-CordovaDemoApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C4C0109BEC5BE6151D1BF6609FB52EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A4F7B96E5B48DF06A3D8E7BBE1F1EA5 /* Wormholy.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Wormholy";
+				IBSC_MODULE = Wormholy;
+				INFOPLIST_FILE = "Target Support Files/Wormholy/ResourceBundle-Wormholy-Wormholy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = Wormholy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				934ED2B84836A780113D1F63484628B2 /* Debug */,
+				92486E5E72E54FAF60E1A7D022C21B10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F96294D89AA51FBDFABCE0B3E51FBD7 /* Build configuration list for PBXNativeTarget "Cordova" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5421C24EF8ED89682F41CBBC42255CC /* Debug */,
+				101B523F413AEA3B9C1E37F065E7FF7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4FC1F2DCD724C0C62379A878C2FD7D1 /* Build configuration list for PBXNativeTarget "Wormholy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B089B7CAE3110CAE8EFBB063995AB4A /* Debug */,
+				0D2ED34DCB28393F6C51CDEB599E08AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A55CB94A9BC09F9FCBC4EC34327D371E /* Build configuration list for PBXNativeTarget "Wormholy-Wormholy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87CAD21206F01CF9F435444E32170D74 /* Debug */,
+				C4C0109BEC5BE6151D1BF6609FB52EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E30EF7359A1B4B30FDD25087979D19E4 /* Build configuration list for PBXNativeTarget "Pods-CordovaDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2603781B6C20500E7A8C9FA1150BBB6 /* Debug */,
+				9E3974ABF16A8362B845E2580C037C7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
