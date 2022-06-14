@@ -76,8 +76,25 @@ function onDeviceReady() {
     // У нас нет сервера и мы просим приложение авторизовать нас на кондо:
     // 1) запрашиваем у основного приложения авторизацию по клиент айди и секрет и получаем токен и рефреш токен
     // 2) при необходимости просим обновить
-    const clientSecret = 'V3KQHSjCYR6P9zPQxEYc8KWwfi9XNVmn';
-    cordova.plugins.condo.requestAuthorization(clientId, clientSecret, function(response) {
+    // const clientSecret = 'V3KQHSjCYR6P9zPQxEYc8KWwfi9XNVmn';
+    // cordova.plugins.condo.requestAuthorization(clientId, clientSecret, function(response) {
+    //     console.log(response);
+    //     console.log('recive responce result => ', response);
+    // }, function(error) {
+    //     console.log(error);
+    // })
+
+    // DOMA!
+    // Вариант авторизации номер три
+    // У нас есть сервер и мы просим приложение провести полную клиентскую авторизацию с редиректом на сервер миниаппа и обратно:
+    // 1) запрашиваем у основного приложения авторизацию по клиент айди и секрет и получаем токен и рефреш токен
+    // 2) при необходимости просим обновить
+
+    const miniappServerRedirectUri = 'https://doma-miniapp.hiplabs.dev/oidc/callback';
+    const authorizationComplitionRedirectUri = 'https://doma2-miniapp.hiplabs.dev/';
+    const mClientId = 'baglansariev-dev-app';
+
+    cordova.plugins.condo.requestServerAuthorization(mClientId, miniappServerRedirectUri, authorizationComplitionRedirectUri, function(response) {
         console.log(response);
         console.log('recive responce result => ', response);
     }, function(error) {

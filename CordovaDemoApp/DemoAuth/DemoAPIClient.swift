@@ -32,12 +32,14 @@ public class DemoAPIClient: NSObject, URLSessionTaskDelegate {
     
     var complition: ((String?)->Void)?
     var result: String?
+    var complitionUrl: String?
     
-    public func performRequest(url: String, isPost: Bool = false, body: String? = nil, cookie: HTTPCookie? = nil, authorization: String? = nil, success: @escaping (String?)->Void, failed: @escaping ([Error])->Void) {
+    public func performRequest(url: String, isPost: Bool = false, body: String? = nil, cookie: HTTPCookie? = nil, authorization: String? = nil, complitionRedirect: String? = nil, success: @escaping (String?)->Void, failed: @escaping ([Error])->Void) {
         guard let url = URL(string: url) else {
             failed([])
             return
         }
+        self.complitionUrl = complitionRedirect
         self.complition = success
         
         var request = URLRequest(url: url)
@@ -62,21 +64,35 @@ public class DemoAPIClient: NSObject, URLSessionTaskDelegate {
                 DispatchQueue.main.async {
                     self.complition?(result)
                 }
-            } else {
-                failed([error ?? NSError(domain: "com.doma.domain", code: -1, userInfo: nil)])
             }
+//            else {
+//                failed([error ?? NSError(domain: "com.doma.domain", code: -1, userInfo: nil)])
+//            }
         }.resume()
     }
     
     public func urlSession(_ session: URLSession, task: URLSessionTask, willPerformHTTPRedirection response: HTTPURLResponse, newRequest request: URLRequest, completionHandler: @escaping (URLRequest?) -> Void) {
+        if let complitionUrl = complitionUrl, !(request.url?.absoluteString.hasPrefix(complitionUrl) ?? false) {
+            completionHandler(request)
+            return
+        }
+        if complitionUrl != nil {
+            self.complition?(request.url?.absoluteString)
+            self.complition = nil
+            task.cancel()
+            //        это ошибка... специально сделанная)
+            completionHandler(nil)
+            return
+        }
         if ((request.url?.absoluteString.hasPrefix("https://v1.doma.ai/oidc") ?? false) && (task.originalRequest?.url?.absoluteString.hasPrefix("https://v1.doma.ai/oidc") ?? false)) ||
             ((request.url?.absoluteString.hasPrefix("https://v1.doma.ai/auth") ?? false) && (task.originalRequest?.url?.absoluteString.hasPrefix("https://v1.doma.ai/auth") ?? false)){
             completionHandler(request)
             return
         }
         self.complition?(request.url?.absoluteString)
+        self.complition = nil
         task.cancel()
 //        это ошибка... специально сделанная)
-//        completionHandler(nil)
+        completionHandler(nil)
     }
 }

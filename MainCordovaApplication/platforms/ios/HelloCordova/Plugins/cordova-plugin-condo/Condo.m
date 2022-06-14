@@ -12,6 +12,7 @@
 - (void)requestAuthorizationCode:(CDVInvokedUrlCommand *)command;
 - (void)requestAuthorization:(CDVInvokedUrlCommand *)command;
 - (void)closeApplication:(CDVInvokedUrlCommand *)command;
+- (void)requestServerAuthorization:(CDVInvokedUrlCommand *)command;
 #ifdef DOMA
 @property (nonatomic, strong) DemoApplicationMainAppAPI *api;
 @property (nonatomic, strong) DemoApplicationServerEmulation *serverApi;
@@ -85,6 +86,41 @@
             }
             else
             {
+                [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR] callbackId:command.callbackId];
+            }
+        }];
+#else
+        [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"test_code_for_auth"] callbackId:command.callbackId];
+#endif
+    } 
+    else 
+    {
+        [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR] callbackId:command.callbackId];
+    }
+}
+
+- (BOOL)nonEmptyString:(NSString *)string
+{
+    return (string != nil && [string isKindOfClass:[NSString class]] && [string length] > 0);
+}
+
+- (void)requestServerAuthorization:(CDVInvokedUrlCommand *)command
+{
+    NSString *clientId = [command.arguments objectAtIndex:0];
+    NSString *miniappServerRedirectUri = [command.arguments objectAtIndex:1];
+    NSString *authorizationComplitionRedirectUri = [command.arguments objectAtIndex:2];
+    
+    if ([self nonEmptyString:clientId] && [self nonEmptyString:miniappServerRedirectUri] && [self nonEmptyString:authorizationComplitionRedirectUri]) 
+    {
+#ifdef DOMA
+        if (self.api == nil)
+        {
+            self.api = [[DemoApplicationMainAppAPI alloc] init];
+        }
+        [self.api getFullAuthWithClient_id:clientId redirect_uri:miniappServerRedirectUri complition_redirect:authorizationComplitionRedirectUri complition:^(NSString * _Nullable) {
+            if ([self nonEmptyString:result]) {
+                [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:result] callbackId:command.callbackId];
+            } else {
                 [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR] callbackId:command.callbackId];
             }
         }];

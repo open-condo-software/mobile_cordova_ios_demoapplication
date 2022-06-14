@@ -19,8 +19,9 @@ import Foundation
     let state = UUID().uuidString
     
     // этот токен под которым авторизован реальный пользователь в приложении домов
-    let demotoken = "KlYvcTXy2q-l9BFp6zAW9rTP5zkEAT8G.6MUsnOI9KbOQTZMKkMiRw/r/Q8ixE2XWRWZ5J3WCFnI"
-    public func authorizationCookie(for domain: String = "v1.doma.ai") -> HTTPCookie? {
+//    let demotoken = "KlYvcTXy2q-l9BFp6zAW9rTP5zkEAT8G.6MUsnOI9KbOQTZMKkMiRw/r/Q8ixE2XWRWZ5J3WCFnI"
+    let demotoken = "HhjiqRZJQhDDfEmybRd-Mt9ABgxDmsPn.jTHgITTlYdckP1HtzzCHI5HQIRw+nW6v/4X/DDDvxus"
+    public func authorizationCookie(for domain: String = "condo.d.doma.ai") -> HTTPCookie? {
         return HTTPCookie.init(properties: [.domain: domain,
                                             .path: "/",
                                             .name: "keystone.sid",
@@ -28,6 +29,19 @@ import Foundation
                                             .secure: true,
                                             .expires: NSDate(timeIntervalSinceNow: 31656926),
                                             .httpOnly: true])
+    }
+    
+    @objc public func getFullAuth(client_id: String, redirect_uri: String, complition_redirect: String, complition: @escaping (String?) -> Void) {
+        let url = "https://condo.d.doma.ai/oidc/auth?response_type=code&client_id=\(client_id)&redirect_uri=\(redirect_uri)&scope=openid&state=\(state)"
+        client.performRequest(url: url, cookie: authorizationCookie(), complitionRedirect: complition_redirect) { data in
+            if let data = data, data.starts(with: complition_redirect) {
+                complition(data)
+                return
+            }
+            complition(nil)
+        } failed: { errors in
+            complition(nil)
+        }
     }
     
     @objc public func getCode(complition: @escaping (String?) -> Void) {
