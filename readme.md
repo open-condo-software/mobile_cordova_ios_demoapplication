@@ -90,7 +90,7 @@ ___
 
 
  ---
-# Commin methods. <a name="common_methods"></a>
+# Common methods. <a name="common_methods"></a>
 - authorization
 
     function requestServerAuthorizationByUrl(miniapp_server_init_auth_url, custom_params_reserver_for_future_use, success, error) 
