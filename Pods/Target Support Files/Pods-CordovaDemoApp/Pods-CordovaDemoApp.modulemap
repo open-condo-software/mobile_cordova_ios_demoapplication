@@ -1,0 +1,6 @@
+framework module Pods_CordovaDemoApp {
+  umbrella header "Pods-CordovaDemoApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

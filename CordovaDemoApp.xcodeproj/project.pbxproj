@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D063F93162E9D2670EE47B5 /* Pods_CordovaDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB82F009E656641EA3279E60 /* Pods_CordovaDemoApp.framework */; };
+		C168CB6028184EC900E2FF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB5F28184EC900E2FF0C /* AppDelegate.swift */; };
+		C168CB6228184EC900E2FF0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB6128184EC900E2FF0C /* SceneDelegate.swift */; };
+		C168CB6428184EC900E2FF0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB6328184EC900E2FF0C /* ViewController.swift */; };
+		C168CB6728184EC900E2FF0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C168CB6528184EC900E2FF0C /* Main.storyboard */; };
+		C168CB6928184ECD00E2FF0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C168CB6828184ECD00E2FF0C /* Assets.xcassets */; };
+		C168CB6C28184ECD00E2FF0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C168CB6A28184ECD00E2FF0C /* LaunchScreen.storyboard */; };
+		C168CB74281881B200E2FF0C /* DemoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB73281881B200E2FF0C /* DemoAPIClient.swift */; };
+		C18CC08C28204FF0005B84E5 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = C18CC08928204FF0005B84E5 /* config.xml */; };
+		C18CC0AF28205977005B84E5 /* www in Resources */ = {isa = PBXBuildFile; fileRef = C18CC0AE28205977005B84E5 /* www */; };
+		C1CF69FA281F4600003B7872 /* DemoApplicationMainAppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF69F9281F4600003B7872 /* DemoApplicationMainAppAPI.swift */; };
+		C1D4D1C72828841F00480EAC /* MiniappView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4D1C62828841F00480EAC /* MiniappView.swift */; };
+		C1D4D1E42828966400480EAC /* condo.js in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1CD2828966400480EAC /* condo.js */; };
+		C1D4D1E72828966400480EAC /* Condo.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D4D1D22828966400480EAC /* Condo.m */; };
+		C1D4D1E92828966400480EAC /* fetch.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1D52828966400480EAC /* fetch.json */; };
+		C1D4D1EA2828966400480EAC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1D72828966400480EAC /* LICENSE */; };
+		C1D4D1EB2828966400480EAC /* plugin.xml in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1D82828966400480EAC /* plugin.xml */; };
+		C1D4D1EC2828966400480EAC /* RELEASENOTES.md in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1D92828966400480EAC /* RELEASENOTES.md */; };
+		C1D4D1ED2828966400480EAC /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1DA2828966400480EAC /* NOTICE */; };
+		C1D4D1EE2828966400480EAC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1DB2828966400480EAC /* README.md */; };
+		C1D4D1EF2828966400480EAC /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1DC2828966400480EAC /* package.json */; };
+		C1D4D1F02828966400480EAC /* CONTRIBUTING.md in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1DD2828966400480EAC /* CONTRIBUTING.md */; };
+		C1D4D1F22828966400480EAC /* ios.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1E12828966400480EAC /* ios.json */; };
+		C1D4D1F52828C28200480EAC /* CondoSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4D1F42828C28200480EAC /* CondoSupport.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03FDF17CA41EB4769EF3A123 /* Pods-CordovaDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CordovaDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-CordovaDemoApp/Pods-CordovaDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C149F0CD281B30E30001B4D7 /* CordovaDemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CordovaDemoApp.entitlements; sourceTree = "<group>"; };
+		C168CB5C28184EC900E2FF0C /* CordovaDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CordovaDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C168CB5F28184EC900E2FF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C168CB6128184EC900E2FF0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C168CB6328184EC900E2FF0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C168CB6628184EC900E2FF0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C168CB6828184ECD00E2FF0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C168CB6B28184ECD00E2FF0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C168CB6D28184ECD00E2FF0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C168CB73281881B200E2FF0C /* DemoAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoAPIClient.swift; sourceTree = "<group>"; };
+		C18CC08928204FF0005B84E5 /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
+		C18CC0AE28205977005B84E5 /* www */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = www; path = MainCordovaApplication/platforms/ios/www; sourceTree = SOURCE_ROOT; };
+		C1CF69F9281F4600003B7872 /* DemoApplicationMainAppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApplicationMainAppAPI.swift; sourceTree = "<group>"; };
+		C1D4D1C62828841F00480EAC /* MiniappView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniappView.swift; sourceTree = "<group>"; };
+		C1D4D1CB2828966400480EAC /* plugin.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = plugin.xml; sourceTree = "<group>"; };
+		C1D4D1CD2828966400480EAC /* condo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = condo.js; sourceTree = "<group>"; };
+		C1D4D1CE2828966400480EAC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C1D4D1CF2828966400480EAC /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		C1D4D1D22828966400480EAC /* Condo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Condo.m; sourceTree = "<group>"; };
+		C1D4D1D52828966400480EAC /* fetch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fetch.json; sourceTree = "<group>"; };
+		C1D4D1D72828966400480EAC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C1D4D1D82828966400480EAC /* plugin.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = plugin.xml; sourceTree = "<group>"; };
+		C1D4D1D92828966400480EAC /* RELEASENOTES.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = RELEASENOTES.md; sourceTree = "<group>"; };
+		C1D4D1DA2828966400480EAC /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = "<group>"; };
+		C1D4D1DB2828966400480EAC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C1D4D1DC2828966400480EAC /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		C1D4D1DD2828966400480EAC /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		C1D4D1E12828966400480EAC /* ios.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ios.json; sourceTree = "<group>"; };
+		C1D4D1F42828C28200480EAC /* CondoSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CondoSupport.swift; sourceTree = "<group>"; };
+		EB82F009E656641EA3279E60 /* Pods_CordovaDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CordovaDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4E9EA4CD9B1B905C029544B /* Pods-CordovaDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CordovaDemoApp.release.xcconfig"; path = "Target Support Files/Pods-CordovaDemoApp/Pods-CordovaDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C168CB5928184EC900E2FF0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D063F93162E9D2670EE47B5 /* Pods_CordovaDemoApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C168CB5328184EC800E2FF0C = {
+			isa = PBXGroup;
+			children = (
+				C168CB5E28184EC900E2FF0C /* CordovaDemoApp */,
+				C168CB5D28184EC900E2FF0C /* Products */,
+				E0D7A674E0F9EA1392619402 /* Pods */,
+				FEBA00B271BAAD1A3BB319C4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C168CB5D28184EC900E2FF0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C168CB5C28184EC900E2FF0C /* CordovaDemoApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C168CB5E28184EC900E2FF0C /* CordovaDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				C18CC0AE28205977005B84E5 /* www */,
+				C18CC08628204FF0005B84E5 /* Cordova */,
+				C1CF69F6281F4276003B7872 /* DemoAuth */,
+				C149F0CD281B30E30001B4D7 /* CordovaDemoApp.entitlements */,
+				C168CB5F28184EC900E2FF0C /* AppDelegate.swift */,
+				C1D4D1F32828C26700480EAC /* Support */,
+				C168CB6128184EC900E2FF0C /* SceneDelegate.swift */,
+				C168CB6328184EC900E2FF0C /* ViewController.swift */,
+				C1D4D1C62828841F00480EAC /* MiniappView.swift */,
+				C168CB6528184EC900E2FF0C /* Main.storyboard */,
+				C168CB6828184ECD00E2FF0C /* Assets.xcassets */,
+				C168CB6A28184ECD00E2FF0C /* LaunchScreen.storyboard */,
+				C168CB6D28184ECD00E2FF0C /* Info.plist */,
+			);
+			path = CordovaDemoApp;
+			sourceTree = "<group>";
+		};
+		C18CC08628204FF0005B84E5 /* Cordova */ = {
+			isa = PBXGroup;
+			children = (
+				C1D4D1C82828966400480EAC /* plugins */,
+				C18CC08928204FF0005B84E5 /* config.xml */,
+			);
+			path = Cordova;
+			sourceTree = "<group>";
+		};
+		C1CF69F6281F4276003B7872 /* DemoAuth */ = {
+			isa = PBXGroup;
+			children = (
+				C168CB73281881B200E2FF0C /* DemoAPIClient.swift */,
+				C1CF69F9281F4600003B7872 /* DemoApplicationMainAppAPI.swift */,
+			);
+			path = DemoAuth;
+			sourceTree = "<group>";
+		};
+		C1D4D1C82828966400480EAC /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				C1D4D1CA2828966400480EAC /* cordova-plugin-condo */,
+				C1D4D1D52828966400480EAC /* fetch.json */,
+				C1D4D1D62828966400480EAC /* cordova-plugin-whitelist */,
+				C1D4D1E12828966400480EAC /* ios.json */,
+			);
+			name = plugins;
+			path = MainCordovaApplication/plugins;
+			sourceTree = SOURCE_ROOT;
+		};
+		C1D4D1CA2828966400480EAC /* cordova-plugin-condo */ = {
+			isa = PBXGroup;
+			children = (
+				C1D4D1CB2828966400480EAC /* plugin.xml */,
+				C1D4D1CC2828966400480EAC /* www */,
+				C1D4D1CE2828966400480EAC /* README.md */,
+				C1D4D1CF2828966400480EAC /* package.json */,
+				C1D4D1D02828966400480EAC /* src */,
+			);
+			path = "cordova-plugin-condo";
+			sourceTree = "<group>";
+		};
+		C1D4D1CC2828966400480EAC /* www */ = {
+			isa = PBXGroup;
+			children = (
+				C1D4D1CD2828966400480EAC /* condo.js */,
+			);
+			path = www;
+			sourceTree = "<group>";
+		};
+		C1D4D1D02828966400480EAC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C1D4D1D12828966400480EAC /* ios */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C1D4D1D12828966400480EAC /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				C1D4D1D22828966400480EAC /* Condo.m */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		C1D4D1D62828966400480EAC /* cordova-plugin-whitelist */ = {
+			isa = PBXGroup;
+			children = (
+				C1D4D1D72828966400480EAC /* LICENSE */,
+				C1D4D1D82828966400480EAC /* plugin.xml */,
+				C1D4D1D92828966400480EAC /* RELEASENOTES.md */,
+				C1D4D1DA2828966400480EAC /* NOTICE */,
+				C1D4D1DB2828966400480EAC /* README.md */,
+				C1D4D1DC2828966400480EAC /* package.json */,
+				C1D4D1DD2828966400480EAC /* CONTRIBUTING.md */,
+				C1D4D1DE2828966400480EAC /* src */,
+			);
+			path = "cordova-plugin-whitelist";
+			sourceTree = "<group>";
+		};
+		C1D4D1DE2828966400480EAC /* src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C1D4D1F32828C26700480EAC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				C1D4D1F42828C28200480EAC /* CondoSupport.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		E0D7A674E0F9EA1392619402 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03FDF17CA41EB4769EF3A123 /* Pods-CordovaDemoApp.debug.xcconfig */,
+				F4E9EA4CD9B1B905C029544B /* Pods-CordovaDemoApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FEBA00B271BAAD1A3BB319C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB82F009E656641EA3279E60 /* Pods_CordovaDemoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C168CB5B28184EC900E2FF0C /* CordovaDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C168CB7028184ECD00E2FF0C /* Build configuration list for PBXNativeTarget "CordovaDemoApp" */;
+			buildPhases = (
+				118C80868048D27F107397D5 /* [CP] Check Pods Manifest.lock */,
+				C1E9304B282ACBDF0017B4A4 /* ShellScript */,
+				C168CB5828184EC900E2FF0C /* Sources */,
+				C168CB5928184EC900E2FF0C /* Frameworks */,
+				C168CB5A28184EC900E2FF0C /* Resources */,
+				CF75E11193E0934B9D6FDD7E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CordovaDemoApp;
+			productName = CordovaDemoApp;
+			productReference = C168CB5C28184EC900E2FF0C /* CordovaDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C168CB5428184EC800E2FF0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					C168CB5B28184EC900E2FF0C = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = C168CB5728184EC800E2FF0C /* Build configuration list for PBXProject "CordovaDemoApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C168CB5328184EC800E2FF0C;
+			productRefGroup = C168CB5D28184EC900E2FF0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C168CB5B28184EC900E2FF0C /* CordovaDemoApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C168CB5A28184EC900E2FF0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C168CB6C28184ECD00E2FF0C /* LaunchScreen.storyboard in Resources */,
+				C1D4D1F02828966400480EAC /* CONTRIBUTING.md in Resources */,
+				C168CB6928184ECD00E2FF0C /* Assets.xcassets in Resources */,
+				C18CC08C28204FF0005B84E5 /* config.xml in Resources */,
+				C1D4D1E92828966400480EAC /* fetch.json in Resources */,
+				C1D4D1ED2828966400480EAC /* NOTICE in Resources */,
+				C1D4D1EE2828966400480EAC /* README.md in Resources */,
+				C1D4D1F22828966400480EAC /* ios.json in Resources */,
+				C1D4D1EA2828966400480EAC /* LICENSE in Resources */,
+				C18CC0AF28205977005B84E5 /* www in Resources */,
+				C168CB6728184EC900E2FF0C /* Main.storyboard in Resources */,
+				C1D4D1EC2828966400480EAC /* RELEASENOTES.md in Resources */,
+				C1D4D1EF2828966400480EAC /* package.json in Resources */,
+				C1D4D1E42828966400480EAC /* condo.js in Resources */,
+				C1D4D1EB2828966400480EAC /* plugin.xml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		118C80868048D27F107397D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CordovaDemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1E9304B282ACBDF0017B4A4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# cd $PROJECT_DIR/MainCordovaApplication\n# /opt/homebrew/bin/cordova build ios\n";
+		};
+		CF75E11193E0934B9D6FDD7E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CordovaDemoApp/Pods-CordovaDemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CordovaDemoApp/Pods-CordovaDemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CordovaDemoApp/Pods-CordovaDemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C168CB5828184EC900E2FF0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C168CB6428184EC900E2FF0C /* ViewController.swift in Sources */,
+				C1D4D1C72828841F00480EAC /* MiniappView.swift in Sources */,
+				C168CB6028184EC900E2FF0C /* AppDelegate.swift in Sources */,
+				C168CB74281881B200E2FF0C /* DemoAPIClient.swift in Sources */,
+				C1CF69FA281F4600003B7872 /* DemoApplicationMainAppAPI.swift in Sources */,
+				C1D4D1E72828966400480EAC /* Condo.m in Sources */,
+				C1D4D1F52828C28200480EAC /* CondoSupport.swift in Sources */,
+				C168CB6228184EC900E2FF0C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C168CB6528184EC900E2FF0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C168CB6628184EC900E2FF0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C168CB6A28184ECD00E2FF0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C168CB6B28184ECD00E2FF0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C168CB6E28184ECD00E2FF0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C168CB6F28184ECD00E2FF0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C168CB7128184ECD00E2FF0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03FDF17CA41EB4769EF3A123 /* Pods-CordovaDemoApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CordovaDemoApp/CordovaDemoApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9KD488X5N;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DOMA=1",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CordovaDemoApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DDOMA";
+				PRODUCT_BUNDLE_IDENTIFIER = cry.CordovaDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG DOMA";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C168CB7228184ECD00E2FF0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E9EA4CD9B1B905C029544B /* Pods-CordovaDemoApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CordovaDemoApp/CordovaDemoApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9KD488X5N;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"DOMA=1",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CordovaDemoApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DDOMA";
+				PRODUCT_BUNDLE_IDENTIFIER = cry.CordovaDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DOMA;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C168CB5728184EC800E2FF0C /* Build configuration list for PBXProject "CordovaDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C168CB6E28184ECD00E2FF0C /* Debug */,
+				C168CB6F28184ECD00E2FF0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C168CB7028184ECD00E2FF0C /* Build configuration list for PBXNativeTarget "CordovaDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C168CB7128184ECD00E2FF0C /* Debug */,
+				C168CB7228184ECD00E2FF0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C168CB5428184EC800E2FF0C /* Project object */;
+}
