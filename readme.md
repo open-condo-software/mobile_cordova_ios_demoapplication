@@ -6,10 +6,6 @@ You can find the cordova app itself in the MainCordovaApplication folder, where 
 
 
 ___
-# Documentation in other languages
-- [Russian](readme_translated_ru.md)
-
-___
 # Content.
 1. [Getting started](#getting_started)
 2. [Common methods.](#common_methods)
