@@ -10,6 +10,10 @@ ___
 1. [Getting started](#getting_started)
 2. [Common methods.](#common_methods)
 3. [Testing.](#testing)
+
+    3.1 [Testing in Demo environment](#testing-demo)
+    
+    3.2 [Testing in Production environment](#testing-production)
 4. [Publishing.](#publishing)
 
 
@@ -123,6 +127,19 @@ ___
 
 ---
 # Testing(as of November 1, 2022).  <a name="testing"></a>
+## Demo environment  <a name="testing-demo"></a>
+1. Open safari on the device running the simulator with your application inside the CordovaDemoApp
+2. Open safari settings
+    
+    ![Settings](./ReadmeImages/Testing/Demo/2.png)
+3. Open the Advanced tab and activate the "Show Develop menu in menu bar" setting
+    ![ShowDeveloperMenu](./ReadmeImages/Testing/Demo/3.png)
+4. Open the Develop menu in Safari, find your simulator and select your mini-application there.
+    ![OpenDeveloperMenu](./ReadmeImages/Testing/Demo/4.png)
+5. The standard Safari debugging tools connected to your mini-application will open
+    ![DebuggingToolsShowed](./ReadmeImages/Testing/Demo/5.png)
+
+## Production environment  <a name="testing-production"></a>
 1.  Open the project directory and navigate to the subdirectory 
         
         /MainCordovaApplication/platforms/ios/
