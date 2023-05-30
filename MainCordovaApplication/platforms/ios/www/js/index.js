@@ -69,6 +69,13 @@ function onDeviceReady() {
         }
     }
 
+    
+    cordova.plugins.condo.getLaunchContext(function(response) {
+        console.log("current context => ", response);
+    }, function(error) {
+        console.log(error);
+    })
+    
     // send post request
     fetch('https://miniapp.d.doma.ai/admin/api', options)
         .then(res => res.json())

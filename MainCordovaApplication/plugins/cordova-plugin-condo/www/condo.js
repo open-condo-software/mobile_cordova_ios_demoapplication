@@ -19,3 +19,7 @@ exports.closeApplication = function (success, error) {
 exports.getCurrentResident = function (success, error) {
     exec(success, error, 'Condo', 'getCurrentResident', []);
 };
+
+exports.getLaunchContext = function (success, error) {
+    exec(success, error, 'Condo', 'getLaunchContext', []);
+};

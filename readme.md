@@ -126,6 +126,15 @@ ___
             cordova.plugins.condo.closeApplication(function(response) {}, function(error) {});
 
 
+- application launch context (from notification)
+
+    function getLaunchContext(success, error)
+
+    example:
+
+            cordova.plugins.condo.getLaunchContext(function(response) {}, function(error) {});
+
+
 ---
 # Important differences. <a name="important_differences"></a>
 Unlike the standard Cordova, our application uses an additional configuration file, which must be located in the www directory and named **native_config.json**
