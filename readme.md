@@ -16,6 +16,7 @@ ___
     
     4.2 [Testing in Production environment](#testing-production)
 5. [Publishing.](#publishing)
+6. [Plugin addition.](#plugin_addition)
 
 
 ---
@@ -188,3 +189,37 @@ This file is a json file and may contain the following fields:
 ---
 # Publishing <a name="publishing"></a>
 To publish the mini-application, send the archive you received during the testing phase to the people at Doma with whom you interact. 
+
+
+---
+# Plugin addition. <a name="plugin_addition"></a>
+using the Device plugin as an example
+1. Adding a plugin to the Cordova project
+- cd MainCordovaApplication
+- cordova plugin add cordova-plugin-device
+
+2. Adding native code to the main project
+- open the plugins directory
+![PluginsDirectory](./ReadmeImages/Plugins/Native/1.png)
+
+- drag and drop the directory of the new plugin into the plugins directory of the main project
+![DragAndDropPluginsDirectory](./ReadmeImages/Plugins/Native/2.png)
+
+- expand the resulting directory and select everything except the src/ios directory
+![SelectExceptPluginsDirectory](./ReadmeImages/Plugins/Native/3.png)
+
+- press delete and select Remove References
+![ClearPluginsDirectory](./ReadmeImages/Plugins/Native/4.png)
+
+3. Adding a dependency
+- open MainCordovaApplication/platforms/ios/HelloCordova/config.xml file
+
+- select and copy everything new that was added when installing the plugin
+![CopyDeps](./ReadmeImages/Plugins/Deps/1.png)
+
+- Paste this into the appropriate places in the Cordova/config file of the main project
+![PasteDeps](./ReadmeImages/Plugins/Deps/2.png)
+
+4. just need to write some code and check how it works
+![AddCode](./ReadmeImages/Plugins/Test/1.png)
+![RunAndCheck](./ReadmeImages/Plugins/Test/2.png)
