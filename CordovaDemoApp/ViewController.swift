@@ -25,6 +25,13 @@ class AutoClearCordovaController: CDVViewController {
             })
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if #available(iOS 16.4, *) {
+            (self.webView as? WKWebView)?.isInspectable = true
+        }
+    }
 }
 
 class ViewController: UIViewController {
