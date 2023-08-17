@@ -4,6 +4,11 @@ This is a Condo Miniapps playground for iOS, it is still under development, but 
 
 You can find the cordova app itself in the MainCordovaApplication folder, where in the www folder there is an example of interaction with the native api and you can develop something of your own.
 
+___
+# Important! Known issues.
+1. only version 10 of Cordova is currently supported
+2. Ant.design components do not work
+
 
 ___
 # Content.
