@@ -23,3 +23,7 @@ exports.getCurrentResident = function (success, error) {
 exports.getLaunchContext = function (success, error) {
     exec(success, error, 'Condo', 'getLaunchContext', []);
 };
+
+exports.setInputsEnabled = function (arg0, success, error) {
+    exec(success, error, 'Condo', 'setInputsEnabled', [arg0]);
+};

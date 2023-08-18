@@ -7,7 +7,7 @@ You can find the cordova app itself in the MainCordovaApplication folder, where 
 ___
 # Important! Known issues.
 1. only version 10 of Cordova is currently supported
-2. Ant.design components do not work
+2. some inputs may not work until you call the corresponding setInputsEnabled(true) method. Don't forget to disable this back when the user leaves the screen where the inputs that required it are located.
 
 
 ___
@@ -140,6 +140,20 @@ ___
 
             cordova.plugins.condo.getLaunchContext(function(response) {}, function(error) {});
 
+
+- activation of additional events required for some inputs
+
+    function setInputsEnabled(enabled, success, error)
+
+    example:
+
+            cordova.plugins.condo.setInputsEnabled(true, function(response) {}, function(error) {});
+
+    Important! Don't forget to disable this back when the user leaves the screen where the inputs that required it are located.
+
+    example:
+
+            cordova.plugins.condo.setInputsEnabled(false, function(response) {}, function(error) {});
 
 ---
 # Important differences. <a name="important_differences"></a>

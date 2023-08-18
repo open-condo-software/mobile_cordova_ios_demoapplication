@@ -15,6 +15,7 @@
 - (void)requestServerAuthorizationByUrl:(CDVInvokedUrlCommand *)command;
 - (void)openURLWithFallback:(CDVInvokedUrlCommand *)command;
 - (void)getLaunchContext:(CDVInvokedUrlCommand *)command;
+- (void)setInputsEnabled:(CDVInvokedUrlCommand *)command;
 #ifdef DOMA
 @property (nonatomic, strong) DemoApplicationMainAppAPI *api;
 #endif
@@ -135,6 +136,17 @@
 {
     NSString *context = @"{\"test\": 1}";
     [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:context] callbackId:command.callbackId];
+}
+
+- (void)setInputsEnabled:(CDVInvokedUrlCommand *)command
+{
+    NSNumber *interactionEnabled = [command.arguments objectAtIndex:0];
+    if ([self.viewController isKindOfClass:[CDVViewController class]]) {
+        if (@available(iOS 14.5, *)) {
+            [((WKWebView *)((CDVViewController *)self.viewController).webView).configuration.preferences setTextInteractionEnabled:[interactionEnabled boolValue]];
+        }
+    }
+    [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
 }
 
 @end
