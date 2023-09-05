@@ -37,49 +37,54 @@ ___
 
     - homebrew installation
     
-            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        then run the three commands suggested in the terminal to add homebrew to the environment variables
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        
+    then run the three commands suggested in the terminal to add homebrew to the environment variables
 
-            echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
-            echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-            eval "$(/opt/homebrew/bin/brew shellenv)"
+        echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
+        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+        eval "$(/opt/homebrew/bin/brew shellenv)"
 
     - cocoapods installation
 
-            brew install cocoapods
-        Note that the installation is not done in the recommended way, but through a third-party package manager. if you install any other way, you will get errors while working on modern hardware.
+        brew install cocoapods
 
-    - installing nvm, node and npm
+    Note that the installation is not done in the recommended way, but through a third-party package manager. if you install any other way, you will get errors while working on modern hardware.
 
-        https://github.com/nvm-sh/nvm#installing-and-updating
+    - installing nvm, node and npm (or yarn)
 
-    - cordova installation
+    https://github.com/nvm-sh/nvm#installing-and-updating
 
-            npm install -g cordova
+    - install cordova and required packages
+
+        cd MainCordovaApplication
+        npm install
+
+    You can also use the command `yarn install` if you are using Yarn as your package manager.
 
 2. Editing the application
 
-    - open the project directory and go to the /MainCordovaApplication/www subdirectory
-        
-        it will contain your application code, edit it freely
+    - Open the project directory and navigate to the `/MainCordovaApplication/www` subdirectory, where you will find the application code. Feel free to make any necessary edits.
     
-    - after editing the code in the MainCordovaApplication directory, run the command
+    - After editing the code in the MainCordovaApplication directory, run the command
 
-            cordova prepare ios
-        this will prepare all your changes for launch
+        npm run cordova prepare ios
+
+    You can also use the command `yarn cordova prepare ios` if you are using Yarn as your package manager.
     
 3. Launching and testing the application
 
-    - in the main project directory, run the command
+    - In the main project directory, execute the following command:
 
-            pod install
-        this command only needs to be executed once before the first run
+        pod install
+
+    This command needs to be executed only once, before the first run.
     
-    - in the main project directory, run the file CordovaDemoApp.xcworkspace. Pay attention to the extension.
+    - In the main project directory, locate and open the file named 'CordovaDemoApp.xcworkspace'. Please take note of the file extension.
 
-    - after opening the project in Xcode, run it
+    - After you have opened the project in Xcode, proceed to run it.
             
-            cmd + R
+        cmd + R
 
 4. Optimizing
     
@@ -94,66 +99,6 @@ ___
 
             path/to/installed/cordova prepare ios 
         after that, each time you start the project, the corresponding command will be executed automatically.
-
-
- ---
-# Common methods. <a name="common_methods"></a>
-- authorization
-
-    function requestServerAuthorizationByUrl(miniapp_server_init_auth_url, custom_params_reserver_for_future_use, success, error) 
-
-    example:
-
-            cordova.plugins.condo.requestServerAuthorizationByUrl('https://miniapp.d.doma.ai/oidc/auth', {}, function(response) {
-                console.log('recive authorication result => ', JSON.stringify(response));
-                window.location.reload();
-            }, function(error) {
-                console.log(error);
-            });
-
-- obtaining a current resident/address
-
-    function getCurrentResident(success, error)
-
-    example:
-
-            cordova.plugins.condo.getCurrentResident(function(response) {
-                console.log("current resident\address => ", JSON.stringify(response));
-            }, function(error) {
-                console.log(error);
-            });
-
-- application closing
-
-    function closeApplication(success, error)
-
-    example:
-
-            cordova.plugins.condo.closeApplication(function(response) {}, function(error) {});
-
-
-- application launch context (from notification)
-
-    function getLaunchContext(success, error)
-
-    example:
-
-            cordova.plugins.condo.getLaunchContext(function(response) {}, function(error) {});
-
-
-- activation of additional events required for some inputs
-
-    function setInputsEnabled(enabled, success, error)
-
-    example:
-
-            cordova.plugins.condo.setInputsEnabled(true, function(response) {}, function(error) {});
-
-    Important! Don't forget to disable this back when the user leaves the screen where the inputs that required it are located.
-
-    example:
-
-            cordova.plugins.condo.setInputsEnabled(false, function(response) {}, function(error) {});
 
 ---
 # Important differences. <a name="important_differences"></a>
@@ -213,9 +158,14 @@ To publish the mini-application, send the archive you received during the testin
 ---
 # Plugin addition. <a name="plugin_addition"></a>
 using the Device plugin as an example
+
 1. Adding a plugin to the Cordova project
-- cd MainCordovaApplication
-- cordova plugin add cordova-plugin-device
+
+```
+cd MainCordovaApplication
+npm run cordova plugin add cordova-plugin-device
+# or `yarn cordova plugin add cordova-plugin-device` if you are using Yarn as your package manager
+```
 
 2. Adding native code to the main project
 - open the plugins directory
@@ -242,3 +192,62 @@ using the Device plugin as an example
 4. just need to write some code and check how it works
 ![AddCode](./ReadmeImages/Plugins/Test/1.png)
 ![RunAndCheck](./ReadmeImages/Plugins/Test/2.png)
+
+ ---
+# Common methods. <a name="common_methods"></a>
+- authorization
+
+    function requestServerAuthorizationByUrl(miniapp_server_init_auth_url, custom_params_reserver_for_future_use, success, error) 
+
+    example:
+
+            cordova.plugins.condo.requestServerAuthorizationByUrl('https://miniapp.d.doma.ai/oidc/auth', {}, function(response) {
+                console.log('recive authorication result => ', JSON.stringify(response));
+                window.location.reload();
+            }, function(error) {
+                console.log(error);
+            });
+
+- obtaining a current resident/address
+
+    function getCurrentResident(success, error)
+
+    example:
+
+            cordova.plugins.condo.getCurrentResident(function(response) {
+                console.log("current resident\address => ", JSON.stringify(response));
+            }, function(error) {
+                console.log(error);
+            });
+
+- application closing
+
+    function closeApplication(success, error)
+
+    example:
+
+            cordova.plugins.condo.closeApplication(function(response) {}, function(error) {});
+
+
+- application launch context (from notification)
+
+    function getLaunchContext(success, error)
+
+    example:
+
+            cordova.plugins.condo.getLaunchContext(function(response) {}, function(error) {});
+
+
+- activation of additional events required for some inputs
+
+    function setInputsEnabled(enabled, success, error)
+
+    example:
+
+            cordova.plugins.condo.setInputsEnabled(true, function(response) {}, function(error) {});
+
+    Important! Don't forget to disable this back when the user leaves the screen where the inputs that required it are located.
+
+    example:
+
+            cordova.plugins.condo.setInputsEnabled(false, function(response) {}, function(error) {});
