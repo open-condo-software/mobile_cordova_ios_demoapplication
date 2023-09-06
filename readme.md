@@ -15,15 +15,15 @@ ___
 # Content.
 
 1. [Getting started](#getting_started)
-2. [Common methods.](#common_methods)
-3. [Important differences.](#important_differences)
-4. [Testing.](#testing)
+2. [Important differences.](#important_differences)
+3. [Testing.](#testing)
 
-    4.1 [Testing in Demo environment](#testing-demo)
+    3.1 [Testing in Demo environment](#testing-demo)
     
-    4.2 [Testing in Production environment](#testing-production)
-5. [Publishing.](#publishing)
-6. [Plugin addition.](#plugin_addition)
+    3.2 [Testing in Production environment](#testing-production)
+4. [Publishing.](#publishing)
+5. [Plugin addition.](#plugin_addition)
+6. [Common methods.](#common_methods)
 
 ---
 
@@ -39,7 +39,7 @@ ___
 
     - Homebrew installation
     
-        `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         
         then run the three commands suggested in the terminal to add homebrew to the environment variables
 
@@ -51,7 +51,7 @@ ___
 
     - Cocoapods installation
 
-        `brew install cocoapods`
+            brew install cocoapods
 
         Note that the installation is not done in the recommended way, but through a third-party package manager. If you install it using any other method, you may encounter errors when working with modern hardware.
 
@@ -74,7 +74,7 @@ ___
     
     - After editing the code in the MainCordovaApplication directory, run the command
 
-        `npm run cordova prepare ios`
+            npm run cordova prepare ios
 
         You can also use the command `yarn cordova prepare ios` if you use Yarn as your package manager. Alternatively, you can use the `cordova prepare ios` command if you have Cordova installed globally, following the official instructions.
     
@@ -82,7 +82,7 @@ ___
 
     - In the main project directory, execute the following command:
 
-        `pod install`
+            pod install
 
         This command needs to be executed only once, before the first run.
     
