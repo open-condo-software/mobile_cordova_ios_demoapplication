@@ -38,8 +38,10 @@ ___
         Xcode -> Preferences -> Locations -> Command Line Tools
 
     - Homebrew installation
-    
-            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+        ```
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        ```
         
         then run the three commands suggested in the terminal to add homebrew to the environment variables
 
@@ -51,7 +53,9 @@ ___
 
     - Cocoapods installation
 
-            brew install cocoapods
+        ```
+        brew install cocoapods
+        ```
 
         Note that the installation is not done in the recommended way, but through a third-party package manager. If you install it using any other method, you may encounter errors when working with modern hardware.
 
@@ -70,27 +74,33 @@ ___
 
 2. Editing the application
 
-    - Open the project directory and navigate to the `/MainCordovaApplication/www` subdirectory, where you will find the application code. Feel free to make any necessary edits.
+    - Open the project directory and navigate to the `./MainCordovaApplication/www` subdirectory, where you will find the application code. Feel free to make any necessary edits.
     
     - After editing the code in the MainCordovaApplication directory, run the command
 
-            npm run cordova prepare ios
-
+        ```
+        npm run cordova prepare ios
+        ```
+        
         You can also use the command `yarn cordova prepare ios` if you use Yarn as your package manager. Alternatively, you can use the `cordova prepare ios` command if you have Cordova installed globally, following the official instructions.
     
 3. Launching and testing the application
 
     - In the main project directory, execute the following command:
 
-            pod install
+        ```
+        pod install
+        ```
 
         This command needs to be executed only once, before the first run.
     
     - In the main project directory, locate and open the file named 'CordovaDemoApp.xcworkspace'. Please take note of the file extension.
 
     - After you have opened the project in Xcode, proceed to run it.
-            
-        `cmd + R`
+
+        ```
+        cmd + R
+        ```
 
 4. Optimizing
     
@@ -103,7 +113,9 @@ ___
     - expand the 4th element in the list that opens called "Run Script"
     - add there a line by the example from the comment
 
-        `path/to/installed/cordova prepare ios`
+        ```
+        path/to/installed/cordova prepare ios
+        ```
        
         after that, each time you start the project, the corresponding command will be executed automatically.
 
@@ -136,29 +148,36 @@ This file is a json file and may contain the following fields:
     ![DebuggingToolsShowed](./ReadmeImages/Testing/Demo/5.png)
 
 ## Production environment  <a name="testing-production"></a>
-1.  Open the project directory and navigate to the subdirectory 
-        
-        /MainCordovaApplication/platforms/ios/
+
+1.  Open the project directory and navigate to the subdirectory `./MainCordovaApplication/platforms/ios/`
+    
     In it you will find the www directory.
+    
     Create a zip archive from the www directory by right-clicking on the folder and selecting Compress "www".
 
-2. Place the resulting archive in the iCloud storage of the account connected to the device on which you will be testing the application.
+3. Place the resulting archive in the iCloud storage of the account connected to the device on which you will be testing the application.
 
-3. Install the Doma app from the AppStore and log in to it
+4. Install the Doma app from the AppStore and log in to it
+
     https://apps.apple.com/us/app/doma/id1573897686
 
-4. The app you downloaded has built-in functionality for debugging mini-applications. To turn it on and off, you use links to open it on your device:
+6. The app you downloaded has built-in functionality for debugging mini-applications. To turn it on and off, you use links to open it on your device:
     
     - Switching on:
-    
-            ai.doma.client.service://miniapps/local/enable
+
+        ```
+        ai.doma.client.service://miniapps/local/enable
+        ```
+        
     - Switching off:
-                    
-            ai.doma.client.service://miniapps/local/disable
+  
+        ```            
+        ai.doma.client.service://miniapps/local/disable
+        ```
 
-5. Now, on the main application screen in the list of mini-applications, the last button allows you to download or replace a previously downloaded mini-application from files. When you click on it, you need to select the previously downloaded archive in iCloud.
+7. Now, on the main application screen in the list of mini-applications, the last button allows you to download or replace a previously downloaded mini-application from files. When you click on it, you need to select the previously downloaded archive in iCloud.
 
-6. The application loaded in this way has a built-in js console, which is accessible by clicking on the button at the bottom right of the open mini-application and is able to show a lot of additional information, including various errors.
+8. The application loaded in this way has a built-in js console, which is accessible by clicking on the button at the bottom right of the open mini-application and is able to show a lot of additional information, including various errors.
 
 
 ---
@@ -192,7 +211,7 @@ npm run cordova plugin add cordova-plugin-device
 ![ClearPluginsDirectory](./ReadmeImages/Plugins/Native/4.png)
 
 3. Adding a dependency
-- open MainCordovaApplication/platforms/ios/HelloCordova/config.xml file
+- open `./MainCordovaApplication/platforms/ios/HelloCordova/config.xml` file
 
 - select and copy everything new that was added when installing the plugin
 ![CopyDeps](./ReadmeImages/Plugins/Deps/1.png)
