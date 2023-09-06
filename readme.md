@@ -2,16 +2,18 @@
 
 This is a Condo Miniapps playground for iOS, it is still under development, but already allows you to feel the real process of interaction with the application.
 
-You can find the cordova app itself in the MainCordovaApplication folder, where in the www folder there is an example of interaction with the native api and you can develop something of your own.
+You can find the Cordova app itself in the MainCordovaApplication folder, where in the www folder there is an example of interaction with the native api and you can develop something of your own.
 
 ___
+
 # Important! Known issues.
-1. only version 10 of Cordova is currently supported
-2. some inputs may not work until you call the corresponding setInputsEnabled(true) method. Don't forget to disable this back when the user leaves the screen where the inputs that required it are located.
 
+1. Some inputs may not work until you call the corresponding setInputsEnabled(true) method. Don't forget to disable this when the user leaves the screen where the required inputs are located.
 
 ___
+
 # Content.
+
 1. [Getting started](#getting_started)
 2. [Common methods.](#common_methods)
 3. [Important differences.](#important_differences)
@@ -23,44 +25,48 @@ ___
 5. [Publishing.](#publishing)
 6. [Plugin addition.](#plugin_addition)
 
-
 ---
+
 # Getting started. <a name="getting_started"></a>
 
 1. Installing the necessary dependencies:
 
-    - make sure you have the latest version of the mac OS, Xcode and Xcode CLT installed
+    - Make sure you have the latest version of the Mac OS, Xcode, and Xcode CLT installed
 
-    - make sure that the desired Xcode CLTs are selected, this can be done in the Xcode settings: 
+    - Make sure that the desired Xcode CLTs are selected, this can be done in the Xcode settings: 
 
         Xcode -> Preferences -> Locations -> Command Line Tools
 
-    - homebrew installation
+    - Homebrew installation
     
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
         
-    then run the three commands suggested in the terminal to add homebrew to the environment variables
+        then run the three commands suggested in the terminal to add homebrew to the environment variables
 
+        ```
         echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
         echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
         eval "$(/opt/homebrew/bin/brew shellenv)"
+        ```
 
-    - cocoapods installation
+    - Cocoapods installation
 
-        brew install cocoapods
+        `brew install cocoapods`
 
-    Note that the installation is not done in the recommended way, but through a third-party package manager. if you install any other way, you will get errors while working on modern hardware.
+        Note that the installation is not done in the recommended way, but through a third-party package manager. If you install it using any other method, you may encounter errors when working with modern hardware.
 
-    - installing nvm, node and npm (or yarn)
+    - Installing NVM or Node.JS with npm (or yarn) package manager
 
-    https://github.com/nvm-sh/nvm#installing-and-updating
+        https://github.com/nvm-sh/nvm#installing-and-updating
 
-    - install cordova and required packages
-
+    - Install Cordova and required packages
+  
+        ```
         cd MainCordovaApplication
         npm install
+        ```
 
-    You can also use the command `yarn install` if you are using Yarn as your package manager.
+        You can also use the command `yarn install` if you use Yarn as your package manager.
 
 2. Editing the application
 
@@ -68,27 +74,27 @@ ___
     
     - After editing the code in the MainCordovaApplication directory, run the command
 
-        npm run cordova prepare ios
+        `npm run cordova prepare ios`
 
-    You can also use the command `yarn cordova prepare ios` if you are using Yarn as your package manager.
+        You can also use the command `yarn cordova prepare ios` if you use Yarn as your package manager. Alternatively, you can use the `cordova prepare ios` command if you have Cordova installed globally, following the official instructions.
     
 3. Launching and testing the application
 
     - In the main project directory, execute the following command:
 
-        pod install
+        `pod install`
 
-    This command needs to be executed only once, before the first run.
+        This command needs to be executed only once, before the first run.
     
     - In the main project directory, locate and open the file named 'CordovaDemoApp.xcworkspace'. Please take note of the file extension.
 
     - After you have opened the project in Xcode, proceed to run it.
             
-        cmd + R
+        `cmd + R`
 
 4. Optimizing
     
-    So that you don't have to run the cordova prepare ios command in the terminal after each code change, you can set it to work automatically when you start the project in Xcode. To do this, do the following steps:
+    So that you don't have to run the Cordova prepare ios command in the terminal after each code change, you can set it to work automatically when you start the project in Xcode. To do this, do the following steps:
 
     - open the project in Xcode
     - in the project navigator tab (cmd + 1) select the topmost node named CordovaDemoApp, it will have a blue square icon with the App Store icon
@@ -97,11 +103,14 @@ ___
     - expand the 4th element in the list that opens called "Run Script"
     - add there a line by the example from the comment
 
-            path/to/installed/cordova prepare ios 
+        `path/to/installed/cordova prepare ios`
+       
         after that, each time you start the project, the corresponding command will be executed automatically.
 
 ---
+
 # Important differences. <a name="important_differences"></a>
+
 Unlike the standard Cordova, our application uses an additional configuration file, which must be located in the www directory and named **native_config.json**
 
 This file is a json file and may contain the following fields:
@@ -109,10 +118,12 @@ This file is a json file and may contain the following fields:
 1. presentationStyle - application display type, required, should be set to **present_fullscreen**
 2. mobile_permissions - An array of strings describing the necessary permissions for the application to work. the array can contain the following values: **record_audio**, **camera**, **audio_settings**
 
-
 ---
+
 # Testing(as of November 1, 2022).  <a name="testing"></a>
+
 ## Demo environment  <a name="testing-demo"></a>
+
 1. Open safari on the device running the simulator with your application inside the CordovaDemoApp
 2. Open safari settings
     
@@ -197,57 +208,70 @@ npm run cordova plugin add cordova-plugin-device
 # Common methods. <a name="common_methods"></a>
 - authorization
 
-    function requestServerAuthorizationByUrl(miniapp_server_init_auth_url, custom_params_reserver_for_future_use, success, error) 
+    `function requestServerAuthorizationByUrl(miniapp_server_init_auth_url, custom_params_reserver_for_future_use, success, error)`
 
     example:
 
-            cordova.plugins.condo.requestServerAuthorizationByUrl('https://miniapp.d.doma.ai/oidc/auth', {}, function(response) {
-                console.log('recive authorication result => ', JSON.stringify(response));
-                window.location.reload();
-            }, function(error) {
-                console.log(error);
-            });
+    ```
+    cordova.plugins.condo.requestServerAuthorizationByUrl('https://miniapp.d.doma.ai/oidc/auth', {}, function(response) {
+        console.log('recive authorication result => ', JSON.stringify(response));
+        window.location.reload();
+    }, function(error) {
+        console.log(error);
+    });
+    ```
 
 - obtaining a current resident/address
 
-    function getCurrentResident(success, error)
+    `function getCurrentResident(success, error)`
 
     example:
 
-            cordova.plugins.condo.getCurrentResident(function(response) {
-                console.log("current resident\address => ", JSON.stringify(response));
-            }, function(error) {
-                console.log(error);
-            });
+    ```
+    cordova.plugins.condo.getCurrentResident(function(response) {
+        console.log("current resident\address => ", JSON.stringify(response));
+    }, function(error) {
+        console.log(error);
+    });
+    ```
+
 
 - application closing
 
-    function closeApplication(success, error)
+    `function closeApplication(success, error)`
 
     example:
 
-            cordova.plugins.condo.closeApplication(function(response) {}, function(error) {});
+    ```
+    cordova.plugins.condo.closeApplication(function(response) {}, function(error) {});
+    ```
 
 
 - application launch context (from notification)
 
-    function getLaunchContext(success, error)
+    `function getLaunchContext(success, error)`
 
     example:
 
-            cordova.plugins.condo.getLaunchContext(function(response) {}, function(error) {});
+    ```
+    cordova.plugins.condo.getLaunchContext(function(response) {}, function(error) {});
+    ```
 
 
 - activation of additional events required for some inputs
 
-    function setInputsEnabled(enabled, success, error)
+    `function setInputsEnabled(enabled, success, error)`
 
     example:
 
-            cordova.plugins.condo.setInputsEnabled(true, function(response) {}, function(error) {});
+    ```
+    cordova.plugins.condo.setInputsEnabled(true, function(response) {}, function(error) {});
+    ```
 
     Important! Don't forget to disable this back when the user leaves the screen where the inputs that required it are located.
 
     example:
 
-            cordova.plugins.condo.setInputsEnabled(false, function(response) {}, function(error) {});
+    ```
+    cordova.plugins.condo.setInputsEnabled(false, function(response) {}, function(error) {});
+    ```
