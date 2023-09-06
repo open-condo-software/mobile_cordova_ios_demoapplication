@@ -27,6 +27,7 @@
 
 document.addEventListener('deviceready', onDeviceReady, false);
 
+
 function closeApplication() {
     cordova.plugins.condo.closeApplication(function(response) {}, function(error) {})
 }
@@ -35,7 +36,14 @@ function onDeviceReady() {
     // Cordova is now initialized. Have fun!
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
+
     document.getElementById('deviceready').classList.add('ready');
+
+    cordova.plugins.condo.getLaunchContext(function(response) {
+        console.log("cordova.plugins.condo.getLaunchContext() response => ", response);
+    }, function(error) {
+        console.log(error);
+    })
 
 
     const clientId = 'miniapp-mobile-test-web';
@@ -69,13 +77,6 @@ function onDeviceReady() {
         }
     }
 
-    
-    cordova.plugins.condo.getLaunchContext(function(response) {
-        console.log("current context => ", response);
-    }, function(error) {
-        console.log(error);
-    })
-    
     // send post request
     fetch('https://miniapp.d.doma.ai/admin/api', options)
         .then(res => res.json())
