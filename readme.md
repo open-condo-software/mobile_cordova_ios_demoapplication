@@ -151,10 +151,10 @@ This file is a json file and may contain the following fields:
     
     - Switching on:
     
-        ai.doma.client.service://miniapps/local/enable
+            ai.doma.client.service://miniapps/local/enable
     - Switching off:
                     
-        ai.doma.client.service://miniapps/local/disable
+            ai.doma.client.service://miniapps/local/disable
 
 5. Now, on the main application screen in the list of mini-applications, the last button allows you to download or replace a previously downloaded mini-application from files. When you click on it, you need to select the previously downloaded archive in iCloud.
 
