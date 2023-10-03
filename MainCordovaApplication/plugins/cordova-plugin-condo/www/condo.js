@@ -45,3 +45,25 @@ exports.history.replaceState = function (state, title, success, error) {
 exports.history.go = function (amount, success, error) {
     exec(success, error, 'Condo', 'historyGo', [amount]);
 };
+
+exports.hostApplication = {};
+
+exports.hostApplication.isDemoEnvironment = function () {
+    return true;
+}
+
+exports.hostApplication.baseURL = function () {
+    return 'https://condo.d.doma.ai';
+}
+
+exports.hostApplication.installationID = function () {
+    return 'b8f73d1c-158a-4507-8b9d-379220c49e3b';
+}
+
+exports.hostApplication.deviceID = function () {
+    return 'ff3654eb-033b-45a0-b7db-c519d70159ba';
+}
+
+exports.hostApplication.locale = function () {
+    return 'ru-RU';
+}

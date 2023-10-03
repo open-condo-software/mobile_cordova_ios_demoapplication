@@ -223,6 +223,62 @@ addEventListener("condoPopstate", (event) => {console.log("condoPopstate => ", J
 
 ---
 
+# Environment. <a name="environment"></a>
+
+The plugin provides a **hostApplication** object that can synchronously output information about the current environment in which the mini-app is running.
+
+- Find out whether the application is looking at the production server or not:
+
+    `function isDemoEnvironment()`
+
+    example:
+
+    ```
+    console.log(cordova.plugins.condo.hostApplication.isDemoEnvironment());
+    ```
+
+- The base address of the current server:
+
+    `function baseURL()`
+
+    example:
+
+    ```
+    console.log(cordova.plugins.condo.hostApplication.baseURL());
+    ```
+
+- Main application installation ID:
+
+    `function installationID()`
+
+    example:
+
+    ```
+    console.log(cordova.plugins.condo.hostApplication.installationID());
+    ```
+
+- Device ID:
+
+    `function deviceID()`
+
+    example:
+
+    ```
+    console.log(cordova.plugins.condo.hostApplication.deviceID());
+    ```
+
+- Application locale:
+
+    `function locale()`
+
+    example:
+
+    ```
+    console.log(cordova.plugins.condo.hostApplication.locale());
+    ```
+
+---
+
 # Testing(as of November 1, 2022).  <a name="testing"></a>
 
 ## Demo environment  <a name="testing-demo"></a>
