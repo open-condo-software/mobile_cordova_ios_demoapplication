@@ -16,14 +16,15 @@ ___
 
 1. [Getting started](#getting_started)
 2. [Important differences.](#important_differences)
-3. [Testing.](#testing)
+3. [Working with user input.](#working_with_user_input)
+4. [Testing.](#testing)
 
-    3.1 [Testing in Demo environment](#testing-demo)
+    4.1 [Testing in Demo environment](#testing-demo)
     
-    3.2 [Testing in Production environment](#testing-production)
-4. [Publishing.](#publishing)
-5. [Plugin addition.](#plugin_addition)
-6. [Common methods.](#common_methods)
+    4.2 [Testing in Production environment](#testing-production)
+5. [Publishing.](#publishing)
+6. [Plugin addition.](#plugin_addition)
+7. [Common methods.](#common_methods)
 
 ---
 
@@ -127,8 +128,30 @@ Unlike the standard Cordova, our application uses an additional configuration fi
 
 This file is a json file and may contain the following fields:
 
-1. presentationStyle - application display type, required, should be set to **present_fullscreen**
+1. presentationStyle - application display type, required, should be set to **native**
 2. mobile_permissions - An array of strings describing the necessary permissions for the application to work. the array can contain the following values: **record_audio**, **camera**, **audio_settings**
+
+---
+
+# Working with user input. <a name="working_with_user_input"></a>
+
+We try to mimic our mini-apps to the native app as much as possible. Unfortunately on **iOS** this can have a negative impact on some controls that require focus. If you notice issues with the components you are using, on the screen where they are being used and only while they are being displayed/used you need to enable additional webkit events by calling the method:
+
+`function setInputsEnabled(enabled, success, error)`
+
+example:
+
+```
+cordova.plugins.condo.setInputsEnabled(true, function(response) {}, function(error) {});
+```
+
+Important! Don't forget to disable this back when the user leaves the screen where the inputs that required it are located.
+
+example:
+
+```
+cordova.plugins.condo.setInputsEnabled(false, function(response) {}, function(error) {});
+```
 
 ---
 

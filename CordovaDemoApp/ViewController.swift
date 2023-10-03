@@ -9,27 +9,154 @@ import UIKit
 import Cordova
 
 enum MiniappPresentationStyle: String {
-    case push
-    case push_with_navigation
-    case present
-    case present_fullscreen
-    case present_fullscreen_with_navigation
+    case native
 }
 
-class AutoClearCordovaController: CDVViewController {
+class MiniappCordovaViewController: CDVViewController, UINavigationBarDelegate {
+    
+    let mNavigationBar = UINavigationBar()
+    var navigationCache = [UINavigationItem: [String: Any]]()
+    
     deinit {
         let dataStore = WKWebsiteDataStore.default()
         dataStore.fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { (records) in
-            dataStore.removeData(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes(), for: records, completionHandler: {
-                print("Deleted: \(records)");
-            })
+            dataStore.removeData(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes(), for: records, completionHandler: {})
+        }
+    }
+
+    
+    func createBackButton() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .close, primaryAction: UIAction(handler: { [weak self] _ in
+            self?.dismiss(animated: true, completion: nil)
+        }))
+    }
+
+    
+    func setupNavigationBar() {
+        mNavigationBar.delegate = self
+        view.addSubview(mNavigationBar)
+        mNavigationBar.translatesAutoresizingMaskIntoConstraints = false
+        let statusHeight = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.windowScene?.statusBarManager?.statusBarFrame.height ?? 20
+        mNavigationBar.topAnchor.constraint(equalTo: view.topAnchor, constant: statusHeight - 1/UIScreen.main.scale).isActive = true
+        mNavigationBar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        mNavigationBar.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        mNavigationBar.pushItem(self.navigationItem, animated: false)
+    }
+    
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        createBackButton()
+        setupNavigationBar()
+        
+        if #available(iOS 16.4, *) {
+            (self.webView as? WKWebView)?.isInspectable = true
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if #available(iOS 16.4, *) {
-            (self.webView as? WKWebView)?.isInspectable = true
+    /////////////////////HISTORY////////////////////
+    
+    @objc func pushState(state: Any, title: String) -> String? {
+        let item = UINavigationItem(title: title)
+        let localState = ["title": title, "state": state] as [String : Any]
+        navigationCache[item] = localState
+        mNavigationBar.pushItem(item, animated: true)
+        notifyPopState(info: localState)
+        return nil
+    }
+    
+    @objc func replaceState(state: Any, title: String) -> String? {
+        let localState = ["title": title, "state": state] as [String : Any]
+        if mNavigationBar.items?.count ?? 0 == 1, let item = mNavigationBar.items?.first {
+            navigationCache[item] = localState
+            self.title = title
+        } else {
+            let item = UINavigationItem(title: title)
+            navigationCache[item] = localState
+            popItem(animated: false)
+            mNavigationBar.pushItem(item, animated: false)
+        }
+        notifyPopState(info: localState)
+        return nil
+    }
+    
+    @discardableResult func popItem(animated: Bool) -> [String: Any]? {
+        if let item = mNavigationBar.popItem(animated: animated) {
+            return navigationCache.removeValue(forKey: item)
+        }
+        return nil
+    }
+    
+    func notifyPopState(info: [String: Any]?) {
+        guard condoPopeventNotificationEnabled == true else { return }
+        var info = info
+        if info == nil, let item = mNavigationBar.items?.last {
+            info = navigationCache[item]
+        }
+        if let state = info?["state"] {
+            var stateString = "{}"
+            if JSONSerialization.isValidJSONObject(state), let data = try? JSONSerialization.data(withJSONObject: state) {
+                stateString = String(data: data, encoding: .utf8) ?? stateString
+            } else if let string = state as? String {
+                stateString = "'\(string)'"
+            } else if let number = state as? NSNumber {
+                stateString = number.stringValue
+            }
+            self.commandDelegate.evalJs("window.dispatchEvent(new PopStateEvent('condoPopstate', { 'state': \(stateString)}));")
+        } else {
+            self.commandDelegate.evalJs("window.dispatchEvent(new PopStateEvent('condoPopstate', { 'state': null }));")
+        }
+    }
+    
+    @objc func go(to delta: Int = 1) -> String? {
+        guard let items = mNavigationBar.items, items.count > 1 else {
+            return "Nothing to pop"
+        }
+        let absDelta = abs(delta)
+        guard absDelta < items.count else {
+            return "Incorrect delta"
+        }
+        preformWithoutCondoPopeventNotification {
+            for _ in 0 ..< (absDelta-1) {
+                popItem(animated: false)
+            }
+            popItem(animated: true)
+        }
+        notifyPopState(info: nil)
+        return nil
+    }
+    
+    @objc func back() -> String? {
+        return go()
+    }
+    
+    var condoPopeventNotificationEnabled = true
+    
+    func preformWithoutCondoPopeventNotification(_ block:()->Void) {
+        condoPopeventNotificationEnabled = false
+        block()
+        condoPopeventNotificationEnabled = true
+    }
+    
+    func navigationBar(_ navigationBar: UINavigationBar, shouldPop item: UINavigationItem) -> Bool {
+        self.commandDelegate.evalJs("cordova.fireDocumentEvent('backbutton');")
+        navigationCache.removeValue(forKey: item)
+        if let count = mNavigationBar.items?.count, count > 1, let prevItem = mNavigationBar.items?[count - 2] {
+            notifyPopState(info: navigationCache[prevItem])
+        } else {
+            notifyPopState(info: nil)
+        }
+        return true
+    }
+    
+    func navigationBar(_ navigationBar: UINavigationBar, didPop item: UINavigationItem) {
+        if navigationCache[item] != nil {
+            self.commandDelegate.evalJs("cordova.fireDocumentEvent('backbutton');")
+            navigationCache.removeValue(forKey: item)
+            notifyPopState(info: nil)
         }
     }
 }
@@ -100,7 +227,7 @@ class ViewController: UIViewController {
     @objc func launchCordovaApp(button: UIButton) {
         //  в реальном приложении перед этим будет скачивание миниапп с сервера и распаковка в локальную директорию
         //  тут мы просто сделаем линк в проект
-        let ctr = AutoClearCordovaController()
+        let ctr = MiniappCordovaViewController()
         currentMiniapp = ctr
         ctr.view.backgroundColor = .white
         ctr.wwwFolderName = "www"
@@ -113,40 +240,10 @@ class ViewController: UIViewController {
         })
         
         setCookies(cookies: cookies)
-        var presentationStyle = MiniappPresentationStyle.present_fullscreen
-        if let configPath = Bundle.main.path(forResource: "native_config", ofType: "json", inDirectory: "www") {
-            let configUrl = URL(fileURLWithPath: configPath)
-            if let data = try? Data(contentsOf: configUrl) {
-                if let config = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
-                    if let style = config["presentationStyle"] as? String {
-                        if let styleOption = MiniappPresentationStyle(rawValue: style) {
-                            presentationStyle = styleOption
-                        }
-                    }
-                }
-            }
-        }
-        
-        switch presentationStyle {
-        case .push:
-            currentMiniappPresented = false
-            navigationController?.pushViewController(ctr, animated: true)
-        case .push_with_navigation:
-            currentMiniappPresented = false
-            navigationController?.pushViewController(ctr, animated: true)
-            navigationController?.setNavigationBarHidden(false, animated: true)
-        case .present:
-            currentMiniappPresented = true
-            self.present(ctr, animated: true)
-        case .present_fullscreen:
-            currentMiniappPresented = true
-            ctr.modalPresentationStyle = .fullScreen
-            self.present(ctr, animated: true)
-        case .present_fullscreen_with_navigation:
-            currentMiniappPresented = true
-            ctr.modalPresentationStyle = .fullScreen
-            self.present(ctr, animated: true)
-        }
+
+        currentMiniappPresented = true
+        ctr.modalPresentationStyle = .fullScreen
+        self.present(ctr, animated: true)
         
         if let cordova = currentMiniapp as? CDVViewController {
             if let webView = cordova.webViewEngine as? WKWebView {

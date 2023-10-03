@@ -27,3 +27,21 @@ exports.getLaunchContext = function (success, error) {
 exports.setInputsEnabled = function (arg0, success, error) {
     exec(success, error, 'Condo', 'setInputsEnabled', [arg0]);
 };
+
+exports.history = {};
+
+exports.history.back = function (success, error) {
+    exec(success, error, 'Condo', 'historyBack', []);
+};
+
+exports.history.pushState = function (state, title, success, error) {
+    exec(success, error, 'Condo', 'historyPushState', [state, title]);
+};
+
+exports.history.replaceState = function (state, title, success, error) {
+    exec(success, error, 'Condo', 'historyReplaceState', [state, title]);
+};
+
+exports.history.go = function (amount, success, error) {
+    exec(success, error, 'Condo', 'historyGo', [amount]);
+};

@@ -16,6 +16,10 @@
 - (void)openURLWithFallback:(CDVInvokedUrlCommand *)command;
 - (void)getLaunchContext:(CDVInvokedUrlCommand *)command;
 - (void)setInputsEnabled:(CDVInvokedUrlCommand *)command;
+- (void)historyBack:(CDVInvokedUrlCommand *)command;
+- (void)historyPushState:(CDVInvokedUrlCommand *)command;
+- (void)historyReplaceState:(CDVInvokedUrlCommand *)command;
+- (void)historyGo:(CDVInvokedUrlCommand *)command;
 #ifdef DOMA
 @property (nonatomic, strong) DemoApplicationMainAppAPI *api;
 #endif
@@ -144,6 +148,75 @@
     if ([self.viewController isKindOfClass:[CDVViewController class]]) {
         if (@available(iOS 14.5, *)) {
             [((WKWebView *)((CDVViewController *)self.viewController).webView).configuration.preferences setTextInteractionEnabled:[interactionEnabled boolValue]];
+        }
+    }
+    [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
+}
+
+- (void)historyBack:(CDVInvokedUrlCommand *)command
+{
+    if ([self.viewController isKindOfClass:[MiniappCordovaViewController class]]) {
+        NSString *error = [((MiniappCordovaViewController *)self.viewController) back];
+        if (error)
+        {
+            [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:error] callbackId:command.callbackId];
+            return;
+        }
+    }
+    [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
+}
+
+- (void)historyPushState:(CDVInvokedUrlCommand *)command
+{
+    NSObject *state = [command.arguments objectAtIndex:0];
+    NSString *title = [command.arguments objectAtIndex:1];
+    if ([title isEqual:[NSNull null]] || title == nil)
+    {
+        title = @"";
+    }
+    if ([self.viewController isKindOfClass:[MiniappCordovaViewController class]]) {
+        NSString *error = [((MiniappCordovaViewController *)self.viewController) pushStateWithState:state title:title];
+        if (error)
+        {
+            [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:error] callbackId:command.callbackId];
+            return;
+        }
+    }
+    [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
+}
+
+- (void)historyReplaceState:(CDVInvokedUrlCommand *)command
+{
+    NSObject *state = [command.arguments objectAtIndex:0];
+    NSString *title = [command.arguments objectAtIndex:1];
+    if ([title isEqual:[NSNull null]] || title == nil)
+    {
+        title = @"";
+    }
+    if ([self.viewController isKindOfClass:[MiniappCordovaViewController class]]) {
+        NSString *error = [((MiniappCordovaViewController *)self.viewController) replaceStateWithState:state title:title];
+        if (error)
+        {
+            [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:error] callbackId:command.callbackId];
+            return;
+        }
+    }
+    [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
+}
+
+- (void)historyGo:(CDVInvokedUrlCommand *)command
+{
+    NSNumber *amount = [command.arguments objectAtIndex:0];
+    if ([amount isEqual:[NSNull null]] || amount == nil)
+    {
+        amount = [NSNumber numberWithInt:1];
+    }
+    if ([self.viewController isKindOfClass:[MiniappCordovaViewController class]]) {
+        NSString *error = [((MiniappCordovaViewController *)self.viewController) goTo:amount.integerValue];
+        if (error)
+        {
+            [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:error] callbackId:command.callbackId];
+            return;
         }
     }
     [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
