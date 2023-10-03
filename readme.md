@@ -18,14 +18,15 @@ ___
 2. [Important differences.](#important_differences)
 3. [Working with user input.](#working_with_user_input)
 4. [Navigation system.](#navigation_system)
-5. [Testing.](#testing)
+5. [Environment.](#environment)
+6. [Testing.](#testing)
 
-    5.1 [Testing in Demo environment](#testing-demo)
+    6.1 [Testing in Demo environment](#testing-demo)
     
-    5.2 [Testing in Production environment](#testing-production)
-6. [Publishing.](#publishing)
-7. [Plugin addition.](#plugin_addition)
-8. [Common methods.](#common_methods)
+    6.2 [Testing in Production environment](#testing-production)
+7. [Publishing.](#publishing)
+8. [Plugin addition.](#plugin_addition)
+9. [Common methods.](#common_methods)
 
 ---
 
