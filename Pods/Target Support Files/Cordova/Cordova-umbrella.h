@@ -11,11 +11,11 @@
 #endif
 
 #import "CDV.h"
+#import "CDVAllowList.h"
 #import "CDVAppDelegate.h"
 #import "CDVAvailability.h"
 #import "CDVAvailabilityDeprecated.h"
 #import "CDVCommandDelegate.h"
-#import "CDVCommandDelegateImpl.h"
 #import "CDVCommandQueue.h"
 #import "CDVConfigParser.h"
 #import "CDVInvokedUrlCommand.h"
@@ -24,11 +24,11 @@
 #import "CDVPluginResult.h"
 #import "CDVScreenOrientationDelegate.h"
 #import "CDVTimer.h"
+#import "CDVURLSchemeHandler.h"
 #import "CDVViewController.h"
+#import "CDVWebViewEngine.h"
 #import "CDVWebViewEngineProtocol.h"
-#import "CDVWebViewUIDelegate.h"
-#import "CDVWhitelist.h"
-#import "Cordova.h"
+#import "CDVWebViewProcessPoolFactory.h"
 #import "NSDictionary+CordovaPreferences.h"
 #import "NSMutableArray+QueueAdditions.h"
 

@@ -19,10 +19,10 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "CDVPluginResult.h"
-#import "NSMutableArray+QueueAdditions.h"
-#import "CDVCommandDelegate.h"
-#import "CDVWebViewEngineProtocol.h"
+#import <Cordova/CDVPluginResult.h>
+#import <Cordova/NSMutableArray+QueueAdditions.h>
+#import <Cordova/CDVCommandDelegate.h>
+#import <Cordova/CDVWebViewEngineProtocol.h>
 
 @interface UIView (org_apache_cordova_UIView_Extension)
 

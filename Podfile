@@ -6,5 +6,5 @@ target 'CordovaDemoApp' do
   use_frameworks!
 
   # Pods for CordovaDemoApp
-  pod 'Cordova'
+  pod 'Cordova', :git => 'https://github.com/open-condo-software/mobile_cordova_ios.git'
 end

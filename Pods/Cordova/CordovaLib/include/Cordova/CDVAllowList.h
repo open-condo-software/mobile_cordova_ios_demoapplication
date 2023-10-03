@@ -17,14 +17,18 @@
  under the License.
  */
 
-#import "CDVAvailability.h"
-#import "CDVAvailabilityDeprecated.h"
-#import "CDVAppDelegate.h"
-#import "CDVPlugin.h"
-#import "CDVPluginResult.h"
-#import "CDVViewController.h"
-#import "CDVCommandDelegate.h"
-#import "CDVInvokedUrlCommand.h"
-#import "CDVWhitelist.h"
-#import "CDVScreenOrientationDelegate.h"
-#import "CDVTimer.h"
+#import <Foundation/Foundation.h>
+
+extern NSString* const kCDVDefaultAllowListRejectionString;
+
+@interface CDVAllowList : NSObject
+
+@property (nonatomic, copy) NSString* allowListRejectionFormatString;
+
+- (id)initWithArray:(NSArray*)array;
+- (BOOL)schemeIsAllowed:(NSString*)scheme;
+- (BOOL)URLIsAllowed:(NSURL*)url;
+- (BOOL)URLIsAllowed:(NSURL*)url logFailure:(BOOL)logFailure;
+- (NSString*)errorStringForURL:(NSURL*)url;
+
+@end

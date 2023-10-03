@@ -18,11 +18,17 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "CDVViewController.h"
+#import <WebKit/WebKit.h>
+#import <Cordova/CDVViewController.h>
 
-@interface CDVAppDelegate : NSObject <UIApplicationDelegate>{}
 
-@property (nonatomic, strong) IBOutlet UIWindow* window;
-@property (nonatomic, strong) IBOutlet CDVViewController* viewController;
+@interface CDVURLSchemeHandler : NSObject <WKURLSchemeHandler>
+
+@property (nonatomic, weak) CDVViewController* viewController;
+
+@property (nonatomic) CDVPlugin* schemePlugin;
+
+- (instancetype)initWithVC:(CDVViewController *)controller;
+
 
 @end

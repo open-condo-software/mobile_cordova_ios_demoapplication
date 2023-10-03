@@ -18,6 +18,7 @@
  */
 
 #import "CDVWebViewUIDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation CDVWebViewUIDelegate
 
@@ -30,6 +31,107 @@
     }
 
     return self;
+}
+
+- (void)checkVideoPermissionCompletion:(void (^)(BOOL))completion
+{
+    NSString *mediaType = AVMediaTypeVideo;
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
+    if(authStatus == AVAuthorizationStatusAuthorized) {
+        completion(YES);
+        return;
+    } else if(authStatus == AVAuthorizationStatusDenied) {
+        completion(NO);
+        return;
+    } else if(authStatus == AVAuthorizationStatusRestricted) {
+        completion(NO);
+        return;
+    } else if(authStatus == AVAuthorizationStatusNotDetermined) {
+        [AVCaptureDevice requestAccessForMediaType:mediaType completionHandler:^(BOOL granted) {
+            if(granted) {
+                completion(YES);
+            } else {
+                completion(NO);
+            }
+        }];
+        return;
+    }
+}
+
+- (void)checkAudioPermissionCompletion:(void (^)(BOOL))completion
+{
+    switch ([[AVAudioSession sharedInstance] recordPermission]) {
+        case AVAudioSessionRecordPermissionGranted:
+            completion(YES);
+            break;
+        default:
+            completion(NO);
+            break;
+    }
+}
+
+- (void)webView:(WKWebView *)webView requestMediaCapturePermissionForOrigin:(WKSecurityOrigin *)origin initiatedByFrame:(WKFrameInfo *)frame type:(WKMediaCaptureType)type decisionHandler:(void (^)(WKPermissionDecision))decisionHandler API_AVAILABLE(ios(15.0)) {
+    switch (type)
+    {
+        case WKMediaCaptureTypeCamera:
+            {
+                [self checkVideoPermissionCompletion:^(BOOL granted)
+                {
+                    if (granted)
+                    {
+                        decisionHandler(WKPermissionDecisionGrant);
+                    }
+                    else
+                    {
+                        decisionHandler(WKPermissionDecisionPrompt);
+                    }
+                }];
+            }
+            break;
+        case WKMediaCaptureTypeMicrophone:
+            {
+                [self checkAudioPermissionCompletion:^(BOOL granted)
+                {
+                    if (granted)
+                    {
+                        decisionHandler(WKPermissionDecisionGrant);
+                    }
+                    else
+                    {
+                        decisionHandler(WKPermissionDecisionPrompt);
+                    }
+                }];
+            }
+            break;
+        case WKMediaCaptureTypeCameraAndMicrophone:
+            {
+                [self checkAudioPermissionCompletion:^(BOOL granted)
+                {
+                    if (granted)
+                    {
+                        [self checkVideoPermissionCompletion:^(BOOL granted)
+                        {
+                            if (granted)
+                            {
+                                decisionHandler(WKPermissionDecisionGrant);
+                            }
+                            else
+                            {
+                                decisionHandler(WKPermissionDecisionPrompt);
+                            }
+                        }];
+                    }
+                    else
+                    {
+                        decisionHandler(WKPermissionDecisionPrompt);
+                    }
+                }];
+            }
+            break;
+        default:
+            decisionHandler(WKPermissionDecisionPrompt);
+            break;
+    }
 }
 
 - (void)     webView:(WKWebView*)webView runJavaScriptAlertPanelWithMessage:(NSString*)message

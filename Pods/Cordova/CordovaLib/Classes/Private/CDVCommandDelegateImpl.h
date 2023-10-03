@@ -17,18 +17,20 @@
  under the License.
  */
 
-#import <Foundation/Foundation.h>
+@import UIKit;
+#import <Cordova/CDVCommandDelegate.h>
 
-extern NSString* const kCDVDefaultWhitelistRejectionString;
+@class CDVViewController;
+@class CDVCommandQueue;
 
-@interface CDVWhitelist : NSObject
-
-@property (nonatomic, copy) NSString* whitelistRejectionFormatString;
-
-- (id)initWithArray:(NSArray*)array;
-- (BOOL)schemeIsAllowed:(NSString*)scheme;
-- (BOOL)URLIsAllowed:(NSURL*)url;
-- (BOOL)URLIsAllowed:(NSURL*)url logFailure:(BOOL)logFailure;
-- (NSString*)errorStringForURL:(NSURL*)url;
-
+@interface CDVCommandDelegateImpl : NSObject <CDVCommandDelegate>{
+    @private
+    __weak CDVViewController* _viewController;
+    NSRegularExpression* _callbackIdPattern;
+    @protected
+    __weak CDVCommandQueue* _commandQueue;
+    BOOL _delayResponses;
+}
+- (id)initWithViewController:(CDVViewController*)viewController;
+- (void)flushCommandQueueWithDelayedJs;
 @end

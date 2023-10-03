@@ -17,18 +17,15 @@
  under the License.
  */
 
-#import <Foundation/Foundation.h>
-#import <WebKit/WebKit.h>
-#import "CDVViewController.h"
-
-
-@interface CDVURLSchemeHandler : NSObject <WKURLSchemeHandler>
-
-@property (nonatomic, strong) CDVViewController* viewController;
-
-@property (nonatomic) CDVPlugin* schemePlugin;
-
-- (instancetype)initWithVC:(CDVViewController *)controller;
-
-
-@end
+#import <Cordova/CDVAvailability.h>
+#import <Cordova/CDVAvailabilityDeprecated.h>
+#import <Cordova/CDVAppDelegate.h>
+#import <Cordova/CDVPlugin.h>
+#import <Cordova/CDVPluginResult.h>
+#import <Cordova/CDVViewController.h>
+#import <Cordova/CDVCommandDelegate.h>
+#import <Cordova/CDVInvokedUrlCommand.h>
+#import <Cordova/CDVAllowList.h>
+#import <Cordova/CDVScreenOrientationDelegate.h>
+#import <Cordova/CDVTimer.h>
+#import <Cordova/CDVWebViewEngine.h>

@@ -19,9 +19,9 @@
 
 #import "CDVWebViewEngine.h"
 #import "CDVWebViewUIDelegate.h"
-#import "CDVWebViewProcessPoolFactory.h"
+#import <Cordova/CDVWebViewProcessPoolFactory.h>
 #import <Cordova/NSDictionary+CordovaPreferences.h>
-#import "CDVURLSchemeHandler.h"
+#import <Cordova/CDVURLSchemeHandler.h>
 
 #import <objc/message.h>
 
@@ -45,6 +45,7 @@
 @property (nonatomic, strong) CDVURLSchemeHandler * schemeHandler;
 @property (nonatomic, readwrite) NSString *CDV_ASSETS_URL;
 @property (nonatomic, readwrite) Boolean cdvIsFileScheme;
+@property (nullable, nonatomic, strong, readwrite) WKWebViewConfiguration *configuration;
 
 @end
 
@@ -55,29 +56,45 @@
 
 @synthesize engineWebView = _engineWebView;
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (nullable instancetype)initWithFrame:(CGRect)frame configuration:(nullable WKWebViewConfiguration *)configuration
 {
     self = [super init];
     if (self) {
         if (NSClassFromString(@"WKWebView") == nil) {
             return nil;
         }
-
-        self.engineWebView = [[WKWebView alloc] initWithFrame:frame];
+        
+        self.configuration = configuration;
+        self.engineWebView = configuration ? [[WKWebView alloc] initWithFrame:frame configuration:configuration] : [[WKWebView alloc] initWithFrame:frame];
     }
 
     return self;
 }
 
+- (nullable instancetype)initWithFrame:(CGRect)frame
+{
+    return [self initWithFrame:frame configuration:nil];
+}
+
 - (WKWebViewConfiguration*) createConfigurationFromSettings:(NSDictionary*)settings
 {
-    WKWebViewConfiguration* configuration = [[WKWebViewConfiguration alloc] init];
-    configuration.processPool = [[CDVWebViewProcessPoolFactory sharedFactory] sharedProcessPool];
+    WKWebViewConfiguration* configuration;
+    if (_configuration) {
+        configuration = _configuration;
+    } else {
+        configuration = [[WKWebViewConfiguration alloc] init];
+        configuration.processPool = [[CDVWebViewProcessPoolFactory sharedFactory] sharedProcessPool];
+    }
+    
     if (settings == nil) {
         return configuration;
     }
+    
+    if (@available(iOS 14.5, *)) {
+        configuration.preferences.textInteractionEnabled = NO;
+    }
 
-    configuration.allowsInlineMediaPlayback = [settings cordovaBoolSettingForKey:@"AllowInlineMediaPlayback" defaultValue:NO];
+    configuration.allowsInlineMediaPlayback = [settings cordovaBoolSettingForKey:@"AllowInlineMediaPlayback" defaultValue:YES];
 
     // Set the media types that are required for user action for playback
     WKAudiovisualMediaTypes mediaType = WKAudiovisualMediaTypeAll; // default
@@ -145,6 +162,17 @@
         
     }
 
+    [configuration setValue:@YES forKey:@"_allowUniversalAccessFromFileURLs"];
+    if (@available(iOS 14.0, *)) {
+        configuration.defaultWebpagePreferences.allowsContentJavaScript = YES;
+    }
+    
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 140000
+    if (@available(iOS 14.0, *)) {
+        configuration.limitsNavigationsToAppBoundDomains = [settings cordovaBoolSettingForKey:@"LimitsNavigationsToAppBoundDomains" defaultValue:NO];
+    }
+#endif
+
     return configuration;
 }
 
@@ -201,9 +229,25 @@
         [configuration setURLSchemeHandler:self.schemeHandler forURLScheme:scheme];
     }
 
+    [self webViewConfigurationAdditionalSetup:configuration];
+    
     // re-create WKWebView, since we need to update configuration
     WKWebView* wkWebView = [[WKWebView alloc] initWithFrame:self.engineWebView.frame configuration:configuration];
     wkWebView.UIDelegate = self.uiDelegate;
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 160400
+    // With the introduction of iOS 16.4 the webview is no longer inspectable by default.
+    // We'll honor that change for release builds, but will still allow inspection on debug builds by default.
+    // We also introduce an override option, so consumers can influence this decision in their own build.
+    if (@available(iOS 16.4, *)) {
+#ifdef DEBUG
+        BOOL allowWebviewInspectionDefault = YES;
+#else
+        BOOL allowWebviewInspectionDefault = NO;
+#endif
+        wkWebView.inspectable = [settings cordovaBoolSettingForKey:@"InspectableWebview" defaultValue:allowWebviewInspectionDefault];
+    }
+#endif
 
     /*
      * This is where the "OverrideUserAgent" is handled. This will replace the entire UserAgent
@@ -241,6 +285,11 @@
     NSLog(@"Using WKWebView");
 
     [self addURLObserver];
+}
+
+- (void)webViewConfigurationAdditionalSetup:(WKWebViewConfiguration *)webViewConfiguration
+{
+    
 }
 
 - (void)onReset {
@@ -376,7 +425,10 @@ static void * KVOContext = &KVOContext;
     // prevent webView from bouncing
     if (!bounceAllowed) {
         if ([wkWebView respondsToSelector:@selector(scrollView)]) {
-            ((UIScrollView*)[wkWebView scrollView]).bounces = NO;
+            UIScrollView* scrollView = [wkWebView scrollView];
+            scrollView.bounces = NO;
+            scrollView.alwaysBounceVertical = NO;     /* iOS 16 workaround */
+            scrollView.alwaysBounceHorizontal = NO;   /* iOS 16 workaround */
         } else {
             for (id subview in wkWebView.subviews) {
                 if ([[subview class] isSubclassOfClass:[UIScrollView class]]) {
@@ -528,7 +580,6 @@ static void * KVOContext = &KVOContext;
 
     return NO;
 }
-
 
 - (void) webView: (WKWebView *) webView decidePolicyForNavigationAction: (WKNavigationAction*) navigationAction decisionHandler: (void (^)(WKNavigationActionPolicy)) decisionHandler
 {
