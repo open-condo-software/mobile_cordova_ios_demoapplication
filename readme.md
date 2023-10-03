@@ -17,14 +17,15 @@ ___
 1. [Getting started](#getting_started)
 2. [Important differences.](#important_differences)
 3. [Working with user input.](#working_with_user_input)
-4. [Testing.](#testing)
+4. [Navigation system.](#navigation_system)
+5. [Testing.](#testing)
 
-    4.1 [Testing in Demo environment](#testing-demo)
+    5.1 [Testing in Demo environment](#testing-demo)
     
-    4.2 [Testing in Production environment](#testing-production)
-5. [Publishing.](#publishing)
-6. [Plugin addition.](#plugin_addition)
-7. [Common methods.](#common_methods)
+    5.2 [Testing in Production environment](#testing-production)
+6. [Publishing.](#publishing)
+7. [Plugin addition.](#plugin_addition)
+8. [Common methods.](#common_methods)
 
 ---
 
@@ -151,6 +152,72 @@ example:
 
 ```
 cordova.plugins.condo.setInputsEnabled(false, function(response) {}, function(error) {});
+```
+
+---
+
+# Navigation system. <a name="navigation_system"></a>
+
+We provide native navigation for your minapps with js code side control. Each miniapp launches with a system navigation bar and a close button on it. In general, you can implement everything else on your side, make an additional panel or controls for nested navigation and work with them. 
+
+But we **strongly recommend** to do otherwise. You can control what the system navigation bar shows on your side. This is achieved by using the following methods on history object inside condo plugin:
+
+- Add a new item to the navigation stack:
+
+    `function pushState(state, title)`
+
+    example:
+
+    ```
+    cordova.plugins.condo.history.pushState({"StateKey": "StateValue"}, "Title for navigation bar");
+    ```
+
+- Replace the current item in the navigation stack:
+
+    `function replaceState(state, title)`
+
+    example:
+
+    ```
+    cordova.plugins.condo.history.replaceState({"StateKey": "StateValue"}, "Title for navigation bar");
+    ```
+
+- Take a step back:
+
+    `function back()`
+
+    example:
+
+    ```
+    cordova.plugins.condo.history.back();
+    ```
+
+- Take a few steps back:
+
+    `function go(amount)`
+
+    example:
+
+    ```
+    cordova.plugins.condo.history.go(-1);
+    ```
+
+    Note that unlike the system history object, the parameter passed here is always negative and can only lead backwards. We have no possibility to go forward to the place we came back from.
+    
+    
+In addition, you need to recognize when a user has pressed the system back button. This is achieved by subscribing to the already existing Cordova backbutton event https://cordova.apache.org/docs/en/12.x/cordova/events/events.html#backbutton This event is called for the system button on iOS as well.
+
+```
+document.addEventListener("backbutton", onBackKeyDown, false);
+
+function onBackKeyDown() {
+    // Handle the back button
+}
+```
+
+And of course after all these changes you can get the State that is now showing on the navigation bar. This is done similarly to the standard system method - by subscribing to the condoPopstate event:
+```
+addEventListener("condoPopstate", (event) => {console.log("condoPopstate => ", JSON.stringify(event.state));});
 ```
 
 ---
