@@ -157,6 +157,7 @@
 
 - (void)historyBack:(CDVInvokedUrlCommand *)command
 {
+    #ifdef DOMA
     if ([self.viewController isKindOfClass:[MiniappCordovaViewController class]]) {
         NSString *error = [((MiniappCordovaViewController *)self.viewController) back];
         if (error)
@@ -165,11 +166,13 @@
             return;
         }
     }
+    #endif
     [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
 }
 
 - (void)historyPushState:(CDVInvokedUrlCommand *)command
 {
+    #ifdef DOMA
     NSObject *state = [command.arguments objectAtIndex:0];
     NSString *title = [command.arguments objectAtIndex:1];
     if ([title isEqual:[NSNull null]] || title == nil)
@@ -184,11 +187,13 @@
             return;
         }
     }
+    #endif
     [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
 }
 
 - (void)historyReplaceState:(CDVInvokedUrlCommand *)command
 {
+    #ifdef DOMA
     NSObject *state = [command.arguments objectAtIndex:0];
     NSString *title = [command.arguments objectAtIndex:1];
     if ([title isEqual:[NSNull null]] || title == nil)
@@ -203,11 +208,13 @@
             return;
         }
     }
+    #endif
     [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
 }
 
 - (void)historyGo:(CDVInvokedUrlCommand *)command
 {
+    #ifdef DOMA
     NSNumber *amount = [command.arguments objectAtIndex:0];
     if ([amount isEqual:[NSNull null]] || amount == nil)
     {
@@ -221,6 +228,7 @@
             return;
         }
     }
+    #endif
     [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
 }
 
