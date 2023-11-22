@@ -421,7 +421,7 @@ npm run cordova plugin add cordova-plugin-device
     example:
 
     ```
-    cordova.plugins.condo.getLaunchContext(function(response) {}, function(error) {});
+    cordova.plugins.condo.getLaunchContext(function(b2cAppContextString) {}, function(error) {});
     ```
 
 
