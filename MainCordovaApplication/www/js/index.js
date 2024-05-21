@@ -29,7 +29,7 @@ document.addEventListener('deviceready', onDeviceReady, false);
 
 
 function closeApplication() {
-    cordova.plugins.condo.closeApplication(function(response) {}, function(error) {})
+    cordova.plugins.condo.closeApplication(function (response) { }, function (error) { })
 }
 
 function onDeviceReady() {
@@ -39,11 +39,49 @@ function onDeviceReady() {
 
     document.getElementById('deviceready').classList.add('ready');
 
-    cordova.plugins.condo.getLaunchContext(function(response) {
+    cordova.plugins.condo.getLaunchContext(function (response) {
         console.log("cordova.plugins.condo.getLaunchContext() response => ", response);
-    }, function(error) {
+    }, function (error) {
         console.log(error);
     })
+
+
+    var uuid = 'B9407F30-F5F8-466E-AFF9-25556B57FE6D';
+    var identifier = 'advertisedBeacon';
+    var minor = 2000;
+    var major = 5;
+    var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(identifier, uuid, major, minor);
+
+    // The Delegate is optional
+    var delegate = new cordova.plugins.locationManager.Delegate();
+
+    // Event when advertising starts (there may be a short delay after the request)
+    // The property 'region' provides details of the broadcasting Beacon
+    delegate.peripheralManagerDidStartAdvertising = function (pluginResult) {
+        console.log('peripheralManagerDidStartAdvertising: ' + JSON.stringify(pluginResult.region));
+    };
+    // Event when bluetooth transmission state changes 
+    // If 'state' is not set to BluetoothManagerStatePoweredOn when advertising cannot start
+    delegate.peripheralManagerDidUpdateState = function (pluginResult) {
+        console.log('peripheralManagerDidUpdateState: ' + pluginResult.state);
+    };
+
+    cordova.plugins.locationManager.setDelegate(delegate);
+
+    // Verify the platform supports transmitting as a beacon
+    cordova.plugins.locationManager.isAdvertisingAvailable()
+        .then(function (isSupported) {
+
+            if (isSupported) {
+                cordova.plugins.locationManager.startAdvertising(beaconRegion)
+                    .fail(console.error)
+                    .done();
+            } else {
+                console.log("Advertising not supported");
+            }
+        })
+        .fail(function (e) { console.error(e); })
+        .done();
 
 
     const clientId = 'miniapp-mobile-test-web';
@@ -65,7 +103,7 @@ function onDeviceReady() {
     // Вариант авторизации номер два - основной способ, мы обращаемся на сервер миниапа и просим авторизовать, а дльше редиректы по всему сценарию
 
 
-    let data = {"variables":{},"query":"{\n  authenticatedUser {\n    id\n    name\n   email\n    isAdmin\n    __typename\n  }\n}\n"};
+    let data = { "variables": {}, "query": "{\n  authenticatedUser {\n    id\n    name\n   email\n    isAdmin\n    __typename\n  }\n}\n" };
 
     // request options
     const options = {
@@ -83,20 +121,20 @@ function onDeviceReady() {
         .then((res) => {
             if (res.data.authenticatedUser) {
                 console.log('authentificated => ', JSON.stringify(res.data.authenticatedUser));
-                cordova.plugins.condo.getCurrentResident(function(response) {
+                cordova.plugins.condo.getCurrentResident(function (response) {
                     console.log("current resident\address => ", JSON.stringify(response));
-                }, function(error) {
+                }, function (error) {
                     console.log(error);
                 })
             } else {
                 console.log('authentification missing => ', JSON.stringify(res));
                 // вот она
-                cordova.plugins.condo.requestServerAuthorizationByUrl('https://miniapp.d.doma.ai/oidc/auth', {}, function(response) {
+                cordova.plugins.condo.requestServerAuthorizationByUrl('https://miniapp.d.doma.ai/oidc/auth', {}, function (response) {
                     console.log(response);
                     console.log('recive authorication result => ', JSON.stringify(response));
                     console.log('reloading');
                     window.location.reload();
-                }, function(error) {
+                }, function (error) {
                     console.log(error);
                 });
             }

@@ -31,6 +31,12 @@
     <feature name="Condo">
           <param name="ios-package" value="Condo"/>
     </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="LocationManager">
+        <param name="ios-package" value="CDVLocationManager" />
+    </feature>
     <name>HelloWorld</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

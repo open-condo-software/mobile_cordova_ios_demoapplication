@@ -12,6 +12,12 @@
     },
     "cordova-plugin-condo": {
       "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
+    },
+    "com.unarin.cordova.beacon": {
+      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
     }
   },
   "dependent_plugins": {}
