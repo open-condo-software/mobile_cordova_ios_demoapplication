@@ -6,10 +6,9 @@ You can find the Cordova app itself in the MainCordovaApplication folder, where 
 
 ___
 
-# Important! Known issues.
-
-1. Some inputs may not work until you call the corresponding setInputsEnabled(true) method. Don't forget to disable this when the user leaves the screen where the required inputs are located.
-
+> [!WARNING] 
+> #### Known Issues:
+> 1. Some inputs may not work until you call the corresponding setInputsEnabled(true) method. Don't forget to disable this when the user leaves the screen where the required inputs are located. 
 ___
 
 # Content.
