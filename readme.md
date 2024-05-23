@@ -17,16 +17,20 @@ ___
 1. [Getting started](#getting_started)
 2. [Important differences.](#important_differences)
 3. [Working with user input.](#working_with_user_input)
-4. [Navigation system.](#navigation_system)
-5. [Environment.](#environment)
-6. [Testing.](#testing)
+
+    3.1 [File Sharing](#sharing_files)
+
+    3.2 [File Imporing](#import_files)
+5. [Navigation system.](#navigation_system)
+6. [Environment.](#environment)
+7. [Testing.](#testing)
 
     6.1 [Testing in Demo environment](#testing-demo)
     
     6.2 [Testing in Production environment](#testing-production)
-7. [Publishing.](#publishing)
-8. [Plugin addition.](#plugin_addition)
-9. [Common methods.](#common_methods)
+8. [Publishing.](#publishing)
+9. [Plugin addition.](#plugin_addition)
+10. [Common methods.](#common_methods)
 
 ---
 
@@ -104,8 +108,8 @@ ___
         ```
         cmd + R
         ```
-
-4. Optimizing
+        
+5. Optimizing
     
     So that you don't have to run the Cordova prepare ios command in the terminal after each code change, you can set it to work automatically when you start the project in Xcode. To do this, do the following steps:
 
@@ -155,6 +159,56 @@ example:
 cordova.plugins.condo.setInputsEnabled(false, function(response) {}, function(error) {});
 ```
 
+## 3.1 Sharing Files. <a name="sharing_files"></a>
+
+Original Documentation: [**WEB File API**](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share)
+### Example for sharing local document:
+```html
+    <script>
+       function shareSomeDocument() {
+           fetch('some/path/to/local/document.pdf')
+              .then(function(response) {
+                   return response.blob()
+               })
+               .then(function(blob) {
+                  var file = new File([blob], "document.pdf", {type: blob.type});
+                  var filesArray = [file];
+                     navigator.share({
+                     files: filesArray
+                  });
+               });
+           }
+    </script>
+```
+
+> [!CAUTION]
+> On iOS calls to `navigator.share` with `files` argument **must** be called in responce to user interaction (button tap, or alike).
+> Otherwise it throws an error
+
+## 3.2 Importing Files. <a name="import_files"></a>
+Original Documentation: [**Using files from web applications**](https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
+### Importing images:
+```html
+    <p>Capture image</p>
+    <input type="file" accept="image/*" capture>
+
+    <p>Select image</p>
+    <input type="file" accept="image/*">  
+
+    <p>Select multiple images</p>
+    <input type="file" accept="image/*" multiple>
+```
+### Importing video:
+```html
+    <p>Capture video</p>
+    <input type="file" accept="video/*" capture>
+
+    <p>Select video</p>
+    <input type="file" accept="video/*">  
+
+    <p>Select multiple video records</p>
+    <input type="file" accept="video/*" multiple>
+```
 ---
 
 # Navigation system. <a name="navigation_system"></a>
