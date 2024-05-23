@@ -188,27 +188,22 @@ Original Documentation: [**WEB File API**](https://developer.mozilla.org/en-US/d
 ## 3.2 Importing Files. <a name="import_files"></a>
 Original Documentation: [**Using files from web applications**](https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 ### Importing images:
-```html
-    <p>Capture image</p>
-    <input type="file" accept="image/*" capture>
-
-    <p>Select image</p>
-    <input type="file" accept="image/*">  
-
-    <p>Select multiple images</p>
-    <input type="file" accept="image/*" multiple>
+Button opens camera:
+```html 
+<input type="file" accept="image/*" capture>
 ```
+Button opens image picker (select one image):
+```html
+<input type="file" accept="image/*">
+```
+Button opens image picker (select multiple images):
+```html
+<input type="file" accept="image/*" multiple>
+```
+
 ### Importing video:
-```html
-    <p>Capture video</p>
-    <input type="file" accept="video/*" capture>
+Exactly same as image, but `accept="video/*"`
 
-    <p>Select video</p>
-    <input type="file" accept="video/*">  
-
-    <p>Select multiple video records</p>
-    <input type="file" accept="video/*" multiple>
-```
 ---
 
 # Navigation system. <a name="navigation_system"></a>
