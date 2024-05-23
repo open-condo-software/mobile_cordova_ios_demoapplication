@@ -34,7 +34,7 @@ ___
 
 ---
 
-# Getting started. <a name="getting_started"></a>
+# 1. Getting started. <a name="getting_started"></a>
 
 1. Installing the necessary dependencies:
 
@@ -128,7 +128,7 @@ ___
 
 ---
 
-# Important differences. <a name="important_differences"></a>
+# 2. Important differences. <a name="important_differences"></a>
 
 Unlike the standard Cordova, our application uses an additional configuration file, which must be located in the www directory and named **native_config.json**
 
@@ -139,7 +139,7 @@ This file is a json file and may contain the following fields:
 
 ---
 
-# Working with user input. <a name="working_with_user_input"></a>
+# 3. Working with user input. <a name="working_with_user_input"></a>
 
 We try to mimic our mini-apps to the native app as much as possible. Unfortunately on **iOS** this can have a negative impact on some controls that require focus. If you notice issues with the components you are using, on the screen where they are being used and only while they are being displayed/used you need to enable additional webkit events by calling the method:
 
@@ -206,7 +206,7 @@ Exactly same as image, but `accept="video/*"`
 
 ---
 
-# Navigation system. <a name="navigation_system"></a>
+# 4. Navigation system. <a name="navigation_system"></a>
 
 We provide native navigation for your minapps with js code side control. Each miniapp launches with a system navigation bar and a close button on it. In general, you can implement everything else on your side, make an additional panel or controls for nested navigation and work with them. 
 
@@ -273,7 +273,7 @@ addEventListener("condoPopstate", (event) => {console.log("condoPopstate => ", J
 
 ---
 
-# Environment. <a name="environment"></a>
+# 5. Environment. <a name="environment"></a>
 
 The plugin provides a **hostApplication** object that can synchronously output information about the current environment in which the mini-app is running.
 
@@ -329,7 +329,7 @@ The plugin provides a **hostApplication** object that can synchronously output i
 
 ---
 
-# Testing(as of November 1, 2022).  <a name="testing"></a>
+# 6. Testing(as of November 1, 2022).  <a name="testing"></a>
 
 ## Demo environment  <a name="testing-demo"></a>
 
@@ -378,12 +378,12 @@ The plugin provides a **hostApplication** object that can synchronously output i
 
 
 ---
-# Publishing <a name="publishing"></a>
+# 7. Publishing <a name="publishing"></a>
 To publish the mini-application, send the archive you received during the testing phase to the people at Doma with whom you interact. 
 
 
 ---
-# Plugin addition. <a name="plugin_addition"></a>
+# 8. Plugin addition. <a name="plugin_addition"></a>
 using the Device plugin as an example
 
 1. Adding a plugin to the Cordova project
@@ -421,7 +421,7 @@ npm run cordova plugin add cordova-plugin-device
 ![RunAndCheck](./ReadmeImages/Plugins/Test/2.png)
 
  ---
-# Common methods. <a name="common_methods"></a>
+# 9. Common methods. <a name="common_methods"></a>
 - authorization
 
     `function requestServerAuthorizationByUrl(miniapp_server_init_auth_url, custom_params_reserver_for_future_use, success, error)`
