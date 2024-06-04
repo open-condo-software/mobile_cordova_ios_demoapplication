@@ -1,4 +1,4 @@
-cordova.define("cordova-plugin-condo.Condo", function (require, exports, module) {
+cordova.define("cordova-plugin-condo.Condo", function(require, exports, module) {
     var exec = require('cordova/exec');
 
     exports.requestAuthorization = function (arg0, arg1, success, error) {

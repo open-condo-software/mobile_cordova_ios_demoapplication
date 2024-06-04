@@ -5,8 +5,6 @@
 #import "CordovaDemoApp-Swift.h"
 #endif
 
-#import <WebKit/WebKit.h>
-
 @interface Condo: CDVPlugin 
 {
   // Member variables go here.

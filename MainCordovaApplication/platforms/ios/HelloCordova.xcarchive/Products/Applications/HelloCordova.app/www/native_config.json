@@ -1,9 +1,0 @@
-{
-    "version": "0.1",
-    "presentationStyle": "native",
-    "hostApplication": {
-        "iOS": {
-            "minimumSupportedVersion": "1.1.38"
-        }
-    }
-}
