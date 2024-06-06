@@ -1172,6 +1172,10 @@
     "stringify-package" "^1.0.1"
     "write-file-atomic" "^5.0.0"
 
+"cordova-plugin-ble-peripheral@github:Donny1995/cordova-plugin-ble-peripheral":
+  "resolved" "git+ssh://git@github.com/Donny1995/cordova-plugin-ble-peripheral.git#9201dcd64cf70531e11b7ce47fa05359fdd943e4"
+  "version" "1.1.2"
+
 "cordova-plugin-condo@git+https://github.com/open-condo-software/mobile_cordova_plugin_condo.git":
   "resolved" "git+ssh://git@github.com/open-condo-software/mobile_cordova_plugin_condo.git#9f08b1b865a3c3d71283b4dc46775b79a0962140"
   "version" "0.0.2"

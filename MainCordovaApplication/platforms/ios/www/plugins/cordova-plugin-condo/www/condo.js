@@ -68,4 +68,5 @@ cordova.define("cordova-plugin-condo.Condo", function (require, exports, module)
     exports.hostApplication.locale = function () {
         return 'ru-RU';
     }
+
 });

@@ -1,2 +1,4 @@
 node_modules
 *.xcuserdatad
+.DS_Store
+/MainCordovaApplication/plugins/cordova-plugin-ble-peripheral/examples

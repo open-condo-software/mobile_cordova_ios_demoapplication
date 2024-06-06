@@ -7,10 +7,19 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "cordova.plugins.condo"
       ]
+    },
+    {
+      "id": "cordova-plugin-ble-peripheral.blePeripheral",
+      "file": "plugins/cordova-plugin-ble-peripheral/www/blePeripheral.js",
+      "pluginId": "cordova-plugin-ble-peripheral",
+      "clobbers": [
+        "blePeripheral"
+      ]
     }
   ];
   module.exports.metadata = {
     "cordova-plugin-whitelist": "1.3.5",
-    "cordova-plugin-condo": "0.0.1"
+    "cordova-plugin-condo": "0.0.1",
+    "cordova-plugin-ble-peripheral": "1.1.2"
   };
 });

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3D063F93162E9D2670EE47B5 /* Pods_CordovaDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB82F009E656641EA3279E60 /* Pods_CordovaDemoApp.framework */; };
+		C044F1F92C1084B900BD5BA0 /* BLEPeripheralPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = C044F1E32C1084B900BD5BA0 /* BLEPeripheralPlugin.m */; };
+		C044F1FF2C10859000BD5BA0 /* blePeripheral.js in Resources */ = {isa = PBXBuildFile; fileRef = C044F1E62C1084B900BD5BA0 /* blePeripheral.js */; };
+		C044F2022C10B2B600BD5BA0 /* BLEPeripheralPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = C044F1E22C1084B900BD5BA0 /* BLEPeripheralPlugin.h */; };
 		C168CB6028184EC900E2FF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB5F28184EC900E2FF0C /* AppDelegate.swift */; };
 		C168CB6228184EC900E2FF0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB6128184EC900E2FF0C /* SceneDelegate.swift */; };
 		C168CB6428184EC900E2FF0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB6328184EC900E2FF0C /* ViewController.swift */; };
@@ -21,20 +24,18 @@
 		C1D4D1C72828841F00480EAC /* MiniappView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4D1C62828841F00480EAC /* MiniappView.swift */; };
 		C1D4D1E42828966400480EAC /* condo.js in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1CD2828966400480EAC /* condo.js */; };
 		C1D4D1E72828966400480EAC /* Condo.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D4D1D22828966400480EAC /* Condo.m */; };
-		C1D4D1E92828966400480EAC /* fetch.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1D52828966400480EAC /* fetch.json */; };
-		C1D4D1EA2828966400480EAC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1D72828966400480EAC /* LICENSE */; };
-		C1D4D1EB2828966400480EAC /* plugin.xml in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1D82828966400480EAC /* plugin.xml */; };
-		C1D4D1EC2828966400480EAC /* RELEASENOTES.md in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1D92828966400480EAC /* RELEASENOTES.md */; };
-		C1D4D1ED2828966400480EAC /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1DA2828966400480EAC /* NOTICE */; };
-		C1D4D1EE2828966400480EAC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1DB2828966400480EAC /* README.md */; };
-		C1D4D1EF2828966400480EAC /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1DC2828966400480EAC /* package.json */; };
-		C1D4D1F02828966400480EAC /* CONTRIBUTING.md in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1DD2828966400480EAC /* CONTRIBUTING.md */; };
-		C1D4D1F22828966400480EAC /* ios.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1E12828966400480EAC /* ios.json */; };
 		C1D4D1F52828C28200480EAC /* CondoSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4D1F42828C28200480EAC /* CondoSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03FDF17CA41EB4769EF3A123 /* Pods-CordovaDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CordovaDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-CordovaDemoApp/Pods-CordovaDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C044F1E22C1084B900BD5BA0 /* BLEPeripheralPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEPeripheralPlugin.h; sourceTree = "<group>"; };
+		C044F1E32C1084B900BD5BA0 /* BLEPeripheralPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEPeripheralPlugin.m; sourceTree = "<group>"; };
+		C044F1E62C1084B900BD5BA0 /* blePeripheral.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = blePeripheral.js; sourceTree = "<group>"; };
+		C044F1E82C1084B900BD5BA0 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		C044F1E92C1084B900BD5BA0 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		C044F1EA2C1084B900BD5BA0 /* plugin.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = plugin.xml; sourceTree = "<group>"; };
+		C044F1EB2C1084B900BD5BA0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C149F0CD281B30E30001B4D7 /* CordovaDemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CordovaDemoApp.entitlements; sourceTree = "<group>"; };
 		C168CB5C28184EC900E2FF0C /* CordovaDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CordovaDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C168CB5F28184EC900E2FF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +81,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C044F1E42C1084B900BD5BA0 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				C044F1E22C1084B900BD5BA0 /* BLEPeripheralPlugin.h */,
+				C044F1E32C1084B900BD5BA0 /* BLEPeripheralPlugin.m */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		C044F1E52C1084B900BD5BA0 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C044F1E42C1084B900BD5BA0 /* ios */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C044F1E72C1084B900BD5BA0 /* www */ = {
+			isa = PBXGroup;
+			children = (
+				C044F1E62C1084B900BD5BA0 /* blePeripheral.js */,
+			);
+			path = www;
+			sourceTree = "<group>";
+		};
+		C044F1EC2C1084B900BD5BA0 /* cordova-plugin-ble-peripheral */ = {
+			isa = PBXGroup;
+			children = (
+				C044F1E52C1084B900BD5BA0 /* src */,
+				C044F1E72C1084B900BD5BA0 /* www */,
+				C044F1E82C1084B900BD5BA0 /* LICENSE.txt */,
+				C044F1E92C1084B900BD5BA0 /* package.json */,
+				C044F1EA2C1084B900BD5BA0 /* plugin.xml */,
+				C044F1EB2C1084B900BD5BA0 /* README.md */,
+			);
+			path = "cordova-plugin-ble-peripheral";
+			sourceTree = "<group>";
+		};
 		C168CB5328184EC800E2FF0C = {
 			isa = PBXGroup;
 			children = (
@@ -139,9 +178,10 @@
 		C1D4D1C82828966400480EAC /* plugins */ = {
 			isa = PBXGroup;
 			children = (
+				C044F1EC2C1084B900BD5BA0 /* cordova-plugin-ble-peripheral */,
 				C1D4D1CA2828966400480EAC /* cordova-plugin-condo */,
-				C1D4D1D52828966400480EAC /* fetch.json */,
 				C1D4D1D62828966400480EAC /* cordova-plugin-whitelist */,
+				C1D4D1D52828966400480EAC /* fetch.json */,
 				C1D4D1E12828966400480EAC /* ios.json */,
 			);
 			name = plugins;
@@ -194,16 +234,8 @@
 				C1D4D1DB2828966400480EAC /* README.md */,
 				C1D4D1DC2828966400480EAC /* package.json */,
 				C1D4D1DD2828966400480EAC /* CONTRIBUTING.md */,
-				C1D4D1DE2828966400480EAC /* src */,
 			);
 			path = "cordova-plugin-whitelist";
-			sourceTree = "<group>";
-		};
-		C1D4D1DE2828966400480EAC /* src */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 		C1D4D1F32828C26700480EAC /* Support */ = {
@@ -233,6 +265,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		C044F2012C10B2A500BD5BA0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C044F2022C10B2B600BD5BA0 /* BLEPeripheralPlugin.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		C168CB5B28184EC900E2FF0C /* CordovaDemoApp */ = {
 			isa = PBXNativeTarget;
@@ -240,6 +283,7 @@
 			buildPhases = (
 				118C80868048D27F107397D5 /* [CP] Check Pods Manifest.lock */,
 				C1E9304B282ACBDF0017B4A4 /* ShellScript */,
+				C044F2012C10B2A500BD5BA0 /* Headers */,
 				C168CB5828184EC900E2FF0C /* Sources */,
 				C168CB5928184EC900E2FF0C /* Frameworks */,
 				C168CB5A28184EC900E2FF0C /* Resources */,
@@ -293,20 +337,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C168CB6C28184ECD00E2FF0C /* LaunchScreen.storyboard in Resources */,
-				C1D4D1F02828966400480EAC /* CONTRIBUTING.md in Resources */,
 				C168CB6928184ECD00E2FF0C /* Assets.xcassets in Resources */,
 				C18CC08C28204FF0005B84E5 /* config.xml in Resources */,
-				C1D4D1E92828966400480EAC /* fetch.json in Resources */,
-				C1D4D1ED2828966400480EAC /* NOTICE in Resources */,
-				C1D4D1EE2828966400480EAC /* README.md in Resources */,
-				C1D4D1F22828966400480EAC /* ios.json in Resources */,
-				C1D4D1EA2828966400480EAC /* LICENSE in Resources */,
 				C18CC0AF28205977005B84E5 /* www in Resources */,
+				C044F1FF2C10859000BD5BA0 /* blePeripheral.js in Resources */,
 				C168CB6728184EC900E2FF0C /* Main.storyboard in Resources */,
-				C1D4D1EC2828966400480EAC /* RELEASENOTES.md in Resources */,
-				C1D4D1EF2828966400480EAC /* package.json in Resources */,
 				C1D4D1E42828966400480EAC /* condo.js in Resources */,
-				C1D4D1EB2828966400480EAC /* plugin.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +421,7 @@
 				C1D4D1E72828966400480EAC /* Condo.m in Sources */,
 				C1D4D1F52828C28200480EAC /* CondoSupport.swift in Sources */,
 				C168CB6228184EC900E2FF0C /* SceneDelegate.swift in Sources */,
+				C044F1F92C1084B900BD5BA0 /* BLEPeripheralPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,7 +570,8 @@
 				CODE_SIGN_ENTITLEMENTS = CordovaDemoApp/CordovaDemoApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G9KD488X5N;
+				DEVELOPMENT_TEAM = V37GW8KE95;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -541,6 +579,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CordovaDemoApp/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Need BT";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -552,7 +591,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DDOMA";
-				PRODUCT_BUNDLE_IDENTIFIER = cry.CordovaDemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = asivash.CordovaDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG DOMA";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -570,7 +609,8 @@
 				CODE_SIGN_ENTITLEMENTS = CordovaDemoApp/CordovaDemoApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G9KD488X5N;
+				DEVELOPMENT_TEAM = V37GW8KE95;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -578,6 +618,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CordovaDemoApp/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Need BT";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -589,7 +630,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DDOMA";
-				PRODUCT_BUNDLE_IDENTIFIER = cry.CordovaDemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = asivash.CordovaDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DOMA;
 				SWIFT_EMIT_LOC_STRINGS = YES;
