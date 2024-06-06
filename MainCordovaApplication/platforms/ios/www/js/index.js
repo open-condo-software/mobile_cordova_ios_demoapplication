@@ -104,8 +104,6 @@ function onDeviceReady() {
         .catch(err => console.error(err));
 
     document.getElementById("CloseButton").addEventListener("click", closeApplication);
-    testBleStuff();
-
 }
 
 function testBleStuff() {

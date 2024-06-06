@@ -92,7 +92,6 @@ function registerReadRequestCallback() {
         
         if (onReadRequestCallback && typeof onReadRequestCallback === 'function') {
             let result = onReadRequestCallback(service, characteristic);
-            result = massageMessageNativeToJs(result);
             
             if(result) {
                 if (typeof result === 'ArrayBuffer') {
@@ -102,7 +101,7 @@ function registerReadRequestCallback() {
                     result = stringToArrayBuffer(result);
                     cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'recieveRequestedCharacteristicValue', [contextID, result]);
                 }
-                
+
             }
         }
     };

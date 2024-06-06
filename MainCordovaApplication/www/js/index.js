@@ -104,5 +104,57 @@ function onDeviceReady() {
         .catch(err => console.error(err));
 
     document.getElementById("CloseButton").addEventListener("click", closeApplication);
+}
 
+function testBleStuff() {
+    let SERVICE_UUID = 'a53438ce-e4bd-430f-a361-a22fe88b02bc';
+    let TX_UUID = '2ff481b3-72be-49e9-a766-5e6cea26932f';
+    let RX_UUID = '6d8c6a4d-9c96-4dde-8f13-7260b00f4785';
+
+    let permissions = blePeripheral.permissions;
+    let properties = blePeripheral.properties;
+
+    blePeripheral.stopAdvertising();
+    blePeripheral.removeAllServices();
+    blePeripheral.createService(SERVICE_UUID).then(() => {
+        console.log('t1');
+        blePeripheral.addCharacteristic(SERVICE_UUID, TX_UUID, properties.WRITE, permissions.WRITEABLE).then(() => {
+            console.log('t2');
+            blePeripheral.addCharacteristic(SERVICE_UUID, RX_UUID, properties.READ | properties.NOTIFY, permissions.READABLE).then(() => {
+                console.log('t3');
+                blePeripheral.publishService(SERVICE_UUID).then(() => {
+                    console.log('t4');
+                    blePeripheral.startAdvertising(SERVICE_UUID, 'UART').then(() => {
+                        console.log ('Created UART Service');
+                        blePeripheral.onReadRequest((service, characteristic) => {
+                            console.log('onReadRequest', 'service:', service, 'characteristic:', characteristic);
+                            return "some data here";
+                        });
+                    });
+                });
+            });
+        });
+    });
+    
+//
+//    Promise.all([
+//        function() { console.log ('Starting'); },
+//        blePeripheral.createService(SERVICE_UUID),
+//        function() { console.log ('Created service, creating char1'); },
+//        blePeripheral.addCharacteristic(SERVICE_UUID, TX_UUID, properties.WRITE, permissions.WRITEABLE),
+//        function() { console.log ('Created service, creating char2'); },
+//        blePeripheral.addCharacteristic(SERVICE_UUID, RX_UUID, properties.READ | properties.NOTIFY, permissions.READABLE),
+//        //blePeripheral.publishService(SERVICE_UUID),
+//        function() { console.log ('Start advertising'); },
+//        blePeripheral.startAdvertising(SERVICE_UUID, 'UART'),
+//        function() { console.log ('done'); },
+//    ]).then(
+//        function() { 
+//            console.log ('Created UART Service');
+//            blePeripheral.onReadRequest((dict) => {
+//                console.log('onReadRequest', JSON.stringify(dict));
+//                return "some data here";
+//            });
+//         },
+//    );
 }
