@@ -252,6 +252,7 @@ NSMutableDictionary<NSUUID *, BLECharacteristicReadRequest *> *readingCallbacks;
 -(void)recieveRequestedCharacteristicValue:(CDVInvokedUrlCommand *)command {
     NSString *someUniqueIDString = [command.arguments objectAtIndex:0];
     NSData *result = [command.arguments objectAtIndex:1];
+    NSLog(@"recieveRequestedCharacteristicValue: %@", result);
     
     if (!someUniqueIDString || !result) {
         CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
@@ -261,7 +262,7 @@ NSMutableDictionary<NSUUID *, BLECharacteristicReadRequest *> *readingCallbacks;
     
     NSUUID *contextID = [[NSUUID alloc] initWithUUIDString:someUniqueIDString];
     BLECharacteristicReadRequest *requestContext = [readingCallbacks objectForKey:contextID];
-    if (!contextID) {
+    if (!requestContext) {
         CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
         return;
@@ -284,7 +285,7 @@ NSMutableDictionary<NSUUID *, BLECharacteristicReadRequest *> *readingCallbacks;
         characteristic = request.characteristic;
     }
     
-    request.value = [characteristic.value subdataWithRange:NSMakeRange(request.offset, characteristic.value.length - request.offset)];
+    request.value = [result subdataWithRange:NSMakeRange(request.offset, result.length - request.offset)];
     [manager respondToRequest:request
                    withResult:CBATTErrorSuccess];
     
@@ -293,6 +294,7 @@ NSMutableDictionary<NSUUID *, BLECharacteristicReadRequest *> *readingCallbacks;
 }
 
 -(void)requestedCharacteristicValueTimeout:(NSUUID *)context {
+    
     BLECharacteristicReadRequest *requestContext = [readingCallbacks objectForKey:context];
     if (!context) {
         return;
@@ -452,6 +454,7 @@ NSMutableDictionary<NSUUID *, BLECharacteristicReadRequest *> *readingCallbacks;
         [dict setObject:requestedService.UUID.UUIDString forKey:@"service"];
         
         CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:dict];
+        [result setKeepCallbackAsBool:YES];
         [self.commandDelegate sendPluginResult:result callbackId:charactristicReadValueCallback];
         
     } else {

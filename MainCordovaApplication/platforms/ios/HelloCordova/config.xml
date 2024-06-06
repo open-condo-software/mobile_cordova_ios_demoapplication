@@ -28,9 +28,6 @@
     <feature name="Condo">
         <param name="ios-package" value="Condo" />
     </feature>
-    <feature name="BLEPeripheral">
-        <param name="ios-package" onload="true" value="BLEPeripheralPlugin" />
-    </feature>
     <name>HelloCordova</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -62,4 +59,7 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
+    <feature name="BLEPeripheral">
+        <param name="ios-package" onload="true" value="BLEPeripheralPlugin" />
+    </feature>
 </widget>

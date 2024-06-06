@@ -53,6 +53,7 @@ function convertToNativeJS(object) {
 // end Util functions
 
 var onWriteRequestCallback;
+var onReadRequestCallback;
 var onBluetoothStateChangeCallback;
 
 function registerWriteRequestCallback() {
@@ -92,10 +93,16 @@ function registerReadRequestCallback() {
         
         if (onReadRequestCallback && typeof onReadRequestCallback === 'function') {
             let result = onReadRequestCallback(service, characteristic);
-            result = massageMessageNativeToJs(result);
             
             if(result) {
-                cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'recieveRequestedCharacteristicValue', [contextID, result]);
+                if (typeof result === 'ArrayBuffer') {
+                    cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'recieveRequestedCharacteristicValue', [contextID, result]);
+                    
+                } else if (typeof result === 'string') {
+                    result = stringToArrayBuffer(result);
+                    cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'recieveRequestedCharacteristicValue', [contextID, result]);
+                }
+
             }
         }
     };
@@ -291,6 +298,5 @@ module.exports = {
     }
 
 };
-
 
 });
