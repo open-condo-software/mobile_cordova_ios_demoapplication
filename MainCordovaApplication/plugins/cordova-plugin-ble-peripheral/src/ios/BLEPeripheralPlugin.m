@@ -249,9 +249,12 @@ NSMutableDictionary<NSUUID *, BLECharacteristicReadRequest *> *readingCallbacks;
 
 /// js did calculate characteristic value;
 /// - Parameter command: 0 - contextID, 1 - result;
--(void)recieveRequestedCharacteristicValue:(CDVInvokedUrlCommand *)command {
+///
+
+-(void)receiveRequestedCharacteristicValue:(CDVInvokedUrlCommand *)command {
     NSString *someUniqueIDString = [command.arguments objectAtIndex:0];
-    NSData *result = [command.arguments objectAtIndex:1];
+    NSString *resultString = [command.arguments objectAtIndex:1];
+    NSData *result = [[NSData alloc] initWithBase64EncodedString:resultString options:nil];
     NSLog(@"recieveRequestedCharacteristicValue: %@", result);
     
     if (!someUniqueIDString || !result) {

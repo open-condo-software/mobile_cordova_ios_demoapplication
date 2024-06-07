@@ -94,12 +94,13 @@ function registerReadRequestCallback() {
             let result = onReadRequestCallback(service, characteristic);
             
             if(result) {
-                if (typeof result === 'ArrayBuffer') {
-                    cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'recieveRequestedCharacteristicValue', [contextID, result]);
+                if (result instanceof ArrayBuffer) {
+                    var base64String = btoa([].reduce.call(new Uint8Array(result),function(p,c){return p+String.fromCharCode(c)},''));
+                    cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'receiveRequestedCharacteristicValue', [contextID, base64String]);
                     
                 } else if (typeof result === 'string') {
-                    result = stringToArrayBuffer(result);
-                    cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'recieveRequestedCharacteristicValue', [contextID, result]);
+                    var base64String = btoa(result);
+                    cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'receiveRequestedCharacteristicValue', [contextID, base64String]);
                 }
 
             }
