@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3D063F93162E9D2670EE47B5 /* Pods_CordovaDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB82F009E656641EA3279E60 /* Pods_CordovaDemoApp.framework */; };
+		C0108B932C22F16200398BA6 /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = C0108B262C22F16200398BA6 /* CDVAssetLibraryFilesystem.m */; };
+		C0108B942C22F16200398BA6 /* CDVFile.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C0108B272C22F16200398BA6 /* CDVFile.bundle */; };
+		C0108B952C22F16200398BA6 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = C0108B292C22F16200398BA6 /* CDVFile.m */; };
+		C0108B962C22F16200398BA6 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = C0108B2B2C22F16200398BA6 /* CDVLocalFilesystem.m */; };
+		C0108BC02C22F16200398BA6 /* CDVCapture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C0108B652C22F16200398BA6 /* CDVCapture.bundle */; };
+		C0108BC12C22F16200398BA6 /* CDVCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = C0108B672C22F16200398BA6 /* CDVCapture.m */; };
 		C168CB6028184EC900E2FF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB5F28184EC900E2FF0C /* AppDelegate.swift */; };
 		C168CB6228184EC900E2FF0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB6128184EC900E2FF0C /* SceneDelegate.swift */; };
 		C168CB6428184EC900E2FF0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB6328184EC900E2FF0C /* ViewController.swift */; };
@@ -19,22 +25,62 @@
 		C18CC0AF28205977005B84E5 /* www in Resources */ = {isa = PBXBuildFile; fileRef = C18CC0AE28205977005B84E5 /* www */; };
 		C1CF69FA281F4600003B7872 /* DemoApplicationMainAppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF69F9281F4600003B7872 /* DemoApplicationMainAppAPI.swift */; };
 		C1D4D1C72828841F00480EAC /* MiniappView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4D1C62828841F00480EAC /* MiniappView.swift */; };
-		C1D4D1E42828966400480EAC /* condo.js in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1CD2828966400480EAC /* condo.js */; };
 		C1D4D1E72828966400480EAC /* Condo.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D4D1D22828966400480EAC /* Condo.m */; };
-		C1D4D1E92828966400480EAC /* fetch.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1D52828966400480EAC /* fetch.json */; };
-		C1D4D1EA2828966400480EAC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1D72828966400480EAC /* LICENSE */; };
-		C1D4D1EB2828966400480EAC /* plugin.xml in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1D82828966400480EAC /* plugin.xml */; };
-		C1D4D1EC2828966400480EAC /* RELEASENOTES.md in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1D92828966400480EAC /* RELEASENOTES.md */; };
-		C1D4D1ED2828966400480EAC /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1DA2828966400480EAC /* NOTICE */; };
-		C1D4D1EE2828966400480EAC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1DB2828966400480EAC /* README.md */; };
-		C1D4D1EF2828966400480EAC /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1DC2828966400480EAC /* package.json */; };
-		C1D4D1F02828966400480EAC /* CONTRIBUTING.md in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1DD2828966400480EAC /* CONTRIBUTING.md */; };
-		C1D4D1F22828966400480EAC /* ios.json in Resources */ = {isa = PBXBuildFile; fileRef = C1D4D1E12828966400480EAC /* ios.json */; };
 		C1D4D1F52828C28200480EAC /* CondoSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D4D1F42828C28200480EAC /* CondoSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03FDF17CA41EB4769EF3A123 /* Pods-CordovaDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CordovaDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-CordovaDemoApp/Pods-CordovaDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C0108B252C22F16200398BA6 /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVAssetLibraryFilesystem.h; sourceTree = "<group>"; };
+		C0108B262C22F16200398BA6 /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVAssetLibraryFilesystem.m; sourceTree = "<group>"; };
+		C0108B272C22F16200398BA6 /* CDVFile.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CDVFile.bundle; sourceTree = "<group>"; };
+		C0108B282C22F16200398BA6 /* CDVFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVFile.h; sourceTree = "<group>"; };
+		C0108B292C22F16200398BA6 /* CDVFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVFile.m; sourceTree = "<group>"; };
+		C0108B2A2C22F16200398BA6 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVLocalFilesystem.h; sourceTree = "<group>"; };
+		C0108B2B2C22F16200398BA6 /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVLocalFilesystem.m; sourceTree = "<group>"; };
+		C0108B352C22F16200398BA6 /* index.d.ts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.typescript; path = index.d.ts; sourceTree = "<group>"; };
+		C0108B3E2C22F16200398BA6 /* FileSystem.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FileSystem.js; sourceTree = "<group>"; };
+		C0108B422C22F16200398BA6 /* DirectoryEntry.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = DirectoryEntry.js; sourceTree = "<group>"; };
+		C0108B432C22F16200398BA6 /* DirectoryReader.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = DirectoryReader.js; sourceTree = "<group>"; };
+		C0108B442C22F16200398BA6 /* Entry.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Entry.js; sourceTree = "<group>"; };
+		C0108B452C22F16200398BA6 /* File.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = File.js; sourceTree = "<group>"; };
+		C0108B462C22F16200398BA6 /* FileEntry.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FileEntry.js; sourceTree = "<group>"; };
+		C0108B472C22F16200398BA6 /* FileError.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FileError.js; sourceTree = "<group>"; };
+		C0108B482C22F16200398BA6 /* FileReader.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FileReader.js; sourceTree = "<group>"; };
+		C0108B492C22F16200398BA6 /* FileSystem.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FileSystem.js; sourceTree = "<group>"; };
+		C0108B4A2C22F16200398BA6 /* fileSystemPaths.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fileSystemPaths.js; sourceTree = "<group>"; };
+		C0108B4B2C22F16200398BA6 /* fileSystems-roots.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "fileSystems-roots.js"; sourceTree = "<group>"; };
+		C0108B4C2C22F16200398BA6 /* fileSystems.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = fileSystems.js; sourceTree = "<group>"; };
+		C0108B4D2C22F16200398BA6 /* FileUploadOptions.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FileUploadOptions.js; sourceTree = "<group>"; };
+		C0108B4E2C22F16200398BA6 /* FileUploadResult.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FileUploadResult.js; sourceTree = "<group>"; };
+		C0108B4F2C22F16200398BA6 /* FileWriter.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = FileWriter.js; sourceTree = "<group>"; };
+		C0108B502C22F16200398BA6 /* Flags.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Flags.js; sourceTree = "<group>"; };
+		C0108B512C22F16200398BA6 /* LocalFileSystem.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = LocalFileSystem.js; sourceTree = "<group>"; };
+		C0108B522C22F16200398BA6 /* Metadata.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Metadata.js; sourceTree = "<group>"; };
+		C0108B532C22F16200398BA6 /* ProgressEvent.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ProgressEvent.js; sourceTree = "<group>"; };
+		C0108B542C22F16200398BA6 /* requestFileSystem.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = requestFileSystem.js; sourceTree = "<group>"; };
+		C0108B552C22F16200398BA6 /* resolveLocalFileSystemURI.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = resolveLocalFileSystemURI.js; sourceTree = "<group>"; };
+		C0108B572C22F16200398BA6 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		C0108B582C22F16200398BA6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C0108B592C22F16200398BA6 /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = "<group>"; };
+		C0108B5A2C22F16200398BA6 /* package.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = package.json; sourceTree = "<group>"; };
+		C0108B5B2C22F16200398BA6 /* plugin.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = plugin.xml; sourceTree = "<group>"; };
+		C0108B5C2C22F16200398BA6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C0108B5D2C22F16200398BA6 /* RELEASENOTES.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = RELEASENOTES.md; sourceTree = "<group>"; };
+		C0108B652C22F16200398BA6 /* CDVCapture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CDVCapture.bundle; sourceTree = "<group>"; };
+		C0108B662C22F16200398BA6 /* CDVCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVCapture.h; sourceTree = "<group>"; };
+		C0108B672C22F16200398BA6 /* CDVCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVCapture.m; sourceTree = "<group>"; };
+		C0108B6D2C22F16200398BA6 /* index.d.ts */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.typescript; path = index.d.ts; sourceTree = "<group>"; };
+		C0108B6F2C22F16200398BA6 /* init.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = init.js; sourceTree = "<group>"; };
+		C0108B712C22F16200398BA6 /* capture.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = capture.js; sourceTree = "<group>"; };
+		C0108B722C22F16200398BA6 /* CaptureAudioOptions.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CaptureAudioOptions.js; sourceTree = "<group>"; };
+		C0108B732C22F16200398BA6 /* CaptureError.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CaptureError.js; sourceTree = "<group>"; };
+		C0108B742C22F16200398BA6 /* CaptureImageOptions.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CaptureImageOptions.js; sourceTree = "<group>"; };
+		C0108B752C22F16200398BA6 /* CaptureVideoOptions.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CaptureVideoOptions.js; sourceTree = "<group>"; };
+		C0108B762C22F16200398BA6 /* ConfigurationData.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ConfigurationData.js; sourceTree = "<group>"; };
+		C0108B772C22F16200398BA6 /* helpers.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = helpers.js; sourceTree = "<group>"; };
+		C0108B782C22F16200398BA6 /* MediaFile.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MediaFile.js; sourceTree = "<group>"; };
+		C0108B792C22F16200398BA6 /* MediaFileData.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MediaFileData.js; sourceTree = "<group>"; };
 		C149F0CD281B30E30001B4D7 /* CordovaDemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CordovaDemoApp.entitlements; sourceTree = "<group>"; };
 		C168CB5C28184EC900E2FF0C /* CordovaDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CordovaDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C168CB5F28184EC900E2FF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +126,150 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0108B2C2C22F16200398BA6 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				C0108B252C22F16200398BA6 /* CDVAssetLibraryFilesystem.h */,
+				C0108B262C22F16200398BA6 /* CDVAssetLibraryFilesystem.m */,
+				C0108B272C22F16200398BA6 /* CDVFile.bundle */,
+				C0108B282C22F16200398BA6 /* CDVFile.h */,
+				C0108B292C22F16200398BA6 /* CDVFile.m */,
+				C0108B2A2C22F16200398BA6 /* CDVLocalFilesystem.h */,
+				C0108B2B2C22F16200398BA6 /* CDVLocalFilesystem.m */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		C0108B342C22F16200398BA6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C0108B2C2C22F16200398BA6 /* ios */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C0108B362C22F16200398BA6 /* types */ = {
+			isa = PBXGroup;
+			children = (
+				C0108B352C22F16200398BA6 /* index.d.ts */,
+			);
+			path = types;
+			sourceTree = "<group>";
+		};
+		C0108B3F2C22F16200398BA6 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				C0108B3E2C22F16200398BA6 /* FileSystem.js */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		C0108B562C22F16200398BA6 /* www */ = {
+			isa = PBXGroup;
+			children = (
+				C0108B3F2C22F16200398BA6 /* ios */,
+				C0108B422C22F16200398BA6 /* DirectoryEntry.js */,
+				C0108B432C22F16200398BA6 /* DirectoryReader.js */,
+				C0108B442C22F16200398BA6 /* Entry.js */,
+				C0108B452C22F16200398BA6 /* File.js */,
+				C0108B462C22F16200398BA6 /* FileEntry.js */,
+				C0108B472C22F16200398BA6 /* FileError.js */,
+				C0108B482C22F16200398BA6 /* FileReader.js */,
+				C0108B492C22F16200398BA6 /* FileSystem.js */,
+				C0108B4A2C22F16200398BA6 /* fileSystemPaths.js */,
+				C0108B4B2C22F16200398BA6 /* fileSystems-roots.js */,
+				C0108B4C2C22F16200398BA6 /* fileSystems.js */,
+				C0108B4D2C22F16200398BA6 /* FileUploadOptions.js */,
+				C0108B4E2C22F16200398BA6 /* FileUploadResult.js */,
+				C0108B4F2C22F16200398BA6 /* FileWriter.js */,
+				C0108B502C22F16200398BA6 /* Flags.js */,
+				C0108B512C22F16200398BA6 /* LocalFileSystem.js */,
+				C0108B522C22F16200398BA6 /* Metadata.js */,
+				C0108B532C22F16200398BA6 /* ProgressEvent.js */,
+				C0108B542C22F16200398BA6 /* requestFileSystem.js */,
+				C0108B552C22F16200398BA6 /* resolveLocalFileSystemURI.js */,
+			);
+			path = www;
+			sourceTree = "<group>";
+		};
+		C0108B5E2C22F16200398BA6 /* cordova-plugin-file */ = {
+			isa = PBXGroup;
+			children = (
+				C0108B342C22F16200398BA6 /* src */,
+				C0108B362C22F16200398BA6 /* types */,
+				C0108B562C22F16200398BA6 /* www */,
+				C0108B572C22F16200398BA6 /* CONTRIBUTING.md */,
+				C0108B582C22F16200398BA6 /* LICENSE */,
+				C0108B592C22F16200398BA6 /* NOTICE */,
+				C0108B5A2C22F16200398BA6 /* package.json */,
+				C0108B5B2C22F16200398BA6 /* plugin.xml */,
+				C0108B5C2C22F16200398BA6 /* README.md */,
+				C0108B5D2C22F16200398BA6 /* RELEASENOTES.md */,
+			);
+			path = "cordova-plugin-file";
+			sourceTree = "<group>";
+		};
+		C0108B682C22F16200398BA6 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				C0108B652C22F16200398BA6 /* CDVCapture.bundle */,
+				C0108B662C22F16200398BA6 /* CDVCapture.h */,
+				C0108B672C22F16200398BA6 /* CDVCapture.m */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		C0108B6C2C22F16200398BA6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C0108B682C22F16200398BA6 /* ios */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C0108B6E2C22F16200398BA6 /* types */ = {
+			isa = PBXGroup;
+			children = (
+				C0108B6D2C22F16200398BA6 /* index.d.ts */,
+			);
+			path = types;
+			sourceTree = "<group>";
+		};
+		C0108B702C22F16200398BA6 /* android */ = {
+			isa = PBXGroup;
+			children = (
+				C0108B6F2C22F16200398BA6 /* init.js */,
+			);
+			path = android;
+			sourceTree = "<group>";
+		};
+		C0108B7A2C22F16200398BA6 /* www */ = {
+			isa = PBXGroup;
+			children = (
+				C0108B702C22F16200398BA6 /* android */,
+				C0108B712C22F16200398BA6 /* capture.js */,
+				C0108B722C22F16200398BA6 /* CaptureAudioOptions.js */,
+				C0108B732C22F16200398BA6 /* CaptureError.js */,
+				C0108B742C22F16200398BA6 /* CaptureImageOptions.js */,
+				C0108B752C22F16200398BA6 /* CaptureVideoOptions.js */,
+				C0108B762C22F16200398BA6 /* ConfigurationData.js */,
+				C0108B772C22F16200398BA6 /* helpers.js */,
+				C0108B782C22F16200398BA6 /* MediaFile.js */,
+				C0108B792C22F16200398BA6 /* MediaFileData.js */,
+			);
+			path = www;
+			sourceTree = "<group>";
+		};
+		C0108B822C22F16200398BA6 /* cordova-plugin-media-capture */ = {
+			isa = PBXGroup;
+			children = (
+				C0108B6C2C22F16200398BA6 /* src */,
+				C0108B6E2C22F16200398BA6 /* types */,
+				C0108B7A2C22F16200398BA6 /* www */,
+			);
+			path = "cordova-plugin-media-capture";
+			sourceTree = "<group>";
+		};
 		C168CB5328184EC800E2FF0C = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +329,8 @@
 		C1D4D1C82828966400480EAC /* plugins */ = {
 			isa = PBXGroup;
 			children = (
+				C0108B5E2C22F16200398BA6 /* cordova-plugin-file */,
+				C0108B822C22F16200398BA6 /* cordova-plugin-media-capture */,
 				C1D4D1CA2828966400480EAC /* cordova-plugin-condo */,
 				C1D4D1D52828966400480EAC /* fetch.json */,
 				C1D4D1D62828966400480EAC /* cordova-plugin-whitelist */,
@@ -292,21 +484,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0108B942C22F16200398BA6 /* CDVFile.bundle in Resources */,
 				C168CB6C28184ECD00E2FF0C /* LaunchScreen.storyboard in Resources */,
-				C1D4D1F02828966400480EAC /* CONTRIBUTING.md in Resources */,
 				C168CB6928184ECD00E2FF0C /* Assets.xcassets in Resources */,
 				C18CC08C28204FF0005B84E5 /* config.xml in Resources */,
-				C1D4D1E92828966400480EAC /* fetch.json in Resources */,
-				C1D4D1ED2828966400480EAC /* NOTICE in Resources */,
-				C1D4D1EE2828966400480EAC /* README.md in Resources */,
-				C1D4D1F22828966400480EAC /* ios.json in Resources */,
-				C1D4D1EA2828966400480EAC /* LICENSE in Resources */,
 				C18CC0AF28205977005B84E5 /* www in Resources */,
 				C168CB6728184EC900E2FF0C /* Main.storyboard in Resources */,
-				C1D4D1EC2828966400480EAC /* RELEASENOTES.md in Resources */,
-				C1D4D1EF2828966400480EAC /* package.json in Resources */,
-				C1D4D1E42828966400480EAC /* condo.js in Resources */,
-				C1D4D1EB2828966400480EAC /* plugin.xml in Resources */,
+				C0108BC02C22F16200398BA6 /* CDVCapture.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,12 +562,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C168CB6428184EC900E2FF0C /* ViewController.swift in Sources */,
+				C0108B932C22F16200398BA6 /* CDVAssetLibraryFilesystem.m in Sources */,
 				C1D4D1C72828841F00480EAC /* MiniappView.swift in Sources */,
 				C168CB6028184EC900E2FF0C /* AppDelegate.swift in Sources */,
 				C168CB74281881B200E2FF0C /* DemoAPIClient.swift in Sources */,
 				C1CF69FA281F4600003B7872 /* DemoApplicationMainAppAPI.swift in Sources */,
+				C0108BC12C22F16200398BA6 /* CDVCapture.m in Sources */,
 				C1D4D1E72828966400480EAC /* Condo.m in Sources */,
 				C1D4D1F52828C28200480EAC /* CondoSupport.swift in Sources */,
+				C0108B952C22F16200398BA6 /* CDVFile.m in Sources */,
+				C0108B962C22F16200398BA6 /* CDVLocalFilesystem.m in Sources */,
 				C168CB6228184EC900E2FF0C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
