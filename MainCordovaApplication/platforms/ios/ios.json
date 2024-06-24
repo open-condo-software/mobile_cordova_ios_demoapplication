@@ -19,6 +19,10 @@
             {
               "xml": "<feature name=\"Capture\"><param name=\"ios-package\" value=\"CDVCapture\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -36,6 +40,9 @@
       "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
     },
     "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
+    },
+    "cordova-plugin-network-information": {
       "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
     }
   },
@@ -283,12 +290,29 @@
       "clobbers": [
         "navigator.device.capture"
       ]
+    },
+    {
+      "id": "cordova-plugin-network-information.network",
+      "file": "plugins/cordova-plugin-network-information/www/network.js",
+      "pluginId": "cordova-plugin-network-information",
+      "clobbers": [
+        "navigator.connection"
+      ]
+    },
+    {
+      "id": "cordova-plugin-network-information.Connection",
+      "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+      "pluginId": "cordova-plugin-network-information",
+      "clobbers": [
+        "Connection"
+      ]
     }
   ],
   "plugin_metadata": {
     "cordova-plugin-whitelist": "1.3.5",
     "cordova-plugin-condo": "0.0.1",
     "cordova-plugin-file": "8.1.0",
-    "cordova-plugin-media-capture": "5.0.1-dev"
+    "cordova-plugin-media-capture": "5.0.1-dev",
+    "cordova-plugin-network-information": "3.0.0"
   }
 }
