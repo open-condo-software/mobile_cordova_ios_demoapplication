@@ -23,6 +23,32 @@
             {
               "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<preference name=\"bluetooth_restore_state\" value=\"false\" />",
+              "count": 1
+            }
+          ],
+          "/widget": [
+            {
+              "xml": "<feature name=\"BLE\"><param name=\"ios-package\" onload=\"true\" value=\"BLECentralPlugin\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "*-Info.plist": {
+        "parents": {
+          "NSBluetoothPeripheralUsageDescription": [
+            {
+              "xml": "<string> </string>",
+              "count": 1
+            }
+          ],
+          "NSBluetoothAlwaysUsageDescription": [
+            {
+              "xml": "<string> </string>",
+              "count": 1
             }
           ]
         }
@@ -43,6 +69,12 @@
       "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
     },
     "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
+    },
+    "cordova-plugin-ble-central": {
+      "IOS_INIT_ON_LOAD": "true",
+      "BLUETOOTH_RESTORE_STATE": "false",
+      "BLUETOOTH_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
     }
   },
@@ -306,6 +338,14 @@
       "clobbers": [
         "Connection"
       ]
+    },
+    {
+      "id": "cordova-plugin-ble-central.ble",
+      "file": "plugins/cordova-plugin-ble-central/www/ble.js",
+      "pluginId": "cordova-plugin-ble-central",
+      "clobbers": [
+        "ble"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -313,6 +353,7 @@
     "cordova-plugin-condo": "0.0.1",
     "cordova-plugin-file": "8.1.0",
     "cordova-plugin-media-capture": "5.0.1-dev",
-    "cordova-plugin-network-information": "3.0.0"
+    "cordova-plugin-network-information": "3.0.0",
+    "cordova-plugin-ble-central": "1.7.3"
   }
 }

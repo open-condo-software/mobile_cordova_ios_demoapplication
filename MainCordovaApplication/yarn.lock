@@ -1172,6 +1172,11 @@
     "stringify-package" "^1.0.1"
     "write-file-atomic" "^5.0.0"
 
+"cordova-plugin-ble-central@^1.7.3":
+  "integrity" "sha512-NOZT+xDuHJJkR9k/P0zCKrYQQFcDMOjaDQajCaV8oIZQdffH+MdFrcFFgKmkiTjyVlLM5StGKgClba0kvwqqCg=="
+  "resolved" "https://registry.npmjs.org/cordova-plugin-ble-central/-/cordova-plugin-ble-central-1.7.3.tgz"
+  "version" "1.7.3"
+
 "cordova-plugin-condo@git+https://github.com/open-condo-software/mobile_cordova_plugin_condo.git":
   "resolved" "git+ssh://git@github.com/open-condo-software/mobile_cordova_plugin_condo.git#9f08b1b865a3c3d71283b4dc46775b79a0962140"
   "version" "0.0.2"
