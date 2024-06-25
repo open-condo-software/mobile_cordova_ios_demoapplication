@@ -24,6 +24,9 @@
       "BLUETOOTH_RESTORE_STATE": "false",
       "BLUETOOTH_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
     }
   },
   "dependent_plugins": {

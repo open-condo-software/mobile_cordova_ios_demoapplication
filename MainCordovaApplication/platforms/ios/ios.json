@@ -27,6 +27,10 @@
             {
               "xml": "<preference name=\"bluetooth_restore_state\" value=\"false\" />",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+              "count": 1
             }
           ],
           "/widget": [
@@ -75,6 +79,9 @@
       "IOS_INIT_ON_LOAD": "true",
       "BLUETOOTH_RESTORE_STATE": "false",
       "BLUETOOTH_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
+    },
+    "cordova-plugin-device": {
       "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
     }
   },
@@ -346,6 +353,14 @@
       "clobbers": [
         "ble"
       ]
+    },
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -354,6 +369,7 @@
     "cordova-plugin-file": "8.1.0",
     "cordova-plugin-media-capture": "5.0.1-dev",
     "cordova-plugin-network-information": "3.0.0",
-    "cordova-plugin-ble-central": "1.7.3"
+    "cordova-plugin-ble-central": "1.7.3",
+    "cordova-plugin-device": "3.0.0"
   }
 }

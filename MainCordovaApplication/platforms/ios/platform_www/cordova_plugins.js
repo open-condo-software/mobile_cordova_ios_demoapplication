@@ -266,6 +266,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "ble"
       ]
+    },
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -274,6 +282,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-file": "8.1.0",
     "cordova-plugin-media-capture": "5.0.1-dev",
     "cordova-plugin-network-information": "3.0.0",
-    "cordova-plugin-ble-central": "1.7.3"
+    "cordova-plugin-ble-central": "1.7.3",
+    "cordova-plugin-device": "3.0.0"
   };
 });

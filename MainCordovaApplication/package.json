@@ -19,6 +19,7 @@
     "cordova-js": "^6.1.0",
     "cordova-plugin-ble-central": "^1.7.3",
     "cordova-plugin-condo": "git+https://github.com/open-condo-software/mobile_cordova_plugin_condo.git",
+    "cordova-plugin-device": "^3.0.0",
     "cordova-plugin-file": "^8.1.0",
     "cordova-plugin-media-capture": "github:apache/cordova-plugin-media-capture",
     "cordova-plugin-network-information": "^3.0.0",
@@ -35,7 +36,8 @@
         "IOS_INIT_ON_LOAD": "true",
         "BLUETOOTH_RESTORE_STATE": "false",
         "BLUETOOTH_USAGE_DESCRIPTION": " "
-      }
+      },
+      "cordova-plugin-device": {}
     },
     "platforms": [
       "ios",
