@@ -51,8 +51,14 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string/>
+	<string>This app would like to scan for iBeacons.</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app would like to scan for iBeacons even when in the background.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app would like to scan for iBeacons while it is in use.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app would like to scan for iBeacons both while in use and while in the background.</string>
 </dict>
 </plist>
