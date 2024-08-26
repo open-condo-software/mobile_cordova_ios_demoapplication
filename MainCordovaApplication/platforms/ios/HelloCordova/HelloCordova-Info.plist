@@ -50,5 +50,9 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string/>
 </dict>
 </plist>
