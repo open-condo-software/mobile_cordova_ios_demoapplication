@@ -31,7 +31,7 @@
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-condo": {},
-      "cordova-plugin-ble-peripheral": {}
+      "cordova-plugin-ble-peripheral": {},
       "cordova-plugin-media-capture": {},
       "cordova-plugin-network-information": {},
       "cordova-plugin-ble-central": {
