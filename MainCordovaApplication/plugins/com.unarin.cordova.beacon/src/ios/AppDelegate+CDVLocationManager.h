@@ -17,12 +17,14 @@
  under the License.
  */
 
-#import "AppDelegate.h"
+//#import "AppDelegate.h" //Nope!
 
-@interface AppDelegate (CDVLocationManager)
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
+@interface DYLDINJECTOR : NSObject
 @property UIBackgroundTaskIdentifier backgroundTaskIdentifier;
 
-- (BOOL) xxx_application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
-
++ (void) load;
+- (BOOL) cdv_application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 @end

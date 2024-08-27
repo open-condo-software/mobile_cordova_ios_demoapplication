@@ -20,25 +20,25 @@
 #import "AppDelegate+CDVLocationManager.h"
 #import <objc/runtime.h>
 
-@implementation AppDelegate (CDVLocationManager)
-
+@implementation DYLDINJECTOR
 
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        Class class = [self class];
-
+        Class appDelegateClassObject = NSClassFromString(@"AppDelegate");
+        Class thisClassObject = [self class];
+        
         SEL originalSelector = @selector(application:didFinishLaunchingWithOptions:);
         SEL swizzledSelector = @selector(xxx_application:didFinishLaunchingWithOptions:);
         
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+        Method originalMethod = class_getInstanceMethod(appDelegateClassObject, originalSelector);
+        Method swizzledMethod = class_getInstanceMethod(thisClassObject, swizzledSelector);
         
-        BOOL didAddMethod = class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+        BOOL didAddMethod = class_addMethod(appDelegateClassObject, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
         
         if (didAddMethod) {
-            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+            class_replaceMethod(appDelegateClassObject, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
         } else {
             method_exchangeImplementations(originalMethod, swizzledMethod);
         }
@@ -46,7 +46,7 @@
     });
 }
 
-- (BOOL) xxx_application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL) cdv_application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     BOOL launchedWithoutOptions = launchOptions == nil;
     
@@ -54,7 +54,7 @@
         [self requestMoreBackgroundExecutionTime];
     }
     
-    return [self xxx_application:application didFinishLaunchingWithOptions:launchOptions];
+    return [self cdv_application:application didFinishLaunchingWithOptions:launchOptions];
     
 }
 

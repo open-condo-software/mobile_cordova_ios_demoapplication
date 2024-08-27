@@ -18,7 +18,7 @@
  */
 
 #import "LMLogger.h"
-
+#import <UserNotificationsUI/UserNotificationsUI.h>
 @class CDVLocationManager;
 @class AppDelegate;
 

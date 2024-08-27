@@ -25,6 +25,12 @@
 		C0AF77E62C7E0877004BDCA3 /* BLEStreamContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AF77C92C7E0877004BDCA3 /* BLEStreamContext.m */; };
 		C0AF77E72C7E0877004BDCA3 /* CBPeripheral+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = C0AF77CA2C7E0877004BDCA3 /* CBPeripheral+Extensions.h */; };
 		C0AF77E82C7E0877004BDCA3 /* CBPeripheral+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AF77CB2C7E0877004BDCA3 /* CBPeripheral+Extensions.m */; };
+		C0AF78352C7E0904004BDCA3 /* AppDelegate+CDVLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C0AF77FA2C7E0904004BDCA3 /* AppDelegate+CDVLocationManager.h */; };
+		C0AF78362C7E0904004BDCA3 /* AppDelegate+CDVLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AF77FB2C7E0904004BDCA3 /* AppDelegate+CDVLocationManager.m */; };
+		C0AF78372C7E0904004BDCA3 /* CDVLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C0AF77FC2C7E0904004BDCA3 /* CDVLocationManager.h */; };
+		C0AF78382C7E0904004BDCA3 /* CDVLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AF77FD2C7E0904004BDCA3 /* CDVLocationManager.m */; };
+		C0AF78392C7E0904004BDCA3 /* LMLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = C0AF77FE2C7E0904004BDCA3 /* LMLogger.h */; };
+		C0AF783A2C7E0904004BDCA3 /* LMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AF77FF2C7E0904004BDCA3 /* LMLogger.m */; };
 		C168CB6028184EC900E2FF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB5F28184EC900E2FF0C /* AppDelegate.swift */; };
 		C168CB6228184EC900E2FF0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB6128184EC900E2FF0C /* SceneDelegate.swift */; };
 		C168CB6428184EC900E2FF0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB6328184EC900E2FF0C /* ViewController.swift */; };
@@ -116,6 +122,27 @@
 		C0AF77CE2C7E0877004BDCA3 /* ble.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ble.js; sourceTree = "<group>"; };
 		C0AF77D12C7E0877004BDCA3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C0AF77D42C7E0877004BDCA3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C0AF77F42C7E0904004BDCA3 /* cordova-plugin-ibeacon.gradle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cordova-plugin-ibeacon.gradle"; sourceTree = "<group>"; };
+		C0AF77F52C7E0904004BDCA3 /* IBeaconServiceNotifier.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = IBeaconServiceNotifier.java; sourceTree = "<group>"; };
+		C0AF77F62C7E0904004BDCA3 /* ILocationManagerCommand.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ILocationManagerCommand.java; sourceTree = "<group>"; };
+		C0AF77F72C7E0904004BDCA3 /* LocationManager.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = LocationManager.java; sourceTree = "<group>"; };
+		C0AF77F82C7E0904004BDCA3 /* PausableThreadPoolExecutor.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = PausableThreadPoolExecutor.java; sourceTree = "<group>"; };
+		C0AF77FA2C7E0904004BDCA3 /* AppDelegate+CDVLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+CDVLocationManager.h"; sourceTree = "<group>"; };
+		C0AF77FB2C7E0904004BDCA3 /* AppDelegate+CDVLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+CDVLocationManager.m"; sourceTree = "<group>"; };
+		C0AF77FC2C7E0904004BDCA3 /* CDVLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVLocationManager.h; sourceTree = "<group>"; };
+		C0AF77FD2C7E0904004BDCA3 /* CDVLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVLocationManager.m; sourceTree = "<group>"; };
+		C0AF77FE2C7E0904004BDCA3 /* LMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLogger.h; sourceTree = "<group>"; };
+		C0AF77FF2C7E0904004BDCA3 /* LMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLogger.m; sourceTree = "<group>"; };
+		C0AF781C2C7E0904004BDCA3 /* q.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = q.min.js; sourceTree = "<group>"; };
+		C0AF781D2C7E0904004BDCA3 /* underscore-min-1.6.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "underscore-min-1.6.js"; sourceTree = "<group>"; };
+		C0AF781F2C7E0904004BDCA3 /* BeaconRegion.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = BeaconRegion.js; sourceTree = "<group>"; };
+		C0AF78202C7E0904004BDCA3 /* CircularRegion.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CircularRegion.js; sourceTree = "<group>"; };
+		C0AF78212C7E0904004BDCA3 /* Region.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Region.js; sourceTree = "<group>"; };
+		C0AF78232C7E0904004BDCA3 /* Delegate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Delegate.js; sourceTree = "<group>"; };
+		C0AF78242C7E0904004BDCA3 /* LocationManager.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = LocationManager.js; sourceTree = "<group>"; };
+		C0AF78252C7E0904004BDCA3 /* Regions.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Regions.js; sourceTree = "<group>"; };
+		C0AF78292C7E0904004BDCA3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C0AF782C2C7E0904004BDCA3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C149F0CD281B30E30001B4D7 /* CordovaDemoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CordovaDemoApp.entitlements; sourceTree = "<group>"; };
 		C168CB5C28184EC900E2FF0C /* CordovaDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CordovaDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C168CB5F28184EC900E2FF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -407,6 +434,82 @@
 			path = "cordova-plugin-ble-central";
 			sourceTree = "<group>";
 		};
+		C0AF77F92C7E0904004BDCA3 /* android */ = {
+			isa = PBXGroup;
+			children = (
+				C0AF77F42C7E0904004BDCA3 /* cordova-plugin-ibeacon.gradle */,
+				C0AF77F52C7E0904004BDCA3 /* IBeaconServiceNotifier.java */,
+				C0AF77F62C7E0904004BDCA3 /* ILocationManagerCommand.java */,
+				C0AF77F72C7E0904004BDCA3 /* LocationManager.java */,
+				C0AF77F82C7E0904004BDCA3 /* PausableThreadPoolExecutor.java */,
+			);
+			path = android;
+			sourceTree = "<group>";
+		};
+		C0AF78002C7E0904004BDCA3 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				C0AF77FA2C7E0904004BDCA3 /* AppDelegate+CDVLocationManager.h */,
+				C0AF77FB2C7E0904004BDCA3 /* AppDelegate+CDVLocationManager.m */,
+				C0AF77FC2C7E0904004BDCA3 /* CDVLocationManager.h */,
+				C0AF77FD2C7E0904004BDCA3 /* CDVLocationManager.m */,
+				C0AF77FE2C7E0904004BDCA3 /* LMLogger.h */,
+				C0AF77FF2C7E0904004BDCA3 /* LMLogger.m */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		C0AF78012C7E0904004BDCA3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C0AF77F92C7E0904004BDCA3 /* android */,
+				C0AF78002C7E0904004BDCA3 /* ios */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C0AF781E2C7E0904004BDCA3 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C0AF781C2C7E0904004BDCA3 /* q.min.js */,
+				C0AF781D2C7E0904004BDCA3 /* underscore-min-1.6.js */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		C0AF78222C7E0904004BDCA3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C0AF781F2C7E0904004BDCA3 /* BeaconRegion.js */,
+				C0AF78202C7E0904004BDCA3 /* CircularRegion.js */,
+				C0AF78212C7E0904004BDCA3 /* Region.js */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C0AF78262C7E0904004BDCA3 /* www */ = {
+			isa = PBXGroup;
+			children = (
+				C0AF781E2C7E0904004BDCA3 /* lib */,
+				C0AF78222C7E0904004BDCA3 /* model */,
+				C0AF78232C7E0904004BDCA3 /* Delegate.js */,
+				C0AF78242C7E0904004BDCA3 /* LocationManager.js */,
+				C0AF78252C7E0904004BDCA3 /* Regions.js */,
+			);
+			path = www;
+			sourceTree = "<group>";
+		};
+		C0AF782D2C7E0904004BDCA3 /* com.unarin.cordova.beacon */ = {
+			isa = PBXGroup;
+			children = (
+				C0AF78012C7E0904004BDCA3 /* src */,
+				C0AF78262C7E0904004BDCA3 /* www */,
+				C0AF78292C7E0904004BDCA3 /* LICENSE */,
+				C0AF782C2C7E0904004BDCA3 /* README.md */,
+			);
+			path = com.unarin.cordova.beacon;
+			sourceTree = "<group>";
+		};
 		C168CB5328184EC800E2FF0C = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +569,7 @@
 		C1D4D1C82828966400480EAC /* plugins */ = {
 			isa = PBXGroup;
 			children = (
+				C0AF782D2C7E0904004BDCA3 /* com.unarin.cordova.beacon */,
 				C0AF77D72C7E0877004BDCA3 /* cordova-plugin-ble-central */,
 				C044F1EC2C1084B900BD5BA0 /* cordova-plugin-ble-peripheral */,
 				C0108B5E2C22F16200398BA6 /* cordova-plugin-file */,
@@ -561,8 +665,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0AF78352C7E0904004BDCA3 /* AppDelegate+CDVLocationManager.h in Headers */,
+				C0AF78392C7E0904004BDCA3 /* LMLogger.h in Headers */,
 				C0AF77E52C7E0877004BDCA3 /* BLEStreamContext.h in Headers */,
 				C044F2022C10B2B600BD5BA0 /* BLEPeripheralPlugin.h in Headers */,
+				C0AF78372C7E0904004BDCA3 /* CDVLocationManager.h in Headers */,
 				C0AF77E12C7E0877004BDCA3 /* BLECentralPlugin.h in Headers */,
 				C0AF77E72C7E0877004BDCA3 /* CBPeripheral+Extensions.h in Headers */,
 				C0AF77E32C7E0877004BDCA3 /* BLECommandContext.h in Headers */,
@@ -710,8 +817,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0AF77E62C7E0877004BDCA3 /* BLEStreamContext.m in Sources */,
+				C0AF78382C7E0904004BDCA3 /* CDVLocationManager.m in Sources */,
 				C0AF77E22C7E0877004BDCA3 /* BLECentralPlugin.m in Sources */,
 				C168CB6428184EC900E2FF0C /* ViewController.swift in Sources */,
+				C0AF783A2C7E0904004BDCA3 /* LMLogger.m in Sources */,
 				C0AF77E42C7E0877004BDCA3 /* BLECommandContext.m in Sources */,
 				C0108B932C22F16200398BA6 /* CDVAssetLibraryFilesystem.m in Sources */,
 				C1D4D1C72828841F00480EAC /* MiniappView.swift in Sources */,
@@ -723,6 +832,7 @@
 				C1D4D1E72828966400480EAC /* Condo.m in Sources */,
 				C1D4D1F52828C28200480EAC /* CondoSupport.swift in Sources */,
 				C0108B952C22F16200398BA6 /* CDVFile.m in Sources */,
+				C0AF78362C7E0904004BDCA3 /* AppDelegate+CDVLocationManager.m in Sources */,
 				C0108B962C22F16200398BA6 /* CDVLocalFilesystem.m in Sources */,
 				C168CB6228184EC900E2FF0C /* SceneDelegate.swift in Sources */,
 				C044F1F92C1084B900BD5BA0 /* BLEPeripheralPlugin.m in Sources */,
