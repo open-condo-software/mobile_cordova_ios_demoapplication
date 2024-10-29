@@ -489,9 +489,6 @@ cordova.plugins.condo.setInputsEnabled(true, function(response) {}, function(err
 
 ---
 # 11. Supported plugins <a name="supported_plugins"></a>
-## cordova-plugin-whitelist: 
-[link](https://github.com/apache/cordova-plugin-whitelist)
-
 ## cordova-plugin-condo: 
 [link](https://github.com/open-condo-software/mobile_cordova_plugin_condo)
 
@@ -499,6 +496,21 @@ cordova.plugins.condo.setInputsEnabled(true, function(response) {}, function(err
 [link](https://github.com/don/cordova-plugin-ble-central)
 
 ⚠️ This plugin has additional feature-flag/permission enabling background functionality: `bluetooth_central_background`
+
+Enable it by adding flag to **www/native_config.json** into `mobile_permissions` field
+
+Example: 
+```js
+{
+    "presentationStyle": "native",
+    "mobile_permissions": ["bluetooth_central_background"],
+    "hostApplication": {
+        "iOS": {
+          "minimumSupportedVersion": "1.1.22"
+        }
+    }
+}
+```
 
 Possible flow of miniapp work with background functionality:
 1) App launched
@@ -519,10 +531,40 @@ Additional flows are: 2 -> 6 -> 9 and 4 -> 6 -> 8
 
 ⚠️ This plugin has additional feature-flag/permission enabling background functionality: `bluetooth_peripheral_background`
 
+Enable it by adding flag to **www/native_config.json** into `mobile_permissions` field
+
+Example: 
+```js
+{
+    "presentationStyle": "native",
+    "mobile_permissions": ["bluetooth_peripheral_background"],
+    "hostApplication": {
+        "iOS": {
+          "minimumSupportedVersion": "1.1.22"
+        }
+    }
+}
+```
+
 ## cordova-plugin-device:
 [link](https://github.com/apache/cordova-plugin-device)
 
-⚠️ This plugin has additional feature-flag/permission enabling background functionality: `bluetooth_beacon_background`
+⚠️ This plugin has additional feature-flag/permission enabling background functionality: `bluetooth_beacon_background`.
+
+Enable it by adding flag to **www/native_config.json** into `mobile_permissions` field
+
+Example: 
+```js
+{
+    "presentationStyle": "native",
+    "mobile_permissions": ["bluetooth_beacon_background"],
+    "hostApplication": {
+        "iOS": {
+          "minimumSupportedVersion": "1.1.22"
+        }
+    }
+}
+```
 
 ## cordova-plugin-file:
 [link](https://github.com/apache/cordova-plugin-file)
