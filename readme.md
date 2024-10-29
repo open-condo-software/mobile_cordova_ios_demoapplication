@@ -30,6 +30,7 @@ ___
 8. [Publishing.](#publishing)
 9. [Plugin addition.](#plugin_addition)
 10. [Common methods.](#common_methods)
+11. [Supported plugins.](#supported_plugins)
 
 ---
 
@@ -420,73 +421,120 @@ npm run cordova plugin add cordova-plugin-device
 ![RunAndCheck](./ReadmeImages/Plugins/Test/2.png)
 
  ---
-# 9. Common methods. <a name="common_methods"></a>
-- authorization
+# 10. Common methods. <a name="common_methods"></a>
+### Authorization
 
-    `function requestServerAuthorizationByUrl(miniapp_server_init_auth_url, custom_params_reserver_for_future_use, success, error)`
+`function requestServerAuthorizationByUrl(miniapp_server_init_auth_url, custom_params_reserver_for_future_use, success, error)`
 
-    example:
+Example:
+```js
+cordova.plugins.condo.requestServerAuthorizationByUrl('https://miniapp.d.doma.ai/oidc/auth', {}, function(response) {
+    console.log('recive authorication result => ', JSON.stringify(response));
+    window.location.reload();
+}, function(error) {
+    console.log(error);
+});
+```
 
-    ```
-    cordova.plugins.condo.requestServerAuthorizationByUrl('https://miniapp.d.doma.ai/oidc/auth', {}, function(response) {
-        console.log('recive authorication result => ', JSON.stringify(response));
-        window.location.reload();
-    }, function(error) {
-        console.log(error);
-    });
-    ```
+### Obtaining a current resident/address
 
-- obtaining a current resident/address
+`function getCurrentResident(success, error)`
 
-    `function getCurrentResident(success, error)`
+Example:
+```js
+cordova.plugins.condo.getCurrentResident(function(response) {
+    console.log("current resident\address => ", JSON.stringify(response));
+}, function(error) {
+    console.log(error);
+});
+```
 
-    example:
+### Closing application
 
-    ```
-    cordova.plugins.condo.getCurrentResident(function(response) {
-        console.log("current resident\address => ", JSON.stringify(response));
-    }, function(error) {
-        console.log(error);
-    });
-    ```
+`function closeApplication(success, error)`
 
+Example:
 
-- application closing
+```js
+cordova.plugins.condo.closeApplication(function(response) {}, function(error) {});
+```
 
-    `function closeApplication(success, error)`
+### application launch context (from notification)
 
-    example:
+`function getLaunchContext(success, error)`
 
-    ```
-    cordova.plugins.condo.closeApplication(function(response) {}, function(error) {});
-    ```
-
-
-- application launch context (from notification)
-
-    `function getLaunchContext(success, error)`
-
-    example:
-
-    ```
-    cordova.plugins.condo.getLaunchContext(function(b2cAppContextString) {}, function(error) {});
-    ```
+Example:
+```js
+cordova.plugins.condo.getLaunchContext(function(b2cAppContextString) {}, function(error) {});
+```
 
 
-- activation of additional events required for some inputs
+### activation of additional events required for some inputs
 
-    `function setInputsEnabled(enabled, success, error)`
+```js
+function setInputsEnabled(enabled, success, error)`
+```
 
-    example:
+Example:
+```js
+cordova.plugins.condo.setInputsEnabled(true, function(response) {}, function(error) {});
+```
 
-    ```
-    cordova.plugins.condo.setInputsEnabled(true, function(response) {}, function(error) {});
-    ```
+> [!IMPORTANT] 
+> Don't forget to disable inputs when the user leaves the screen where the inputs that required it are located.
+>  ```js
+>    cordova.plugins.condo.setInputsEnabled(false, function(response) {}, function(error) {});
+>  ```
+> 
 
-    Important! Don't forget to disable this back when the user leaves the screen where the inputs that required it are located.
+---
+# 11. Supported plugins <a name="supported_plugins"></a>
+## cordova-plugin-whitelist: 
+[link](https://github.com/apache/cordova-plugin-whitelist)
 
-    example:
+## cordova-plugin-condo: 
+[link](https://github.com/open-condo-software/mobile_cordova_plugin_condo)
 
-    ```
-    cordova.plugins.condo.setInputsEnabled(false, function(response) {}, function(error) {});
-    ```
+## cordova-plugin-ble-central: 
+[link](https://github.com/don/cordova-plugin-ble-central)
+
+⚠️ This plugin has additional feature-flag/permission enabling background functionality: `bluetooth_central_background`
+
+Possible flow of miniapp work with background functionality:
+1) App launched
+2) miniapp launched -> miniapp starts scanning
+3) miniapp closed (while actively scanning) => app proceeds scanning for miniapp 
+4) application goes to background
+5) application is suspended by iOS (while app still actively scanning) => iOS proceeds scanning for app
+6) BT device detected
+7) iOS raises application in background
+8) Application raises miniapp in background
+9) miniapp recieves events
+10) things happen :D
+
+Additional flows are: 2 -> 6 -> 9 and 4 -> 6 -> 8
+
+## cordova-plugin-ble-peripheral:
+[link](https://github.com/open-condo-software/mobile_cordova_plugin_condo)
+
+⚠️ This plugin has additional feature-flag/permission enabling background functionality: `bluetooth_peripheral_background`
+
+## cordova-plugin-device:
+[link](https://github.com/apache/cordova-plugin-device)
+
+⚠️ This plugin has additional feature-flag/permission enabling background functionality: `bluetooth_beacon_background`
+
+## cordova-plugin-file:
+[link](https://github.com/apache/cordova-plugin-file)
+
+## cordova-plugin-media-capture:
+[link](https://github.com/apache/cordova-plugin-media-capture)
+
+## cordova-plugin-network-information:
+[link](https://github.com/apache/cordova-plugin-network-information)
+
+## com.unarin.cordova.beacon:
+[link](https://github.com/petermetz/cordova-plugin-ibeacon)
+
+
+
