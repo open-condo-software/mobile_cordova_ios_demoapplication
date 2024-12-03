@@ -549,6 +549,18 @@ Example:
 ## cordova-plugin-device:
 [link](https://github.com/apache/cordova-plugin-device)
 
+## cordova-plugin-file:
+[link](https://github.com/apache/cordova-plugin-file)
+
+## cordova-plugin-media-capture:
+[link](https://github.com/apache/cordova-plugin-media-capture)
+
+## cordova-plugin-network-information:
+[link](https://github.com/apache/cordova-plugin-network-information)
+
+## com.unarin.cordova.beacon:
+[link](https://github.com/petermetz/cordova-plugin-ibeacon)
+
 ⚠️ This plugin has additional feature-flag/permission enabling background functionality: `bluetooth_beacon_background`.
 
 Enable it by adding flag to **www/native_config.json** into `mobile_permissions` field
@@ -565,18 +577,4 @@ Example:
     }
 }
 ```
-
-## cordova-plugin-file:
-[link](https://github.com/apache/cordova-plugin-file)
-
-## cordova-plugin-media-capture:
-[link](https://github.com/apache/cordova-plugin-media-capture)
-
-## cordova-plugin-network-information:
-[link](https://github.com/apache/cordova-plugin-network-information)
-
-## com.unarin.cordova.beacon:
-[link](https://github.com/petermetz/cordova-plugin-ibeacon)
-
-
 
