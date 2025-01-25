@@ -32,6 +32,13 @@
 		C168CB6928184ECD00E2FF0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C168CB6828184ECD00E2FF0C /* Assets.xcassets */; };
 		C168CB6C28184ECD00E2FF0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C168CB6A28184ECD00E2FF0C /* LaunchScreen.storyboard */; };
 		C168CB74281881B200E2FF0C /* DemoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168CB73281881B200E2FF0C /* DemoAPIClient.swift */; };
+		C172C95A2D45524500AC9D23 /* CDVDevice.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C172C9252D45524500AC9D23 /* CDVDevice.bundle */; };
+		C172C9672D45524500AC9D23 /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C172C93A2D45524500AC9D23 /* CDVConnection.m */; };
+		C172C9682D45524500AC9D23 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C172C9262D45524500AC9D23 /* CDVDevice.m */; };
+		C172C9692D45524500AC9D23 /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C172C93C2D45524500AC9D23 /* CDVReachability.m */; };
+		C172C96A2D45524500AC9D23 /* CDVConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = C172C9392D45524500AC9D23 /* CDVConnection.h */; };
+		C172C96B2D45524500AC9D23 /* CDVReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = C172C93B2D45524500AC9D23 /* CDVReachability.h */; };
+		C172C96C2D45524500AC9D23 /* CDVDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = C172C9242D45524500AC9D23 /* CDVDevice.h */; };
 		C18CC08C28204FF0005B84E5 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = C18CC08928204FF0005B84E5 /* config.xml */; };
 		C18CC0AF28205977005B84E5 /* www in Resources */ = {isa = PBXBuildFile; fileRef = C18CC0AE28205977005B84E5 /* www */; };
 		C1CF69FA281F4600003B7872 /* DemoApplicationMainAppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CF69F9281F4600003B7872 /* DemoApplicationMainAppAPI.swift */; };
@@ -126,6 +133,17 @@
 		C168CB6B28184ECD00E2FF0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C168CB6D28184ECD00E2FF0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C168CB73281881B200E2FF0C /* DemoAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoAPIClient.swift; sourceTree = "<group>"; };
+		C172C9242D45524500AC9D23 /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDVDevice.h; sourceTree = "<group>"; };
+		C172C9252D45524500AC9D23 /* CDVDevice.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CDVDevice.bundle; sourceTree = "<group>"; };
+		C172C9262D45524500AC9D23 /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDVDevice.m; sourceTree = "<group>"; };
+		C172C92E2D45524500AC9D23 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C172C9322D45524500AC9D23 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C172C9392D45524500AC9D23 /* CDVConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDVConnection.h; sourceTree = "<group>"; };
+		C172C93A2D45524500AC9D23 /* CDVConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDVConnection.m; sourceTree = "<group>"; };
+		C172C93B2D45524500AC9D23 /* CDVReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDVReachability.h; sourceTree = "<group>"; };
+		C172C93C2D45524500AC9D23 /* CDVReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDVReachability.m; sourceTree = "<group>"; };
+		C172C9472D45524500AC9D23 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C172C94B2D45524500AC9D23 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C18CC08928204FF0005B84E5 /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
 		C18CC0AE28205977005B84E5 /* www */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = www; path = MainCordovaApplication/platforms/ios/www; sourceTree = SOURCE_ROOT; };
 		C1CF69F9281F4600003B7872 /* DemoApplicationMainAppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApplicationMainAppAPI.swift; sourceTree = "<group>"; };
@@ -445,6 +463,63 @@
 			path = CordovaDemoApp;
 			sourceTree = "<group>";
 		};
+		C172C9272D45524500AC9D23 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				C172C9242D45524500AC9D23 /* CDVDevice.h */,
+				C172C9252D45524500AC9D23 /* CDVDevice.bundle */,
+				C172C9262D45524500AC9D23 /* CDVDevice.m */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		C172C9282D45524500AC9D23 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C172C9272D45524500AC9D23 /* ios */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C172C9342D45524500AC9D23 /* cordova-plugin-device */ = {
+			isa = PBXGroup;
+			children = (
+				C172C9282D45524500AC9D23 /* src */,
+				C172C92E2D45524500AC9D23 /* LICENSE */,
+				C172C9322D45524500AC9D23 /* README.md */,
+			);
+			path = "cordova-plugin-device";
+			sourceTree = "<group>";
+		};
+		C172C93D2D45524500AC9D23 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				C172C9392D45524500AC9D23 /* CDVConnection.h */,
+				C172C93A2D45524500AC9D23 /* CDVConnection.m */,
+				C172C93B2D45524500AC9D23 /* CDVReachability.h */,
+				C172C93C2D45524500AC9D23 /* CDVReachability.m */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		C172C9402D45524500AC9D23 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C172C93D2D45524500AC9D23 /* ios */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C172C94D2D45524500AC9D23 /* cordova-plugin-network-information */ = {
+			isa = PBXGroup;
+			children = (
+				C172C9402D45524500AC9D23 /* src */,
+				C172C9472D45524500AC9D23 /* LICENSE */,
+				C172C94B2D45524500AC9D23 /* README.md */,
+			);
+			path = "cordova-plugin-network-information";
+			sourceTree = "<group>";
+		};
 		C18CC08628204FF0005B84E5 /* Cordova */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +541,8 @@
 		C1D4D1C82828966400480EAC /* plugins */ = {
 			isa = PBXGroup;
 			children = (
+				C172C9342D45524500AC9D23 /* cordova-plugin-device */,
+				C172C94D2D45524500AC9D23 /* cordova-plugin-network-information */,
 				C0AF77D72C7E0877004BDCA3 /* cordova-plugin-ble-central */,
 				C044F1EC2C1084B900BD5BA0 /* cordova-plugin-ble-peripheral */,
 				C0108B5E2C22F16200398BA6 /* cordova-plugin-file */,
@@ -564,6 +641,9 @@
 				C0AF77E52C7E0877004BDCA3 /* BLEStreamContext.h in Headers */,
 				C044F2022C10B2B600BD5BA0 /* BLEPeripheralPlugin.h in Headers */,
 				C0AF77E12C7E0877004BDCA3 /* BLECentralPlugin.h in Headers */,
+				C172C96A2D45524500AC9D23 /* CDVConnection.h in Headers */,
+				C172C96B2D45524500AC9D23 /* CDVReachability.h in Headers */,
+				C172C96C2D45524500AC9D23 /* CDVDevice.h in Headers */,
 				C0AF77E72C7E0877004BDCA3 /* CBPeripheral+Extensions.h in Headers */,
 				C0AF77E32C7E0877004BDCA3 /* BLECommandContext.h in Headers */,
 			);
@@ -638,6 +718,7 @@
 				C18CC0AF28205977005B84E5 /* www in Resources */,
 				C044F1FF2C10859000BD5BA0 /* blePeripheral.js in Resources */,
 				C168CB6728184EC900E2FF0C /* Main.storyboard in Resources */,
+				C172C95A2D45524500AC9D23 /* CDVDevice.bundle in Resources */,
 				C0108BC02C22F16200398BA6 /* CDVCapture.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,6 +801,9 @@
 				C168CB74281881B200E2FF0C /* DemoAPIClient.swift in Sources */,
 				C1CF69FA281F4600003B7872 /* DemoApplicationMainAppAPI.swift in Sources */,
 				C0108BC12C22F16200398BA6 /* CDVCapture.m in Sources */,
+				C172C9672D45524500AC9D23 /* CDVConnection.m in Sources */,
+				C172C9682D45524500AC9D23 /* CDVDevice.m in Sources */,
+				C172C9692D45524500AC9D23 /* CDVReachability.m in Sources */,
 				C1D4D1E72828966400480EAC /* Condo.m in Sources */,
 				C1D4D1F52828C28200480EAC /* CondoSupport.swift in Sources */,
 				C0108B952C22F16200398BA6 /* CDVFile.m in Sources */,
@@ -872,9 +956,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CordovaDemoApp/CordovaDemoApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V37GW8KE95;
+				DEVELOPMENT_TEAM = GN3B897ZL4;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -895,8 +980,9 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DDOMA";
-				PRODUCT_BUNDLE_IDENTIFIER = asivash.CordovaDemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = cry.asivash.CordovaDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG DOMA";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -911,9 +997,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CordovaDemoApp/CordovaDemoApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V37GW8KE95;
+				DEVELOPMENT_TEAM = GN3B897ZL4;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -934,8 +1021,9 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DDOMA";
-				PRODUCT_BUNDLE_IDENTIFIER = asivash.CordovaDemoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = cry.asivash.CordovaDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DOMA;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
