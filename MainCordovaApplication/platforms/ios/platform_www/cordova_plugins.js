@@ -1,11 +1,11 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
   module.exports = [
     {
-      "id": "cordova-plugin-condo.Condo",
-      "file": "plugins/cordova-plugin-condo/www/condo.js",
-      "pluginId": "cordova-plugin-condo",
+      "id": "cordova-plugin-ble-central.ble",
+      "file": "plugins/cordova-plugin-ble-central/www/ble.js",
+      "pluginId": "cordova-plugin-ble-central",
       "clobbers": [
-        "cordova.plugins.condo"
+        "ble"
       ]
     },
     {
@@ -14,6 +14,22 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "pluginId": "cordova-plugin-ble-peripheral",
       "clobbers": [
         "blePeripheral"
+      ]
+    },
+    {
+      "id": "cordova-plugin-condo.Condo",
+      "file": "plugins/cordova-plugin-condo/www/condo.js",
+      "pluginId": "cordova-plugin-condo",
+      "clobbers": [
+        "cordova.plugins.condo"
+      ]
+    },
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
       ]
     },
     {
@@ -266,32 +282,16 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "Connection"
       ]
-    },
-    {
-      "id": "cordova-plugin-ble-central.ble",
-      "file": "plugins/cordova-plugin-ble-central/www/ble.js",
-      "pluginId": "cordova-plugin-ble-central",
-      "clobbers": [
-        "ble"
-      ]
-    },
-    {
-      "id": "cordova-plugin-device.device",
-      "file": "plugins/cordova-plugin-device/www/device.js",
-      "pluginId": "cordova-plugin-device",
-      "clobbers": [
-        "device"
-      ]
     }
   ];
   module.exports.metadata = {
-    "cordova-plugin-whitelist": "1.3.5",
+    "cordova-plugin-ble-central": "1.7.3",
+    "cordova-plugin-ble-peripheral": "1.1.2.2",
     "cordova-plugin-condo": "0.0.1",
-    "cordova-plugin-ble-peripheral": "1.1.2.2"
+    "cordova-plugin-device": "3.0.0",
     "cordova-plugin-file": "8.1.0",
     "cordova-plugin-media-capture": "5.0.1-dev",
     "cordova-plugin-network-information": "3.0.0",
-    "cordova-plugin-ble-central": "1.7.3",
-    "cordova-plugin-device": "3.0.0"
+    "cordova-plugin-whitelist": "1.3.5"
   };
 });

@@ -7,34 +7,34 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
-    },
-    "cordova-plugin-condo": {
-      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
-    },
-    "cordova-plugin-ble-peripheral": {
-      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
-    },
-    "cordova-plugin-media-capture": {
-      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
-    },
-    "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
-    },
     "cordova-plugin-ble-central": {
       "IOS_INIT_ON_LOAD": "true",
       "BLUETOOTH_RESTORE_STATE": "false",
       "BLUETOOTH_USAGE_DESCRIPTION": " ",
-      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-ble-peripheral": {
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-condo": {
+      "PACKAGE_NAME": "com.example.hello"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.example.hello"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-file": {
-      "PACKAGE_NAME": "io.cordova.hellocordova.demo.app"
+      "PACKAGE_NAME": "com.example.hello"
     }
   }
 }

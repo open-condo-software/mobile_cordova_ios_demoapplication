@@ -15,10 +15,10 @@
   "devDependencies": {
     "cordova": "^12.0.0",
     "cordova-browser": "^7.0.0",
-    "cordova-ios": "^7.0.0",
+    "cordova-ios": "^7.1.1",
     "cordova-js": "^6.1.0",
-    "cordova-plugin-ble-peripheral": "github:Donny1995/cordova-plugin-ble-peripheral",
     "cordova-plugin-ble-central": "^1.7.3",
+    "cordova-plugin-ble-peripheral": "github:Donny1995/cordova-plugin-ble-peripheral",
     "cordova-plugin-condo": "git+https://github.com/open-condo-software/mobile_cordova_plugin_condo.git",
     "cordova-plugin-device": "^3.0.0",
     "cordova-plugin-file": "^8.1.0",
@@ -42,8 +42,8 @@
       "cordova-plugin-device": {}
     },
     "platforms": [
-      "ios",
-      "browser"
+      "browser",
+      "ios"
     ]
   },
   "dependencies": {

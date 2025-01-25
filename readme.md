@@ -83,6 +83,14 @@ ___
 
     - Open the project directory and navigate to the `./MainCordovaApplication/www` subdirectory, where you will find the application code. Feel free to make any necessary edits.
     
+    - After editing the code in the MainCordovaApplication directory, run the command
+
+        ```
+        npm run cordova prepare ios
+        ```
+        
+        You can also use the command `yarn cordova prepare ios` if you use Yarn as your package manager. Alternatively, you can use the `cordova prepare ios` command if you have Cordova installed globally, following the official instructions.
+    
 3. Launching and testing the application
 
     - In the main project directory, execute the following command:
