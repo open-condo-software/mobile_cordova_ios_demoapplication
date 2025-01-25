@@ -1,6 +1,6 @@
 {
   "name": "Cordova",
-  "version": "7.0.2.2-dev",
+  "version": "7.0.2.6-dev",
   "summary": "Apache Cordova for iOS",
   "homepage": "https://github.com/apache/cordova-ios",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/apache/cordova-ios.git",
-    "tag": "rel/7.0.2.2-dev",
+    "tag": "rel/7.0.2.6-dev",
     "submodules": true
   },
   "requires_arc": true,

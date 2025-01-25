@@ -1,5 +1,5 @@
 PODS:
-  - Cordova (7.0.2.2-dev)
+  - Cordova (7.0.2.6-dev)
 
 DEPENDENCIES:
   - Cordova (from `https://github.com/open-condo-software/mobile_cordova_ios.git`)
@@ -10,12 +10,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Cordova:
-    :commit: 3cbdb0af2939a136e57ee58ea65d8f805453157a
+    :commit: d34be19d1c098c7a9c0b6de8c79bad2fff042808
     :git: https://github.com/open-condo-software/mobile_cordova_ios.git
 
 SPEC CHECKSUMS:
-  Cordova: 5eea2c750ee5bf2e2ee8e761f655112d120b84f6
+  Cordova: 20cd38bd87f0319e8ed25e8d168a9449d8d4975b
 
 PODFILE CHECKSUM: 74d596093be6347ba630ea4959d5dad0e3833f97
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.16.2

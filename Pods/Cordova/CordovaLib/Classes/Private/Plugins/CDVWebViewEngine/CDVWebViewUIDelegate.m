@@ -150,9 +150,14 @@
         }];
 
     [alert addAction:ok];
-
-    UIViewController* rootController = [UIApplication sharedApplication].delegate.window.rootViewController;
-
+    
+    UIViewController* rootController = [[UIApplication sharedApplication] keyWindow].rootViewController;
+    while ([rootController presentedViewController]) {
+        if (![rootController presentedViewController].isBeingDismissed) {
+            rootController = [rootController presentedViewController];
+        }
+    }
+    
     [rootController presentViewController:alert animated:YES completion:nil];
 }
 
@@ -182,7 +187,12 @@
         }];
     [alert addAction:cancel];
 
-    UIViewController* rootController = [UIApplication sharedApplication].delegate.window.rootViewController;
+    UIViewController* rootController = [[UIApplication sharedApplication] keyWindow].rootViewController;
+    while ([rootController presentedViewController]) {
+        if (![rootController presentedViewController].isBeingDismissed) {
+            rootController = [rootController presentedViewController];
+        }
+    }
 
     [rootController presentViewController:alert animated:YES completion:nil];
 }
@@ -218,7 +228,12 @@
         textField.text = defaultText;
     }];
 
-    UIViewController* rootController = [UIApplication sharedApplication].delegate.window.rootViewController;
+    UIViewController* rootController = [[UIApplication sharedApplication] keyWindow].rootViewController;
+    while ([rootController presentedViewController]) {
+        if (![rootController presentedViewController].isBeingDismissed) {
+            rootController = [rootController presentedViewController];
+        }
+    }
 
     [rootController presentViewController:alert animated:YES completion:nil];
 }
@@ -237,7 +252,13 @@
 
             [windows addObject:vc];
 
-            UIViewController* rootController = [UIApplication sharedApplication].delegate.window.rootViewController;
+            UIViewController* rootController = [[UIApplication sharedApplication] keyWindow].rootViewController;
+            while ([rootController presentedViewController]) {
+                if (![rootController presentedViewController].isBeingDismissed) {
+                    rootController = [rootController presentedViewController];
+                }
+            }
+            
             [rootController presentViewController:vc animated:YES completion:nil];
             return v;
         } else {

@@ -29,6 +29,7 @@
 #import "CDVWebViewEngine.h"
 #import "CDVWebViewEngineProtocol.h"
 #import "CDVWebViewProcessPoolFactory.h"
+#import "CDVWebViewUIDelegate.h"
 #import "NSDictionary+CordovaPreferences.h"
 #import "NSMutableArray+QueueAdditions.h"
 
