@@ -26,6 +26,7 @@ class AppViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        view.addInteraction(UIDropInteraction(delegate: self))
         
         let startButton = UIButton()
         mButtonStart = startButton
@@ -64,7 +65,6 @@ class AppViewController: UIViewController {
     }
 }
 
-/*
 import Foundation
 import UniformTypeIdentifiers
 import CoreServices
@@ -97,11 +97,36 @@ extension AppViewController: UIDropInteractionDelegate {
         do {
             let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             let destinationURL = documentsURL.appendingPathComponent(fileURL.lastPathComponent)
+            
+            try? FileManager.default.removeItem(at: destinationURL)
             try FileManager.default.copyItem(at: fileURL, to: destinationURL)
             print("File saved to: \(destinationURL)")
+            
+            guard let sdk = MiniappsSDK.shared else {
+                return alert(title: "Installation error", subTitle: "SDK is uninitialized")
+            }
+            
+            do {
+                try sdk.installDebugMiniapp(filePath: destinationURL.path)
+            } catch {
+                alert(title: "Installation error", subTitle: error.localizedDescription)
+                return
+            }
+            
+            sdk.launchMiniapp(
+                appId: MiniappsSDK.debugMiniappID,
+                addressID: MiniappsSDK.debugMiniappID,
+                launchType: .present(over: self, animated: true)
+            )
+            
         } catch {
             print("Error: \(error)")
         }
     }
+    
+    private func alert(title: String, subTitle: String) {
+        let alert = UIAlertController(title: title, message: subTitle, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true)
+    }
 }
-*/

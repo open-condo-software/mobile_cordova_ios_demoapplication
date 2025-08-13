@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MiniappSDK_demo
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -25,7 +26,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        print(URLContexts)
+        guard
+            let urlContext = URLContexts.first,
+            urlContext.url.isFileURL,
+            FileManager.default.fileExists(atPath: urlContext.url.path)
+        else {
+            return
+        }
+        
+        guard let sdk = MiniappsSDK.shared else {
+            return alert(title: "Installation error", subTitle: "SDK is uninitialized")
+        }
+        
+        do {
+            try sdk.installDebugMiniapp(filePath: urlContext.url.path)
+        } catch {
+            alert(title: "Installation error", subTitle: error.localizedDescription)
+            return
+        }
+        
+        guard let rootViewController = window?.rootViewController as? UINavigationController else {
+            return alert(title: "Launching error", subTitle: "UI not ready")
+        }
+        
+        sdk.launchMiniapp(
+            appId: MiniappsSDK.debugMiniappID,
+            addressID: MiniappsSDK.debugMiniappID,
+            launchType: .present(over: rootViewController, animated: true)
+        )
+    }
+    
+    private func alert(title: String, subTitle: String) {
+        let alert = UIAlertController(title: title, message: subTitle, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        window?.rootViewController?.present(alert, animated: true)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
