@@ -29,7 +29,13 @@ cordova.define("cordova-plugin-file.File", function(require, exports, module) {
  * size {Number} size of the file in bytes
  */
 
+// Store the original File constructor
+const originalFile = window.File;
 const File = function (name, localURL, type, lastModifiedDate, size) {
+    if (Array.isArray(name) && name.length > 0 && (name[0] instanceof Blob)) {
+        return new originalFile(name, localURL, type, lastModifiedDate, size);
+    }
+    
     this.name = name || '';
     this.localURL = localURL || null;
     this.type = type || null;

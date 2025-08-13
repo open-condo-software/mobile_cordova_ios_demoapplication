@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/ZIPFoundation-Swift.h</key>
 		<data>
-		vr5y/6GCzxezAqVW9ov5tdDAQaY=
+		N9AmHguAT/aK5hk/+LQVtHG0Uys=
 		</data>
 		<key>Headers/ZIPFoundation-umbrella.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		88iFBZ5Tgr8Q9pG4iHSQUjh3yAo=
+		Y4CWg4W6oEdU76SOkfep9XKxcCw=
 		</data>
 		<key>Modules/ZIPFoundation.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -22,19 +22,19 @@
 		</data>
 		<key>Modules/ZIPFoundation.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		tFSqmKoV2+q/e+sna2P3e/c6dgs=
+		hOzDA5rAGvzHJ3x+n1pywCeDreI=
 		</data>
 		<key>Modules/ZIPFoundation.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Uq2BKv6xmqpFOgVEvokKdAGrwTI=
+		RxJBbuIe+Eayab+ny2W/5pM2Ygw=
 		</data>
 		<key>Modules/ZIPFoundation.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		tFSqmKoV2+q/e+sna2P3e/c6dgs=
+		hOzDA5rAGvzHJ3x+n1pywCeDreI=
 		</data>
 		<key>Modules/ZIPFoundation.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		buzcywWK0Y78aGWXZgHLKeVvQXw=
+		N3reRY+w29cApQQSQ8b+J2LR83Q=
 		</data>
 		<key>Modules/ZIPFoundation.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -42,19 +42,19 @@
 		</data>
 		<key>Modules/ZIPFoundation.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		bezV4V5rOoQub1H3bnTuuByPn7M=
+		gWn3qr1kIDu6iMcXZDZXGk9VI5U=
 		</data>
 		<key>Modules/ZIPFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		eIO8L4AzQ4Q/bjhUneMEYAqVNI8=
+		94alz9yBskRhDkimRG5eLUKPPx0=
 		</data>
 		<key>Modules/ZIPFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		bezV4V5rOoQub1H3bnTuuByPn7M=
+		gWn3qr1kIDu6iMcXZDZXGk9VI5U=
 		</data>
 		<key>Modules/ZIPFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iY6KdEzOUQdY/N3/4Dqn3fs4loM=
+		cBUWnZzrZLEymzWkPYRlhtB4xMc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qvt1SoG5HxziNM5zRtExiyl0wBdrvEIYnoIfKrv9FMM=
+			Pp5EJnA3t/9wtjYx1SB8LvkIDADxSp7Ql21+Co/Mj/I=
 			</data>
 		</dict>
 		<key>Headers/ZIPFoundation-umbrella.h</key>
@@ -88,28 +88,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VuRkH80Rs4SPTDuIcOpNIsna/phiwFaA83Fkgq6Oyuk=
+			vDLzxG2Fwyhr1qJ5gJNrwnb+6l2e6D9O8VPWadDI0kE=
 			</data>
 		</dict>
 		<key>Modules/ZIPFoundation.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V0bXiNguOTDHUrxVl5zsFLG4s5gjbrks4bp9ewPRYPI=
+			ImZp1mwzSY2/5iayr9ICzNg5Pq6/NIWJXgo/2Ml5tGg=
 			</data>
 		</dict>
 		<key>Modules/ZIPFoundation.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VuRkH80Rs4SPTDuIcOpNIsna/phiwFaA83Fkgq6Oyuk=
+			vDLzxG2Fwyhr1qJ5gJNrwnb+6l2e6D9O8VPWadDI0kE=
 			</data>
 		</dict>
 		<key>Modules/ZIPFoundation.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xtvgF6EGN/lbvkX6iJBI3McvXnezvt/U1lqERbW8S78=
+			YAyn1gXL004TVIHp/D7S4l5kLZnbuaLTp7DxhyC84jo=
 			</data>
 		</dict>
 		<key>Modules/ZIPFoundation.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -123,28 +123,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YKbN0rE8TBBWCYZNqBqIIJhHvv6SYvEkSjoy1AM93WM=
+			oITt0KKLZVmLC2S6guli1hex5avbOPJO6VywuyLuhn4=
 			</data>
 		</dict>
 		<key>Modules/ZIPFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K+quUvjd77O7VPrmYyUITlJpb8BMGHGLrhZmcBFYNzU=
+			IhW/ck45PYsWzlGipfUXZdKWjT7+NZLBghcqTL/YMj0=
 			</data>
 		</dict>
 		<key>Modules/ZIPFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YKbN0rE8TBBWCYZNqBqIIJhHvv6SYvEkSjoy1AM93WM=
+			oITt0KKLZVmLC2S6guli1hex5avbOPJO6VywuyLuhn4=
 			</data>
 		</dict>
 		<key>Modules/ZIPFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9ooHyYYPdsXHFDSdY2n9hdcA6+37nWidjR8NcKOoR5w=
+			/aNfOJo1jJPpnwkdFLgkQrLMhN4Z/R/h4gXRh3T5Y9c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

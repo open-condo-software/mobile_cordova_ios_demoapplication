@@ -12,7 +12,7 @@
 #endif
 
 /* Intructions:
-    1) remove everything below ~30 line
+    1) remove everything below ~25 line
     2) Build
     3) Copy contents of MiniappSDK-Swift.h below with full replace like it was below line ~25 (dont forget the @imports) */
 //  4) Replace all `@objc public /*public*/` into `@objc /*public*/`
@@ -24,9 +24,6 @@
         sh MiniappSDK/MiniappSDK/Scripts/MakeXCFramework.sh client.xcworkspace MiniappSDK ~/Desktop/MiniappSDK
     8) Revert all changes back
 */
-
-// Reverse imported declarations below
-
 
 @import CoreBluetooth;
 @import CoreLocation;
@@ -41,10 +38,9 @@ SWIFT_CLASS("_TtC15MiniappSDK_demo15CBBeaconService")
 @interface CBBeaconService : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CBBeaconService * _Nonnull shared;)
 + (CBBeaconService * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (CBPeripheralManager * _Nonnull)dequeueReusablePeripheralManagerWithID:(MiniappID * _Nullable)miniappID options:(NSDictionary<NSString *, id> * _Nonnull)options SWIFT_WARN_UNUSED_RESULT;
 - (CLLocationManager * _Nonnull)dequeueReusableLocationManagerWithID:(MiniappID * _Nullable)miniappID SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @interface CBBeaconService (SWIFT_EXTENSION(MiniappSDK_demo)) <CBPeripheralManagerDelegate>
@@ -68,10 +64,9 @@ SWIFT_CLASS("_TtC15MiniappSDK_demo16CBCentralService")
 @interface CBCentralService : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CBCentralService * _Nonnull shared;)
 + (CBCentralService * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (CBCentralManager * _Nonnull)dequeueReusableManagerWithID:(NSString * _Nullable)restorationID options:(NSDictionary<NSString *, id> * _Nonnull)options SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)doesMiniappSupportsBluetoothBackgroundFeatureWithMiniappID:(MiniappID * _Nonnull)miniappID SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)doesMiniappSupportBluetoothBackgroundFeatureWithAppID:(NSString * _Nonnull)appID SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class CBUUID;
@@ -99,12 +94,11 @@ SWIFT_CLASS("_TtC15MiniappSDK_demo19CBPeripheralService")
 @interface CBPeripheralService : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CBPeripheralService * _Nonnull shared;)
 + (CBPeripheralService * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (CBPeripheralManager * _Nonnull)dequeueReusableManagerWithID:(MiniappID * _Nullable)miniappID options:(NSDictionary<NSString *, id> * _Nonnull)options SWIFT_WARN_UNUSED_RESULT;
 - (void)startSendingStashedReadWriteEventsWithMiniappID:(MiniappID * _Nonnull)miniappID;
 - (NSDictionary<NSString *, id> * _Nonnull)getBluetoothSystemStateWithMiniappID:(MiniappID * _Nonnull)miniappID SWIFT_WARN_UNUSED_RESULT;
-- (BOOL)doesMiniappSupportsBluetoothBackgroundFeatureWithMiniappID:(MiniappID * _Nonnull)miniappID SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)doesMiniappSupportBluetoothBackgroundFeatureWithAppID:(NSString * _Nonnull)appID SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class CBService;
@@ -132,6 +126,7 @@ SWIFT_CLASS("_TtC15MiniappSDK_demo35MiniappCordovaViewControllerInterop")
 - (nonnull instancetype)initWithController:(UIViewController * _Nonnull)controller OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, readonly, copy) NSString * _Nullable context;
 @property (nonatomic, readonly, strong) MiniappID * _Nonnull miniappID;
+@property (nonatomic, readonly, copy) NSString * _Nonnull appID;
 - (void)didPressBackButton;
 - (void)pushStateWithState:(id _Nonnull)state title:(NSString * _Nonnull)title;
 - (void)replaceStateWithState:(id _Nonnull)state title:(NSString * _Nonnull)title;
@@ -139,8 +134,13 @@ SWIFT_CLASS("_TtC15MiniappSDK_demo35MiniappCordovaViewControllerInterop")
 - (NSString * _Nullable)back SWIFT_WARN_UNUSED_RESULT;
 - (void)currentResidentWithCompletion:(void (^ _Nonnull)(NSDictionary * _Nullable))completion;
 - (void)setTextInteractionEnabledWithEnabled:(BOOL)enabled;
+- (void)closeCurrentMiniappWithMiniappID:(MiniappID * _Nonnull)miniappID;
 - (void)miniappStartInvoicePaymentWithInvoiceID:(NSString * _Nonnull)invoiceID completion:(void (^ _Nonnull)(NSString * _Nonnull, NSString * _Nullable, NSString * _Nonnull))completion;
 - (void)miniappStartOauthPaymentWithUrl:(NSString * _Nonnull)url successURLPattern:(NSString * _Nonnull)successURLPattern failUrlPattern:(NSString * _Nullable)failUrlPattern completion:(void (^ _Nonnull)(NSDictionary<NSString *, NSString *> * _Nonnull))completion;
+- (void)serverAuthByClientId:(NSString * _Nonnull)byClientId serverURI:(NSString * _Nonnull)serverURI miniappID:(MiniappID * _Nonnull)miniappID completion:(void (^ _Nonnull)(NSString * _Nullable))completion;
+- (void)serverAuthByURL:(NSString * _Nonnull)byURL miniappID:(MiniappID * _Nonnull)miniappID params:(NSDictionary<NSString *, id> * _Nonnull)params completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable))completion;
+- (void)setMiniappDebugLoggingEnabledWithMiniappID:(MiniappID * _Nonnull)miniappID enabled:(BOOL)enabled;
+- (void)setEventNameRegisteredForLocalNotificationPrintingWithMiniappID:(MiniappID * _Nonnull)miniappID eventName:(NSString * _Nonnull)eventName enabled:(BOOL)enabled;
 - (BOOL)endCurrentCall SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)endAllCalls SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)initiateVoipWithType:(NSString * _Nonnull)type address:(NSString * _Nonnull)address login:(NSString * _Nonnull)login password:(NSString * _Nonnull)password dtmfCommand:(NSString * _Nullable)dtmfCommand stun:(NSString * _Nullable)stun preferredCodec:(NSString * _Nullable)preferredCodec autoAnswerCall:(BOOL)autoAnswerCall SWIFT_WARN_UNUSED_RESULT;
@@ -156,25 +156,7 @@ SWIFT_CLASS("_TtC15MiniappSDK_demo9MiniappID")
 @property (nonatomic, readonly) NSUInteger hash;
 @property (nonatomic, readonly, copy) NSString * _Nonnull rawValue;
 - (BOOL)isEqual:(id _Nullable)object SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-SWIFT_CLASS("_TtC15MiniappSDK_demo20MiniappLaunchService")
-@interface MiniappLaunchService : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MiniappLaunchService * _Nonnull shared;)
-+ (MiniappLaunchService * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (void)closeCurrentMiniappWithMiniappID:(MiniappID * _Nonnull)miniappID;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@interface MiniappLaunchService (SWIFT_EXTENSION(MiniappSDK_demo))
-- (void)serverAuthByClientId:(NSString * _Nonnull)byClientId serverURI:(NSString * _Nonnull)serverURI miniappID:(MiniappID * _Nonnull)miniappID completion:(void (^ _Nonnull)(NSString * _Nullable))completion;
-- (void)serverAuthByURL:(NSString * _Nonnull)byURL miniappID:(MiniappID * _Nonnull)miniappID params:(NSDictionary<NSString *, id> * _Nonnull)params completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable))completion;
-@end
-
-@interface MiniappLaunchService (SWIFT_EXTENSION(MiniappSDK_demo))
-- (void)setMiniappDebugLoggingEnabledWithMiniappID:(MiniappID * _Nonnull)miniappID enabled:(BOOL)enabled;
-- (void)setEventNameRegisteredForLocalNotificationPrintingWithMiniappID:(MiniappID * _Nonnull)miniappID eventName:(NSString * _Nonnull)eventName enabled:(BOOL)enabled;
-- (void)publicLogPrintWithMiniappID:(MiniappID * _Nullable)miniappID identifier:(NSString * _Nonnull)identifier text:(NSString * _Nonnull)text;
 @end

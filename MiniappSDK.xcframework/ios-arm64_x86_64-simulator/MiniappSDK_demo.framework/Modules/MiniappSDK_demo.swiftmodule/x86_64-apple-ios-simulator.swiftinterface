@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name MiniappSDK_demo
-// swift-module-flags-ignorable:  -interface-compiler-version 6.1
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
 import AVFoundation
 import CoreBluetooth
 import CoreLocation
@@ -19,51 +19,6 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-extension CoreBluetooth.CBCharacteristicProperties : Swift.Codable {
-}
-extension CoreBluetooth.CBAttributePermissions : Swift.Codable {
-}
-extension MiniappSDK_demo.MiniappsSDK {
-  public struct PartnerClientAddress : Swift.Hashable {
-    public let address: Swift.String
-    public let unitName: Swift.String
-    public let unitType: MiniappSDK_demo.MiniappsSDK.UnitType
-    public init(address: Swift.String, unitName: Swift.String, unitType: MiniappSDK_demo.MiniappsSDK.UnitType)
-    public static func == (a: MiniappSDK_demo.MiniappsSDK.PartnerClientAddress, b: MiniappSDK_demo.MiniappsSDK.PartnerClientAddress) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-}
-#warning("MINIAPP_ANALYTICS")
-extension MiniappSDK_demo.MiniappsSDK {
-  public enum UnitType : Swift.String, Swift.Codable {
-    case parking
-    case flat
-    case apartment
-    case commercial
-    case warehouse
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-}
-extension MiniappSDK_demo.MiniappsSDK {
-  public enum LogLevel : Swift.Int {
-    case info
-    case warn
-    case error
-    case fatal
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-}
 extension Swift.Collection where Self.Index : Swift.BinaryInteger {
   @inlinable internal func safeGet(index position: Self.Index) -> Self.Element? {
         guard position >= 0 && position < count else { return nil }
@@ -113,8 +68,94 @@ extension Swift.Dictionary {
         return copy
     }
 }
-@inlinable internal func norm(_ x: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat {
-    return max(min(x, 1), 0)
+extension MiniappSDK_demo.MiniappsSDK {
+  public struct PartnerClientAddress : Swift.Hashable {
+    public let address: Swift.String
+    public let unitName: Swift.String
+    public let unitType: MiniappSDK_demo.MiniappsSDK.UnitType
+    public init(address: Swift.String, unitName: Swift.String, unitType: MiniappSDK_demo.MiniappsSDK.UnitType)
+    public static func == (a: MiniappSDK_demo.MiniappsSDK.PartnerClientAddress, b: MiniappSDK_demo.MiniappsSDK.PartnerClientAddress) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension MiniappSDK_demo.MiniappsSDK {
+  public struct AppBuildData : Swift.Codable, Swift.Hashable {
+    public let id: Swift.String
+    public static func == (a: MiniappSDK_demo.MiniappsSDK.AppBuildData, b: MiniappSDK_demo.MiniappsSDK.AppBuildData) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+@_hasMissingDesignatedInitializers final public class MiniappLaunchService {
+  public static let shared: MiniappSDK_demo.MiniappLaunchService
+  @objc deinit
+}
+extension MiniappSDK_demo.MiniappsSDK {
+  public struct AppColorSchema : Swift.Codable, Swift.Hashable {
+    public let main: Swift.String
+    public let secondary: Swift.String
+    public static func == (a: MiniappSDK_demo.MiniappsSDK.AppColorSchema, b: MiniappSDK_demo.MiniappsSDK.AppColorSchema) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension MiniappSDK_demo.MiniappsSDK {
+  public struct AppData : Swift.Codable, Swift.Hashable {
+    public let id: MiniappSDK_demo.MiniappsSDK.AppID
+    public let name: Swift.String?
+    public let shortDescription: Swift.String?
+    public let logoUrl: Foundation.URL?
+    public static func == (a: MiniappSDK_demo.MiniappsSDK.AppData, b: MiniappSDK_demo.MiniappsSDK.AppData) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension MiniappSDK_demo.MiniappsSDK {
+  public struct FileData : Swift.Codable, Swift.Hashable {
+    public let id: Swift.String
+    public let publicUrl: Swift.String?
+    public static func == (a: MiniappSDK_demo.MiniappsSDK.FileData, b: MiniappSDK_demo.MiniappsSDK.FileData) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension MiniappSDK_demo.MiniappsSDK {
+  public enum UnitType : Swift.String, Swift.Codable {
+    case parking
+    case flat
+    case apartment
+    case commercial
+    case warehouse
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+#warning("MINIAPP_ANALYTICS")
+@_hasMissingDesignatedInitializers public class SubscriptionKey {
+  public func invalidateSubscription()
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers final public class MiniappsSDK {
   public static var shared: MiniappSDK_demo.MiniappsSDK? {
@@ -189,13 +230,14 @@ extension Swift.Dictionary {
     case miniappLaunchedInForegroundCantBeMovedToBackground
     case failedToInitializeMiniappController
     case sdkNotInitialized
+    case presentFailed
     public static func == (a: MiniappSDK_demo.MiniappsSDK.MiniappLaunchError, b: MiniappSDK_demo.MiniappsSDK.MiniappLaunchError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
   }
-  final public func launchMiniapp(appId: MiniappSDK_demo.MiniappsSDK.AppID, addressID: MiniappSDK_demo.MiniappsSDK.AddressID, launchType: MiniappSDK_demo.MiniappsSDK.MiniappLaunchType, completion: ((_ error: MiniappSDK_demo.MiniappsSDK.MiniappLaunchError?) -> Swift.Void)? = nil)
+  final public func launchMiniapp(appId: MiniappSDK_demo.MiniappsSDK.AppID, addressID: MiniappSDK_demo.MiniappsSDK.AddressID, context: Swift.String? = nil, launchType: MiniappSDK_demo.MiniappsSDK.MiniappLaunchType, completion: ((_ error: MiniappSDK_demo.MiniappsSDK.MiniappLaunchError?) -> Swift.Void)? = nil)
   final public func closeMiniapp(appID: MiniappSDK_demo.MiniappsSDK.AppID, addressID: MiniappSDK_demo.MiniappsSDK.AddressID, completion: ((_ closed: Swift.Bool) -> Swift.Void)? = nil)
   public enum MiniappLaunchState : Swift.Equatable {
     case current
@@ -219,46 +261,11 @@ extension Swift.Dictionary {
   }
   @objc deinit
 }
+@usableFromInline
+internal typealias AddressID = Swift.String
 extension MiniappSDK_demo.MiniappsSDK {
-  public static var logLevel: MiniappSDK_demo.MiniappsSDK.LogLevel {
-    get
-    set
-  }
-  public protocol MiniappViewControllerPublicInterface : UIKit.UIViewController {
-    var appID: MiniappSDK_demo.MiniappsSDK.AppID { get }
-    var addressID: MiniappSDK_demo.MiniappsSDK.AddressID { get }
-  }
-  public protocol MiniappControllerUIAdapter : AnyObject {
-    func miniappController(requestsNewCloseButton controller: any MiniappSDK_demo.MiniappsSDK.MiniappViewControllerPublicInterface) -> UIKit.UIButton
-    func miniappController(requestsNewNavigationBar controller: any MiniappSDK_demo.MiniappsSDK.MiniappViewControllerPublicInterface) -> UIKit.UINavigationBar
-    func miniappController(requestsNewNavigationController controller: any MiniappSDK_demo.MiniappsSDK.MiniappViewControllerPublicInterface) -> UIKit.UINavigationController
-    var accentColorOverride: UIKit.UIColor? { get }
-  }
-}
-extension MiniappSDK_demo.MiniappsSDK {
-  public protocol AuthorizationDelegate : AnyObject {
-    func processAuthorization(with url: Swift.String, completion: @escaping (Swift.String?) -> Swift.Void)
-  }
-}
-extension MiniappSDK_demo.MiniappsSDK {
-  public protocol BackgroundPresentationAdapter : AnyObject {
-    func miniappRequestsRootControllerForBackgroundPresentation(appID: MiniappSDK_demo.MiniappsSDK.AppID, addressID: MiniappSDK_demo.MiniappsSDK.AddressID) -> UIKit.UIViewController
-  }
-}
-extension MiniappSDK_demo.MiniappsSDK {
-  public struct AppBuildData : Swift.Codable, Swift.Hashable {
-    public let id: Swift.String
-    public static func == (a: MiniappSDK_demo.MiniappsSDK.AppBuildData, b: MiniappSDK_demo.MiniappsSDK.AppBuildData) -> Swift.Bool
-    public func encode(to encoder: any Swift.Encoder) throws
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-    public init(from decoder: any Swift.Decoder) throws
-  }
-}
-extension MiniappSDK_demo.MiniappsSDK {
-  public static let debugMiniappID: Swift.String
+  public typealias AppID = Swift.String
+  public typealias AddressID = Swift.String
 }
 extension MiniappSDK_demo.MiniappsSDK {
   public enum Errors : Foundation.LocalizedError {
@@ -270,11 +277,66 @@ extension MiniappSDK_demo.MiniappsSDK {
     }
   }
 }
-@usableFromInline
-internal typealias AddressID = Swift.String
 extension MiniappSDK_demo.MiniappsSDK {
-  public typealias AppID = Swift.String
-  public typealias AddressID = Swift.String
+  public enum LogLevel : Swift.Int {
+    case info
+    case warn
+    case error
+    case fatal
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+}
+extension MiniappSDK_demo.MiniappsSDK {
+  public protocol AuthorizationDelegate : AnyObject {
+    func processAuthorization(with url: Swift.String, completion: @escaping (Swift.String?) -> Swift.Void)
+  }
+}
+extension MiniappSDK_demo.MiniappsSDK {
+  public static let version: Swift.String
+}
+extension MiniappSDK_demo.MiniappsSDK {
+  public protocol BackgroundPresentationAdapter : AnyObject {
+    func miniappRequestsRootControllerForBackgroundPresentation(appID: MiniappSDK_demo.MiniappsSDK.AppID, addressID: MiniappSDK_demo.MiniappsSDK.AddressID) -> UIKit.UIViewController
+  }
+}
+extension MiniappSDK_demo.MiniappsSDK {
+  public static var logLevel: MiniappSDK_demo.MiniappsSDK.LogLevel {
+    get
+    set
+  }
+  public protocol MiniappViewControllerPublicInterface : UIKit.UIViewController {
+    var appID: MiniappSDK_demo.MiniappsSDK.AppID { get }
+    var addressID: MiniappSDK_demo.MiniappsSDK.AddressID { get }
+  }
+}
+extension MiniappSDK_demo.MiniappsSDK {
+  public enum Environment {
+    case production
+    case devevelopment
+    public var host: Swift.String {
+      get
+    }
+    public static func == (a: MiniappSDK_demo.MiniappsSDK.Environment, b: MiniappSDK_demo.MiniappsSDK.Environment) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension MiniappSDK_demo.MiniappsSDK {
+  public protocol MiniappControllerUIAdapter : AnyObject {
+    func miniappController(requestsNewCloseButton controller: any MiniappSDK_demo.MiniappsSDK.MiniappViewControllerPublicInterface) -> UIKit.UIButton
+    func miniappController(requestsNewNavigationBar controller: any MiniappSDK_demo.MiniappsSDK.MiniappViewControllerPublicInterface) -> UIKit.UINavigationBar
+    func miniappController(requestsNewNavigationController controller: any MiniappSDK_demo.MiniappsSDK.MiniappViewControllerPublicInterface) -> UIKit.UINavigationController
+    var accentColorOverride: UIKit.UIColor? { get }
+  }
+}
+@inlinable internal func norm(_ x: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat {
+    return max(min(x, 1), 0)
 }
 extension MiniappSDK_demo.MiniappsSDK {
   weak public static var translationsOverrideAdapter: (any MiniappSDK_demo.MiniappsSDK.TranslationsOverrideAdapter)?
@@ -307,80 +369,28 @@ extension MiniappSDK_demo.MiniappsSDK {
     }
   }
 }
-extension MiniappSDK_demo.MiniappsSDK {
-  public enum Environment {
-    case production
-    case devevelopment
-    public var host: Swift.String {
-      get
-    }
-    public static func == (a: MiniappSDK_demo.MiniappsSDK.Environment, b: MiniappSDK_demo.MiniappsSDK.Environment) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
+extension CoreBluetooth.CBCharacteristicProperties : Swift.Codable {
+}
+extension CoreBluetooth.CBAttributePermissions : Swift.Codable {
 }
 extension MiniappSDK_demo.MiniappsSDK {
-  public struct AppData : Swift.Codable, Swift.Hashable {
-    public let id: MiniappSDK_demo.MiniappsSDK.AppID
-    public let name: Swift.String?
-    public let shortDescription: Swift.String?
-    public let logoUrl: Foundation.URL?
-    public static func == (a: MiniappSDK_demo.MiniappsSDK.AppData, b: MiniappSDK_demo.MiniappsSDK.AppData) -> Swift.Bool
-    public func encode(to encoder: any Swift.Encoder) throws
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-    public init(from decoder: any Swift.Decoder) throws
-  }
-}
-@_hasMissingDesignatedInitializers public class SubscriptionKey {
-  public func invalidateSubscription()
-  @objc deinit
+  public static let debugMiniappID: Swift.String
 }
 extension CoreLocation.CLActivityType : Swift.Codable {
 }
 extension CoreLocation.CLDeviceOrientation : Swift.Codable {
 }
-extension MiniappSDK_demo.MiniappsSDK {
-  public struct FileData : Swift.Codable, Swift.Hashable {
-    public let id: Swift.String
-    public let publicUrl: Swift.String?
-    public static func == (a: MiniappSDK_demo.MiniappsSDK.FileData, b: MiniappSDK_demo.MiniappsSDK.FileData) -> Swift.Bool
-    public func encode(to encoder: any Swift.Encoder) throws
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-    public init(from decoder: any Swift.Decoder) throws
-  }
-}
-extension MiniappSDK_demo.MiniappsSDK {
-  public struct AppColorSchema : Swift.Codable, Swift.Hashable {
-    public let main: Swift.String
-    public let secondary: Swift.String
-    public static func == (a: MiniappSDK_demo.MiniappsSDK.AppColorSchema, b: MiniappSDK_demo.MiniappsSDK.AppColorSchema) -> Swift.Bool
-    public func encode(to encoder: any Swift.Encoder) throws
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-    public init(from decoder: any Swift.Decoder) throws
-  }
-}
 extension MiniappSDK_demo.MiniappsSDK.UnitType : Swift.Equatable {}
 extension MiniappSDK_demo.MiniappsSDK.UnitType : Swift.Hashable {}
 extension MiniappSDK_demo.MiniappsSDK.UnitType : Swift.RawRepresentable {}
-extension MiniappSDK_demo.MiniappsSDK.LogLevel : Swift.Equatable {}
-extension MiniappSDK_demo.MiniappsSDK.LogLevel : Swift.Hashable {}
-extension MiniappSDK_demo.MiniappsSDK.LogLevel : Swift.RawRepresentable {}
 extension MiniappSDK_demo.MiniappsSDK.MiniappLaunchError : Swift.Equatable {}
 extension MiniappSDK_demo.MiniappsSDK.MiniappLaunchError : Swift.Hashable {}
 extension MiniappSDK_demo.MiniappsSDK.MiniappLaunchState : Swift.Hashable {}
+extension MiniappSDK_demo.MiniappsSDK.LogLevel : Swift.Equatable {}
+extension MiniappSDK_demo.MiniappsSDK.LogLevel : Swift.Hashable {}
+extension MiniappSDK_demo.MiniappsSDK.LogLevel : Swift.RawRepresentable {}
+extension MiniappSDK_demo.MiniappsSDK.Environment : Swift.Equatable {}
+extension MiniappSDK_demo.MiniappsSDK.Environment : Swift.Hashable {}
 extension MiniappSDK_demo.MiniappsSDK.TranslationKeys : Swift.Equatable {}
 extension MiniappSDK_demo.MiniappsSDK.TranslationKeys : Swift.Hashable {}
 extension MiniappSDK_demo.MiniappsSDK.TranslationKeys : Swift.RawRepresentable {}
-extension MiniappSDK_demo.MiniappsSDK.Environment : Swift.Equatable {}
-extension MiniappSDK_demo.MiniappsSDK.Environment : Swift.Hashable {}

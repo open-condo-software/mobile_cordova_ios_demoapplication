@@ -58,24 +58,51 @@ var onBluetoothStateChangeCallback;
 
 function registerWriteRequestCallback() {
 
-    var didReceiveWriteRequest = function (json) {
+    var didReceiveWriteRequest = async function (json) {
         console.log('didReceiveWriteRequest');
         console.log(json);
         convertToNativeJS(json);
+        const contextID = json.contextID;
 
         if (onWriteRequestCallback && typeof onWriteRequestCallback === 'function') {
-            onWriteRequestCallback(json);
+            let result = await onWriteRequestCallback(json);
+
+            if (result instanceof ArrayBuffer) {
+                const base64String = btoa([].reduce.call(new Uint8Array(result),function(p,c){return p+String.fromCharCode(c);},''));
+                cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'receiveChangedCharacteristicValue', [contextID, base64String]);
+                
+            } else if (result instanceof Uint8Array) {
+                let binaryString = '';
+                for (let i = 0; i < result.length; i++) {
+                  binaryString += String.fromCharCode(result[i]);
+                }
+                let base64String = btoa(binaryString);
+                cordova.exec(
+                  () => {},
+                  () => {},
+                  'BLEPeripheral',
+                  'receiveChangedCharacteristicValue',
+                  [contextID, base64String]
+                );
+                
+            } else if (typeof result === 'string' && result.length > 0) {
+                const base64String = btoa([].reduce.call(new Uint8Array(result),function(p,c){return p+String.fromCharCode(c);},''));
+                cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'receiveChangedCharacteristicValue', [contextID, base64String]);
+                
+            } else {
+                cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'receiveChangedCharacteristicValue', [contextID]);
+            }
         }
     };
 
     var failure = function () {
         // this should never happen
-        console.log("Failed to add setCharacteristicValueChangedListener");
+        console.log('Failed to add setCharacteristicValueChangedListener');
     };
 
     cordova.exec(didReceiveWriteRequest, failure, 'BLEPeripheral', 'setCharacteristicValueChangedListener', []);
 }
-registerWriteRequestCallback();
+//registerWriteRequestCallback();
 
 function registerReadRequestCallback() {
 
@@ -88,29 +115,27 @@ function registerReadRequestCallback() {
         
         if (!(contextID && characteristic && service)) {
             console.log('didReceiveReadRequest', 'malformed reqeust');
-            return
+            return;
         }
         
         if (onReadRequestCallback && typeof onReadRequestCallback === 'function') {
             let result = onReadRequestCallback(service, characteristic);
             
-            if(result) {
-                if (result instanceof ArrayBuffer) {
-                    var base64String = btoa([].reduce.call(new Uint8Array(result),function(p,c){return p+String.fromCharCode(c)},''));
-                    cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'receiveRequestedCharacteristicValue', [contextID, base64String]);
-                    
-                } else if (typeof result === 'string') {
-                    var base64String = btoa(result);
-                    cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'receiveRequestedCharacteristicValue', [contextID, base64String]);
-                }
-
+            if (result instanceof ArrayBuffer) {
+                const base64String = btoa([].reduce.call(new Uint8Array(result),function(p,c){return p+String.fromCharCode(c);},''));
+                cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'receiveRequestedCharacteristicValue', [contextID, base64String]);
+            } else if (typeof result === 'string' && result.length > 0) {
+                const base64String = btoa(result);
+                cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'receiveRequestedCharacteristicValue', [contextID, base64String]);
+            } else {
+                cordova.exec(() => { }, () => { }, 'BLEPeripheral', 'receiveRequestedCharacteristicValue', [contextID]);
             }
         }
     };
     
     var failure = function () {
         // this should never happen
-        console.log("Failed to add setCharacteristicValueRequestedListener");
+        console.log('Failed to add setCharacteristicValueRequestedListener');
     };
     
     cordova.exec(didReceiveReadRequest, failure, 'BLEPeripheral', 'setCharacteristicValueRequestedListener');
@@ -128,7 +153,7 @@ function registerBluetoothStateChangeCallback() {
 
     var failure = function () {
         // this should never happen
-        console.log("Failed to add bluetoothStateChangedListener");
+        console.log('Failed to add bluetoothStateChangedListener');
     };
 
     cordova.exec(bluetoothStateChanged, failure, 'BLEPeripheral', 'setBluetoothStateChangedListener', []);
@@ -272,7 +297,7 @@ module.exports = {
     // setDescriptorValueChangedListener: function(success) {
     //     var failure = function() {
     //         // this should never happen
-    //         console.log("Failed to add setDescriptorValueChangedListener");
+    //         console.log('Failed to add setDescriptorValueChangedListener');
     //     };
     //
     //     cordova.exec(success, failure, 'BLEPeripheral', 'setDescriptorValueChangedListener', []);
@@ -288,6 +313,7 @@ module.exports = {
     // }
     onWriteRequest: function (callback) {
         onWriteRequestCallback = callback;
+        registerWriteRequestCallback();
     },
     
     onReadRequest: function (callback) {
@@ -298,7 +324,7 @@ module.exports = {
     onBluetoothStateChange: function (callback) {
         onBluetoothStateChangeCallback = callback;
     },
-    
+
     //If miniapp uses background features, services and advertising is performed even when miniapp is closed, or even applicaiton is closed.
     //At some point (on read or write request from some bluetooth central) OS launches app, then app launches miniapp
     //You should call this function when your miniapp is ready to accept such (read & write) events.
@@ -307,7 +333,7 @@ module.exports = {
     startSendingStashedReadWriteEvents: function() {
         cordova.exec(() => {}, () => {}, 'BLEPeripheral', 'startSendingStashedReadWriteEvents', []);
     },
-    
+
     //If miniapp uses background features, services and advertising is performed even when miniapp is closed, or even applicaiton is closed.
     //So, in context of miniapp it may be dificult to understand, in what state is adverting and services are at the moment (at least aon the start of the miniapp)
     //For that we made this fucntion, which exports data in json. If result is not empty => the app is already advertising info you see in result. Asking it to advertise somethin else will result in error. You should call stopAdvertising() first
