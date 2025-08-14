@@ -7,6 +7,7 @@
 
 import UIKit
 import MiniappSDK_demo
+import UniformTypeIdentifiers
 
 class AppViewController: UIViewController {
     
@@ -26,6 +27,7 @@ class AppViewController: UIViewController {
     }
     
     var mButtonStart: UIButton? { mViewContent.startButton }
+    var mButtonPick: UIButton? { mViewContent.pickButton }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +35,7 @@ class AppViewController: UIViewController {
         view.backgroundColor = .white
         
         mViewContent.startButton.addTarget(self, action: #selector(start), for: .touchUpInside)
+        mViewContent.pickButton.addTarget(self, action: #selector(pickZipFile), for: .touchUpInside)
         mViewContent.dropContainer.addInteraction(UIDropInteraction(delegate: self))
     }
     
@@ -55,18 +58,31 @@ class AppViewController: UIViewController {
             }
         }
     }
+    
+    @objc func pickZipFile() {
+        let documentPicker = UIDocumentPickerViewController(documentTypes: ["public.file-url", "public.data"], in: .import)
+        documentPicker.delegate = self
+        documentPicker.allowsMultipleSelection = false
+        present(documentPicker, animated: true, completion: nil)
+    }
 }
 
-import Foundation
-import UniformTypeIdentifiers
-import CoreServices
+extension AppViewController: UIDocumentPickerDelegate {
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let fileURL = urls.first else { return }
+        handleDroppedFile(fileURL)
+    }
+    
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        // Handle cancellation if needed
+    }
+}
 
 extension AppViewController: UIDropInteractionDelegate {
     func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
         return session.hasItemsConforming(toTypeIdentifiers: ["public.file-url", "public.data"])
     }
     
-    // Define drop behavior (e.g., copy files)
     func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
         return UIDropProposal(operation: .copy)
     }
@@ -83,12 +99,10 @@ extension AppViewController: UIDropInteractionDelegate {
         mViewContent.dropContainer.backgroundColor = AppViewController.View.Constants.dropContainerDefaultColor
     }
     
-    // Handle the dropped files
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
         for item in session.items {
             item.itemProvider.loadItem(forTypeIdentifier: "public.data") { some, error in
                 guard let fileURL = some as? URL else { return }
-                // Process the file (e.g., copy to app’s directory)
                 self.handleDroppedFile(fileURL)
             }
         }

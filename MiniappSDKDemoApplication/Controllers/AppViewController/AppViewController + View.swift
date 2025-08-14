@@ -27,8 +27,6 @@ extension AppViewController {
             let view = UIView()
             view.backgroundColor = Constants.dropContainerDefaultColor
             view.layer.cornerRadius = 12
-            //view.layer.borderWidth = 2
-            //view.layer.borderColor = UIColor.gray.cgColor
             view.layer.setValue(true, forKey: "continuousCorners")
             let dash = CAShapeLayer()
             dash.strokeColor = UIColor.gray.cgColor
@@ -64,6 +62,17 @@ extension AppViewController {
             return label
         }()
         
+        let pickButton: UIButton = {
+            let button = UIButton(type: .system)
+            button.setTitle("Or pick .zip archive", for: .normal)
+            button.titleLabel?.font = .systemFont(ofSize: 18, weight: .medium)
+            button.backgroundColor = .systemBlue.withAlphaComponent(0.7)
+            button.setTitleColor(.white, for: .normal)
+            button.layer.cornerRadius = 8
+            button.translatesAutoresizingMaskIntoConstraints = false
+            return button
+        }()
+        
         let infoLabel: UILabel = {
             let label = UILabel()
             label.text = "Files in the 'BundledMiniapp' directory are archived as a miniapp during each application compilation. Recompile the app to receive changes"
@@ -79,7 +88,7 @@ extension AppViewController {
             let button = UIButton(type: .system)
             button.setTitle("Start miniapp", for: .normal)
             button.titleLabel?.font = .systemFont(ofSize: 18, weight: .medium)
-            button.backgroundColor = .systemBlue
+            button.backgroundColor = .systemGreen
             button.setTitleColor(.white, for: .normal)
             button.layer.cornerRadius = 8
             button.translatesAutoresizingMaskIntoConstraints = false
@@ -101,6 +110,7 @@ extension AppViewController {
             addSubview(titleLabel)
             addSubview(dropContainer)
             dropContainer.addSubview(dropLabel)
+            dropContainer.addSubview(pickButton)
             addSubview(infoLabel)
             addSubview(startButton)
             
@@ -111,11 +121,16 @@ extension AppViewController {
                 dropContainer.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
                 dropContainer.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
                 dropContainer.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-                dropContainer.heightAnchor.constraint(equalToConstant: 120),
+                dropContainer.heightAnchor.constraint(equalToConstant: 164),
                 
                 dropLabel.centerXAnchor.constraint(equalTo: dropContainer.centerXAnchor),
-                dropLabel.centerYAnchor.constraint(equalTo: dropContainer.centerYAnchor),
+                dropLabel.topAnchor.constraint(equalTo: dropContainer.topAnchor, constant: 16),
                 dropLabel.widthAnchor.constraint(lessThanOrEqualTo: dropContainer.widthAnchor, multiplier: 1.0, constant: -32),
+                
+                pickButton.bottomAnchor.constraint(equalTo: dropContainer.bottomAnchor, constant: -8),
+                pickButton.centerXAnchor.constraint(equalTo: dropContainer.centerXAnchor),
+                pickButton.widthAnchor.constraint(equalTo: dropContainer.widthAnchor, multiplier: 1.0, constant: -16),
+                pickButton.heightAnchor.constraint(equalToConstant: 44 * 0.66),
                 
                 infoLabel.topAnchor.constraint(equalTo: dropContainer.bottomAnchor, constant: 60),
                 infoLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
