@@ -20,28 +20,20 @@ class AppViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var mButtonStart: UIButton?
+    let mViewContent = View()
+    override func loadView() {
+        self.view = mViewContent
+    }
+    
+    var mButtonStart: UIButton? { mViewContent.startButton }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        view.addInteraction(UIDropInteraction(delegate: self))
         
-        let startButton = UIButton()
-        mButtonStart = startButton
-        startButton.backgroundColor = .systemGreen
-        startButton.layer.cornerRadius = 8
-        
-        startButton.setTitle("Запустить миниапп", for: .normal)
-        startButton.setTitleColor(UIColor.systemBlue, for: .normal)
-        startButton.addTarget(self, action: #selector(start), for: .touchUpInside)
-        view.addSubview(startButton)
-        startButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            startButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-        ])
+        mViewContent.startButton.addTarget(self, action: #selector(start), for: .touchUpInside)
+        mViewContent.dropContainer.addInteraction(UIDropInteraction(delegate: self))
     }
     
     var isStarting: Bool = false
@@ -77,6 +69,18 @@ extension AppViewController: UIDropInteractionDelegate {
     // Define drop behavior (e.g., copy files)
     func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
         return UIDropProposal(operation: .copy)
+    }
+    
+    func dropInteraction(_ interaction: UIDropInteraction, sessionDidEnter session: any UIDropSession) {
+        mViewContent.dropContainer.backgroundColor = UIColor.green.withAlphaComponent(0.1)
+    }
+    
+    func dropInteraction(_ interaction: UIDropInteraction, sessionDidExit session: any UIDropSession) {
+        mViewContent.dropContainer.backgroundColor = AppViewController.View.Constants.dropContainerDefaultColor
+    }
+    
+    func dropInteraction(_ interaction: UIDropInteraction, concludeDrop session: any UIDropSession) {
+        mViewContent.dropContainer.backgroundColor = AppViewController.View.Constants.dropContainerDefaultColor
     }
     
     // Handle the dropped files
