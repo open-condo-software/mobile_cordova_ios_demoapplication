@@ -41,22 +41,17 @@ class AppViewController: UIViewController {
     
     var isStarting: Bool = false
     @objc func start() {
-        guard let miniappSDK = MiniappsSDK.shared else { return }
-        
         guard !isStarting else { return }
         isStarting = true
         
-        miniappSDK.launchMiniapp(
-            appId: MiniappsSDK.debugMiniappID,
-            addressID: addressID,
-            launchType: .present(over: self, animated: true)
-        ) { [weak self] error in
-            self?.isStarting = false
-            
-            if let error {
-                self?.showAlert(message: "Error: \(error.localizedDescription)")
+        try MiniappsSDK.launchDebugMiniapp(
+            launchType: .present(over: self, animated: true)) { [weak self] error in
+                self?.isStarting = false
+                
+                if let error {
+                    self?.showAlert(message: "Error: \(error.localizedDescription)")
+                }
             }
-        }
     }
     
     @objc func pickZipFile() {
@@ -125,17 +120,17 @@ extension AppViewController: UIDropInteractionDelegate {
             }
             
             do {
-                try sdk.installDebugMiniapp(filePath: destinationURL.path)
+                try MiniappsSDK.installDebugMiniapp(filePath: destinationURL.path)
             } catch {
                 alert(title: "Installation error", subTitle: error.localizedDescription)
                 return
             }
             
-            sdk.launchMiniapp(
-                appId: MiniappsSDK.debugMiniappID,
-                addressID: MiniappsSDK.debugMiniappID,
-                launchType: .present(over: self, animated: true)
-            )
+            MiniappsSDK.launchDebugMiniapp(launchType: .present(over: self, animated: true)) { error in
+                if let error {
+                    print("Error: \(error)")
+                }
+            }
             
         } catch {
             print("Error: \(error)")

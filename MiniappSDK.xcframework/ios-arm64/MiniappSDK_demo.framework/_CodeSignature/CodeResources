@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		nLgn/PueQFcuqcP+Sys4J0G8iWI=
+		2AHBuvzhfJVqnwj3XNJs+S7ZtQA=
 		</data>
 		<key>CDVCapture.bundle/controls_bg.png</key>
 		<data>
@@ -152,27 +152,27 @@
 		</data>
 		<key>Frameworks/Cordova.framework/Cordova</key>
 		<data>
-		OdD93W/cz63Uu9LWZHfrjBuNJNI=
+		kSwJ/n/2UPqVN09oUanmx4SkrE4=
 		</data>
 		<key>Frameworks/Cordova.framework/Info.plist</key>
 		<data>
-		qFqaRDGGYVbN/ue0v4GzVBS5Ggg=
+		pssaJW+IlKNsatjOEJy/ZN/H31I=
 		</data>
 		<key>Frameworks/Gzip.framework/Gzip</key>
 		<data>
-		2d233nHE4jDZkOhM0IiUxdUpWtI=
+		0N5k1rliVysirBMFDz25EF1mT+0=
 		</data>
 		<key>Frameworks/Gzip.framework/Info.plist</key>
 		<data>
-		K4IjWsitDbu7ye37KC5LyGOJga4=
+		UTX+0JKqt7bhsFV7H7A2vscZYDA=
 		</data>
 		<key>Frameworks/KeychainAccess.framework/Info.plist</key>
 		<data>
-		PSElU08OcArNkf6f/PC1ruf5LOs=
+		8gIPGmrqb4/dwfKw5ZnLEMODSYc=
 		</data>
 		<key>Frameworks/KeychainAccess.framework/KeychainAccess</key>
 		<data>
-		EbFTGaKgIA0jYbdMkhQjlYfW3EM=
+		g6BT83ZZD53LMCu7RrXrypOkldk=
 		</data>
 		<key>Frameworks/LocalExtensions.framework/CMakeLists.txt</key>
 		<data>
@@ -192,7 +192,7 @@
 		</data>
 		<key>Frameworks/LocalExtensions.framework/Info.plist</key>
 		<data>
-		pfIiMd42DCtmVh2IP6p5Vctffx0=
+		dPSvL2MkAKijQ8hnzy4NSvzpYU0=
 		</data>
 		<key>Frameworks/LocalExtensions.framework/Integer rank.swift.gyb</key>
 		<data>
@@ -200,7 +200,7 @@
 		</data>
 		<key>Frameworks/LocalExtensions.framework/LocalExtensions</key>
 		<data>
-		n+1fEldV8874aMqOz0JQka+SLUY=
+		5lY7kJE97y597O4PNvmi2FXUxdI=
 		</data>
 		<key>Frameworks/LocalExtensions.framework/RandomAccessCollection+Offsets.swift.gyb</key>
 		<data>
@@ -252,47 +252,47 @@
 		</data>
 		<key>Frameworks/SnapKit.framework/Info.plist</key>
 		<data>
-		mB7Kslz3Y3PNFcHj1cljd16+MxI=
+		IcjBjqjxf7FdjKuzBGJbcZkLW2U=
 		</data>
 		<key>Frameworks/SnapKit.framework/SnapKit</key>
 		<data>
-		EvPWCdidHnf4tjVBpW5oUndyg+A=
+		5UltTDFmB+zuzB2uGpHwuZcmZUs=
 		</data>
 		<key>Frameworks/ZIPFoundation.framework/Info.plist</key>
 		<data>
-		JeKFI4eJ8hN8T6gM4FcMdZqd3Wc=
+		9dtjt9MIt+4aUnycZZA3TUTtwMw=
 		</data>
 		<key>Frameworks/ZIPFoundation.framework/ZIPFoundation</key>
 		<data>
-		Jb9TLoyKiWIPyyfqqqoVOON5WAc=
+		knSADJ/QwuBU3H/F33OngZCfnRA=
 		</data>
 		<key>Headers/MiniappSDK-umbrella.h</key>
 		<data>
-		zJrL2M3jKZrFHvlyjxXnA0ZnVu0=
+		j98E16+9EdAyl+95X20VQ1KCMxg=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZumZXp+kTRUb5EzjUEkuLyV4UC0=
+		uU13wafmnlklQJOhOeutHs4mbOI=
 		</data>
 		<key>Modules/MiniappSDK_demo.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		tXzdSj3ubVTlWZj8cUHISlf9nC0=
+		f/CcU+dcN3sVQr/yO0Hf1bp75Nk=
 		</data>
 		<key>Modules/MiniappSDK_demo.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		5vc/WpE5FAJrE9vIDg/GNYxicBU=
+		FJRsaOMFSwfwI7NsWGVxehSW2ZE=
 		</data>
 		<key>Modules/MiniappSDK_demo.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		YioIfUzyKPcob5rtgtbPuIDOGXw=
+		ljvrAfJPhwQHkKp/ZXPIMWCXOeU=
 		</data>
 		<key>Modules/MiniappSDK_demo.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		5vc/WpE5FAJrE9vIDg/GNYxicBU=
+		FJRsaOMFSwfwI7NsWGVxehSW2ZE=
 		</data>
 		<key>Modules/MiniappSDK_demo.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		PBAzQSROgTqEeBu8EtjcMCzC5f0=
+		0ZqViuR0+vFqhyrkF9JrJ34UCek=
 		</data>
 		<key>cordovaConfig.xml</key>
 		<data>
@@ -302,7 +302,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ufqLmsgNBflGzTE5D7M9Zhep/Qk=
+			fwN2H7qMw5XYbxApbiB+o7x0XIU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -519,7 +519,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5sZ1FQfNjf1APxA5G5bbxOuSjZE=
+			gJYJpbqE4HaoG9R64RCtzXzHLRA=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -535,7 +535,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v5gS9QNwaxg5iKI2H7AizsZ/LQECeU00VUplcjSg2q4=
+			cRAdAZWFF7Hs1xNUYcKRhUpCuuMRMnO6hx7tsIBNYOE=
 			</data>
 		</dict>
 		<key>CDVCapture.bundle/controls_bg.png</key>
@@ -750,42 +750,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SnWW+fVhFlyki7ECycDFjS+daznfFwAkxgnQaPeHJ8k=
+			BOKBKwnr3QO3U/DFC52cWXeOv0rdQ+TlWQ3jvJ/n2/w=
 			</data>
 		</dict>
 		<key>Frameworks/Cordova.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BpBte04/YJr2YMRv+xO1XlHqH6RqsyQDZWQeCdfr1wg=
+			YrGs/oiiOUf2n+3omIibbV/8raXIYSfKeLQN+SRvyqI=
 			</data>
 		</dict>
 		<key>Frameworks/Gzip.framework/Gzip</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			S+W0D0Y2Y77iy7wtYjYrezGZb1WMIbXVri90G9jqF7o=
+			IwAOVEfzLJs3bMmgu/iM+ybTUu8G6N01wVv1+tTpfEw=
 			</data>
 		</dict>
 		<key>Frameworks/Gzip.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vRr63n5kkc+pwFRPQ1Vt46vPRw4ksyqZuzjxftsZKIw=
+			2rnpsDuE1hl5baQrseaaWX1xGtyzB2Z28sxMyviuqXI=
 			</data>
 		</dict>
 		<key>Frameworks/KeychainAccess.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6I1wFS01NbOpZ6vUJph0GmKedWT8zcmnD4ut0d110KU=
+			m5AL1W+zuW7S4mSBnA95yAHNJx7ELxF+hCoMI8+iUfM=
 			</data>
 		</dict>
 		<key>Frameworks/KeychainAccess.framework/KeychainAccess</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nruEn97EYxkia4bdJCbHuLAPb7FXMmyLooJ8AW4Wn0Y=
+			kHPrucZiulmXl3yyXOkcJCuaUnO62gJSUc8R5Mvv0TA=
 			</data>
 		</dict>
 		<key>Frameworks/LocalExtensions.framework/CMakeLists.txt</key>
@@ -820,7 +820,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eLD940+UMzlRoJmv6mR2r6E2PJnbpQEFCurYgFscyM4=
+			ym4jeWWdVXIZP1bmh4R/R+LWZT/VOA7bqnveCZvAPbk=
 			</data>
 		</dict>
 		<key>Frameworks/LocalExtensions.framework/Integer rank.swift.gyb</key>
@@ -834,7 +834,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qhXwKmxCfv7ZCMm0RunmMJOn4ed8EKPTdCpxQK4eQX4=
+			1Mz+hHpPVWKD8/fm28dgiytxfPqiWaHBTIT0q0dpN9A=
 			</data>
 		</dict>
 		<key>Frameworks/LocalExtensions.framework/RandomAccessCollection+Offsets.swift.gyb</key>
@@ -925,70 +925,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			npbRT5EbciAImTA6Jo/eMhYTDqbiq0QlQhLbyR/OOpU=
+			P2Wy49j39GNN4Q6f3de23SlDFDYRymPY5fe4eKB1EIo=
 			</data>
 		</dict>
 		<key>Frameworks/SnapKit.framework/SnapKit</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lrkjbcvAK6rmZEZAqXMgEF4yAPXgedjbMKO13rXgoxQ=
+			PcT43NXQo+pv6XBdRYHjXlleScnzoQ7cAy/ye7+KmAE=
 			</data>
 		</dict>
 		<key>Frameworks/ZIPFoundation.framework/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gIlVFH65TP4XUpXd+gN+GPznN3koT6OiPV+n5G7DI7Y=
+			lEkUrx7csRxfLhf1bdmE1nzZpMqg/GHUZSjbGpiZU2s=
 			</data>
 		</dict>
 		<key>Frameworks/ZIPFoundation.framework/ZIPFoundation</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9j5BSlICfWqQ7MFxuEIPYSKSIAfzxPDhd2NEokD00zg=
+			55F8coiX2ZEeZwlmYaqZeUGm1MvH6J06AISHPn8c6y8=
 			</data>
 		</dict>
 		<key>Headers/MiniappSDK-umbrella.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yB+AHpB/bN/AayjeJ5TSFSmU2Tt5+84pzieVx5ibwzw=
+			gBrX5RXfADrtEP8ppbV481Onq4lN5jy3/cfN/O5cdLw=
 			</data>
 		</dict>
 		<key>Modules/MiniappSDK_demo.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DcnagsjnMw03t7/dTsQHhqZpPy4PUJhGD2s7B7cG+Ko=
+			RorIHYZUeRNR4lmNbmBEF7qJejAq5JQu2DU0KLy2GEs=
 			</data>
 		</dict>
 		<key>Modules/MiniappSDK_demo.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aqQ1PSU3lDgik29hN6ACil7+NeXOolj0k1uo6XXZtzs=
+			BJaKJ9MaPrpNkL2rEoXq333t2Lhy5Jrr2AfBmN+/3Uo=
 			</data>
 		</dict>
 		<key>Modules/MiniappSDK_demo.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IbvC9i8O6CXc6GCphzSIst8Ubm9xzQL5MzWtl81ZW3M=
+			ezwGPcRBLitp3UhSOFQ+3vFdxqHUFFwNKva962RTCPU=
 			</data>
 		</dict>
 		<key>Modules/MiniappSDK_demo.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aqQ1PSU3lDgik29hN6ACil7+NeXOolj0k1uo6XXZtzs=
+			BJaKJ9MaPrpNkL2rEoXq333t2Lhy5Jrr2AfBmN+/3Uo=
 			</data>
 		</dict>
 		<key>Modules/MiniappSDK_demo.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			L1T+V710OL9pXxmpbL40I0dbkUrkdiu35IuNshfTPzA=
+			mY4nsOhvc+ZtIs+/TUD95aIzbUseJe5ZkUDkTe5Y3Hc=
 			</data>
 		</dict>
 		<key>cordovaConfig.xml</key>
@@ -1002,7 +1002,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tBMG1fbvYw0WSJLKzXdgpsOVOH0Aczc2sJ5EAw1d7V4=
+			OrZMZ7q1nUz4LZsD2jqcFVzk6yNliUFse4jBhhGfgcw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1375,7 +1375,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ld5w3DOX+GuRHpLiFhZLSGS5lL0IQuFkBL2+KI2TSYM=
+			SC+0jaF7RPnxhX4sT4DmHJQcjpcvCmlX6BUgASsSNTk=
 			</data>
 			<key>optional</key>
 			<true/>

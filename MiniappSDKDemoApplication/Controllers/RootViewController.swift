@@ -32,7 +32,7 @@ class RootViewController: UIViewController {
         guard !isStarting else { return }
         isStarting = true
         
-        MiniappsSDK.login(clientIdSecret: "demo", environment: .devevelopment) { [weak self] result in
+        MiniappsSDK.login_demo { [weak self] result in
             guard let self else { return }
             self.isStarting = false
             
@@ -91,7 +91,7 @@ class RootViewController: UIViewController {
         
         do {
             let archivedMiniapp = try installBundledMiniapp()
-            try MiniappsSDK.shared?.installDebugMiniapp(filePath: archivedMiniapp.path)
+            try MiniappsSDK.installDebugMiniapp(filePath: archivedMiniapp.path)
             
         } catch {
             showAlert(message: error.localizedDescription, actionTitle: "Ok")

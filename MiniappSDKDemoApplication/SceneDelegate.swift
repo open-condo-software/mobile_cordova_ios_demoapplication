@@ -39,7 +39,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         do {
-            try sdk.installDebugMiniapp(filePath: urlContext.url.path)
+            try MiniappsSDK.installDebugMiniapp(filePath: urlContext.url.path)
         } catch {
             alert(title: "Installation error", subTitle: error.localizedDescription)
             return
@@ -49,9 +49,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return alert(title: "Launching error", subTitle: "UI not ready")
         }
         
-        sdk.launchMiniapp(
-            appId: MiniappsSDK.debugMiniappID,
-            addressID: MiniappsSDK.debugMiniappID,
+        MiniappsSDK.launchDebugMiniapp(
             launchType: .present(over: rootViewController, animated: true)
         )
     }
