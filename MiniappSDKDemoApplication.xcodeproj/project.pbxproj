@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0AC89302DD36CD7005DC7B9 /* MiniappSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AC892E2DD36CCD005DC7B9 /* MiniappSDK.xcframework */; };
-		C0AC89312DD36CD7005DC7B9 /* MiniappSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0AC892E2DD36CCD005DC7B9 /* MiniappSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C092C86A30642483009449F5 /* PropertySDK_demo.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C092C86930642483009449F5 /* PropertySDK_demo.xcframework */; };
+		C092C86B30642483009449F5 /* PropertySDK_demo.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C092C86930642483009449F5 /* PropertySDK_demo.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0AC89632DD3E004005DC7B9 /* BundledMiniapp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C0AC895E2DD3E004005DC7B9 /* BundledMiniapp.bundle */; };
 /* End PBXBuildFile section */
 
@@ -19,7 +19,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C0AC89312DD36CD7005DC7B9 /* MiniappSDK.xcframework in Embed Frameworks */,
+				C092C86B30642483009449F5 /* PropertySDK_demo.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -27,7 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C0AC892E2DD36CCD005DC7B9 /* MiniappSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MiniappSDK.xcframework; sourceTree = "<group>"; };
+		C092C86930642483009449F5 /* PropertySDK_demo.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PropertySDK_demo.xcframework; sourceTree = "<group>"; };
 		C0AC895E2DD3E004005DC7B9 /* BundledMiniapp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BundledMiniapp.bundle; sourceTree = "<group>"; };
 		C0B6FDC42DD352AB00522789 /* MiniappSDKDemoApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniappSDKDemoApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0AC89302DD36CD7005DC7B9 /* MiniappSDK.xcframework in Frameworks */,
+				C092C86A30642483009449F5 /* PropertySDK_demo.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 		C0B6FDE12DD3554D00522789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0AC892E2DD36CCD005DC7B9 /* MiniappSDK.xcframework */,
+				C092C86930642483009449F5 /* PropertySDK_demo.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 				CODE_SIGN_ENTITLEMENTS = MiniappSDKDemoApplication/MiniappSDKDemoApplication.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V37GW8KE95;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MiniappSDKDemoApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -212,7 +212,7 @@
 				CODE_SIGN_ENTITLEMENTS = MiniappSDKDemoApplication/MiniappSDKDemoApplication.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V37GW8KE95;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MiniappSDKDemoApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -1,0 +1,441 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PropertySDK_demo
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+import AVFoundation
+import Compression
+import CoreBluetooth
+import CoreLocation
+import CryptoKit
+import DeveloperToolsSupport
+import Foundation
+import MobileCoreServices
+import QuickLook
+import SafariServices
+import Swift
+import SwiftUI
+import UIKit
+import UserNotifications
+@preconcurrency import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@inlinable internal func norm(_ x: CoreFoundation.CGFloat) -> CoreFoundation.CGFloat {
+    return max(min(x, 1), 0)
+}
+extension UIKit.UIColor {
+  public var luminance: CoreFoundation.CGFloat {
+    get
+  }
+  public var isCloserToWhite: Swift.Bool {
+    get
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  weak public static var translationsOverrideAdapter: (any PropertySDK_demo.PropertySDK.TranslationsOverrideAdapter)?
+  public protocol TranslationsOverrideAdapter : AnyObject {
+    func overrideTranslationResult(for key: PropertySDK_demo.PropertySDK.TranslationKeys) -> Swift.String?
+  }
+  public enum TranslationKeys : Swift.String {
+    case done
+    case pay
+    case to_pay_with_pattern
+    case pay_with_card
+    case pay_with_card_pattern
+    case pay_with_new_card
+    case new_card
+    case card_mir
+    case card_mastercard
+    case card_visa
+    case expires_w_pattern
+    case specific_month_with_year_short
+    case error
+    case save_card_full
+    case payment_is_done_with_pattern
+    case payment_receipt
+    case contact_your_bank
+    case payment_failed_with_pattern
+    case sms_code
+    case sent_on_number
+    case send_code_again
+    case not_recived_code
+    case send_again_avail
+    case permission_general_title
+    case permission_general_allow
+    case permission_general_refuse
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  public struct PartnerClientAddress : Swift.Hashable {
+    public let address: Swift.String
+    public let unitName: Swift.String
+    public let unitType: PropertySDK_demo.PropertySDK.UnitType
+    public init(address: Swift.String, unitName: Swift.String, unitType: PropertySDK_demo.PropertySDK.UnitType)
+    public static func == (a: PropertySDK_demo.PropertySDK.PartnerClientAddress, b: PropertySDK_demo.PropertySDK.PartnerClientAddress) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  public struct AppBuildData : Swift.Codable, Swift.Hashable {
+    public let id: Swift.String
+    public static func == (a: PropertySDK_demo.PropertySDK.AppBuildData, b: PropertySDK_demo.PropertySDK.AppBuildData) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  public struct AppColorSchema : Swift.Codable, Swift.Hashable {
+    public let main: Swift.String
+    public let secondary: Swift.String
+    public static func == (a: PropertySDK_demo.PropertySDK.AppColorSchema, b: PropertySDK_demo.PropertySDK.AppColorSchema) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  public struct AppData : Swift.Codable, Swift.Hashable {
+    public let id: PropertySDK_demo.PropertySDK.AppID
+    public let name: Swift.String?
+    public let hasWebInterface: Swift.Bool?
+    public let shortDescription: Swift.String?
+    public let logoUrl: Foundation.URL?
+    public static func == (a: PropertySDK_demo.PropertySDK.AppData, b: PropertySDK_demo.PropertySDK.AppData) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  public struct FileData : Swift.Codable, Swift.Hashable {
+    public let id: Swift.String
+    public let publicUrl: Swift.String?
+    public static func == (a: PropertySDK_demo.PropertySDK.FileData, b: PropertySDK_demo.PropertySDK.FileData) -> Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  public enum UnitType : Swift.String, Swift.Codable {
+    case parking
+    case flat
+    case apartment
+    case commercial
+    case warehouse
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension CoreBluetooth.CBCharacteristicProperties : Swift.Codable {
+}
+extension CoreBluetooth.CBAttributePermissions : Swift.Codable {
+}
+extension Swift.Collection where Self.Index : Swift.BinaryInteger {
+  @inlinable internal func safeGet(index position: Self.Index) -> Self.Element? {
+        guard position >= 0 && position < count else { return nil }
+        return self[position]
+    }
+}
+extension Swift.Collection {
+  @inlinable internal func nilIfEmpty() -> Self? {
+        return isEmpty ? nil : self
+    }
+}
+extension Swift.Collection where Self.Element : Swift.Hashable {
+  @inlinable internal func reduceToSet() -> Swift.Set<Self.Element> {
+        return Set<Element>.init(self)
+    }
+  @inlinable internal func removingDuplicates() -> [Self.Element] {
+        var addedDict = [Element: Bool]()
+        
+        return filter {
+            addedDict.updateValue(true, forKey: $0) == nil
+        }
+    }
+}
+extension Swift.Array {
+  @inlinable internal func appending(_ newElement: Element) -> [Element] {
+        var copy = self
+        copy.append(newElement)
+        return copy
+    }
+  @inlinable internal func appending(contentsOf newElements: [Element]) -> [Element] {
+        return self + newElements
+    }
+}
+extension Swift.Dictionary {
+  @inlinable internal func mapKeys<T>(_ transform: (Key) throws -> T) rethrows -> [T : Value] where T : Swift.Hashable {
+        var copy: [T: Value] = [:]
+        for (key, value) in self {
+            copy[try transform(key)] = value
+        }
+        return copy
+    }
+  @inlinable internal func mapKeys<T>(_ transform: (Key) -> T) -> [T : Value] where T : Swift.Hashable {
+        var copy: [T: Value] = [:]
+        for (key, value) in self {
+            copy[transform(key)] = value
+        }
+        return copy
+    }
+}
+extension PropertySDK_demo.PropertySDK {
+  public protocol BackgroundPresentationAdapter : AnyObject {
+    func miniappRequestsRootControllerForBackgroundPresentation(appID: PropertySDK_demo.PropertySDK.AppID, addressID: PropertySDK_demo.PropertySDK.AddressID) -> UIKit.UIViewController
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  public static var isGeneralDataPermissionEnabled: Swift.Bool
+}
+extension PropertySDK_demo.PropertySDK {
+  public static var logLevel: PropertySDK_demo.PropertySDK.LogLevel {
+    get
+    set
+  }
+  public protocol MiniappViewControllerPublicInterface : UIKit.UIViewController {
+    var appID: PropertySDK_demo.PropertySDK.AppID { get }
+    var addressID: PropertySDK_demo.PropertySDK.AddressID { get }
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  public protocol MiniappControllerUIAdapter : AnyObject {
+    func miniappController(requestsNewCloseButton controller: any PropertySDK_demo.PropertySDK.MiniappViewControllerPublicInterface) -> UIKit.UIButton
+    func miniappController(requestsNewNavigationBar controller: any PropertySDK_demo.PropertySDK.MiniappViewControllerPublicInterface) -> UIKit.UINavigationBar
+    func miniappController(requestsNewNavigationController controller: any PropertySDK_demo.PropertySDK.MiniappViewControllerPublicInterface) -> UIKit.UINavigationController
+    var accentColorOverride: UIKit.UIColor? { get }
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  public enum VerificationMethod {
+    case sms(phone: Swift.String)
+    case email(address: Swift.String)
+  }
+  public protocol VerificationDelegate : AnyObject {
+    func didRequestVerification(method: PropertySDK_demo.PropertySDK.VerificationMethod, resolve: @escaping (_ code: Swift.String?) -> Swift.Void, resend: @escaping (_ completion: @escaping ((any Swift.Error)?) -> Swift.Void) -> Swift.Void)
+    func requestVerificationFailed(method: PropertySDK_demo.PropertySDK.VerificationMethod, with error: any Swift.Error)
+    func requestVerificationSucceeded(method: PropertySDK_demo.PropertySDK.VerificationMethod)
+  }
+  public static var verificationDelegate: any PropertySDK_demo.PropertySDK.VerificationDelegate
+}
+extension PropertySDK_demo.PropertySDK {
+  public enum DefaultVerificationInputControllerType {
+    case plain
+    case bottomForm(title: Swift.String?)
+  }
+  public static func createDefaultInputContoller(method: PropertySDK_demo.PropertySDK.VerificationMethod, type: PropertySDK_demo.PropertySDK.DefaultVerificationInputControllerType = .plain, resolve: @escaping (_ code: Swift.String?) -> Swift.Void, resend: @escaping (_ completion: @escaping ((any Swift.Error)?) -> Swift.Void) -> Swift.Void) -> (controller: UIKit.UIViewController, onError: (_ error: (any Swift.Error)?) -> Swift.Void)
+}
+extension CoreLocation.CLActivityType : Swift.Codable {
+}
+extension CoreLocation.CLDeviceOrientation : Swift.Codable {
+}
+@_hasMissingDesignatedInitializers final public class PropertySDK {
+  public static var shared: PropertySDK_demo.PropertySDK? {
+    get
+  }
+  public static var miniappUIAdapter: any PropertySDK_demo.PropertySDK.MiniappControllerUIAdapter {
+    get
+    set
+  }
+  public static var miniappBackgroundPresentationAdapter: any PropertySDK_demo.PropertySDK.BackgroundPresentationAdapter {
+    get
+    set
+  }
+  public static var isStarting: Swift.Bool {
+    get
+  }
+  public static var locale: Foundation.Locale {
+    get
+  }
+  public static func setLocale(locale: Foundation.Locale)
+  public static func login(clientId: Swift.String, accessToken: Swift.String, environment: PropertySDK_demo.PropertySDK.Environment = .production, completion: @escaping (Swift.Result<PropertySDK_demo.PropertySDK, PropertySDK_demo.PropertySDK.Errors>) -> Swift.Void)
+  @usableFromInline
+  internal enum AuthType {
+    case partner(clientId: Swift.String, accessToken: Swift.String)
+    case demo
+  }
+  @usableFromInline
+  internal static func internal_login(auth: PropertySDK_demo.PropertySDK.AuthType, environment: PropertySDK_demo.PropertySDK.Environment, tokenOverride: Swift.String?, completion: @escaping (Swift.Result<PropertySDK_demo.PropertySDK, PropertySDK_demo.PropertySDK.Errors>) -> Swift.Void)
+  public static func logout()
+  final public var addressList: [PropertySDK_demo.PropertySDK.PartnerClientAddress : PropertySDK_demo.PropertySDK.AddressID] {
+    get
+  }
+  final public func setAddress(addressList: any Swift.Collection<PropertySDK_demo.PropertySDK.PartnerClientAddress>, completion: @escaping ([PropertySDK_demo.PropertySDK.PartnerClientAddress : Swift.Result<PropertySDK_demo.PropertySDK.AddressID, any Swift.Error>]) -> Swift.Void)
+  public enum MiniappInstallationState : Swift.Hashable {
+    case installed
+    case updateRequired
+    case uninstalled
+    case installing(progress: Swift.Double)
+    case failed(error: any Swift.Error)
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (lhs: PropertySDK_demo.PropertySDK.MiniappInstallationState, rhs: PropertySDK_demo.PropertySDK.MiniappInstallationState) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public func installMiniapp(appID: Swift.String, completion: ((_ state: PropertySDK_demo.PropertySDK.MiniappInstallationState) -> Swift.Void)? = nil)
+  final public func clearMiniappData(appID: PropertySDK_demo.PropertySDK.AppID, completion: (() -> Swift.Void)? = nil)
+  final public func uninstallMiniapp(appID: PropertySDK_demo.PropertySDK.AppID, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
+  @discardableResult
+  final public func subscribeToMiniappInstallationState(subscriber: Swift.AnyObject, context: Swift.String? = nil, appID: PropertySDK_demo.PropertySDK.AppID, valueChanged: @escaping (PropertySDK_demo.PropertySDK.AppID, PropertySDK_demo.PropertySDK.MiniappInstallationState?) -> Swift.Void) -> PropertySDK_demo.SubscriptionKey
+  final public func unsubscribeFromMiniappInstallationState(subscriber: Swift.AnyObject, context: Swift.String? = nil, appID: PropertySDK_demo.PropertySDK.AppID)
+  final public func unsubscribeFromMiniappsInstallationState(subscriber: Swift.AnyObject, context: Swift.String? = nil)
+  final public func getAllMiniappInstallationStates() -> [PropertySDK_demo.PropertySDK.AppID : PropertySDK_demo.PropertySDK.MiniappInstallationState]
+  final public func getMiniappInstallationState(appID: PropertySDK_demo.PropertySDK.AppID) -> PropertySDK_demo.PropertySDK.MiniappInstallationState?
+  final public func fetchMiniappsList(addressID: PropertySDK_demo.PropertySDK.AddressID) -> [PropertySDK_demo.PropertySDK.AppData]?
+  final public func loadMiniapps(addressList: Swift.Set<PropertySDK_demo.PropertySDK.AddressID>, force: Swift.Bool = false, completion: @escaping (Swift.Result<[PropertySDK_demo.PropertySDK.AddressID : [PropertySDK_demo.PropertySDK.AppData]], any Swift.Error>) -> Swift.Void)
+  final public func subscribeToMiniappsList(subscriber: Swift.AnyObject, addressID: PropertySDK_demo.PropertySDK.AddressID, valueChanged: @escaping (PropertySDK_demo.PropertySDK.AddressID, [PropertySDK_demo.PropertySDK.AppData]) -> Swift.Void) -> PropertySDK_demo.SubscriptionKey?
+  final public func unsubscribeFromMiniappsList(subscriber: Swift.AnyObject, addressID: PropertySDK_demo.PropertySDK.AddressID)
+  final public func getApplicationDescriptor(appID: PropertySDK_demo.PropertySDK.AppID) -> PropertySDK_demo.PropertySDK.AppData?
+  public static var isDebugMiniappExists: Swift.Bool {
+    get
+  }
+  public static func installDebugMiniapp(filePath: Swift.String) throws
+  public static func launchDebugMiniapp(launchType: PropertySDK_demo.PropertySDK.MiniappLaunchType, completion: ((_ error: PropertySDK_demo.PropertySDK.MiniappLaunchError?) -> Swift.Void)? = nil)
+  final public func uninstallDebugMiniapp() throws
+  public enum MiniappLaunchType {
+    case present(over: UIKit.UIViewController, animated: Swift.Bool = true)
+    case custom(present: (_ controller: UIKit.UIViewController, _ completion: @escaping () -> Swift.Void) -> Swift.Void, dismiss: (UIKit.UIViewController) -> Swift.Void)
+    case background
+  }
+  public enum MiniappLaunchError : Swift.Error {
+    case addressNotFound
+    case appNotFound
+    case malformedAppData
+    case appIsNotInstalled
+    case sdkVersionTooLow
+    case actuallyFineButAppOpenedInExternalBrowser
+    case miniappLaunchedInForegroundCantBeMovedToBackground
+    case failedToInitializeMiniappController
+    case sdkNotInitialized
+    case subscriptionPlanMissing
+    case userRefusedToGrantGeneralDataPermission
+    case presentFailed
+    public static func == (a: PropertySDK_demo.PropertySDK.MiniappLaunchError, b: PropertySDK_demo.PropertySDK.MiniappLaunchError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public func closeMiniapp(appID: PropertySDK_demo.PropertySDK.AppID, addressID: PropertySDK_demo.PropertySDK.AddressID, completion: ((_ closed: Swift.Bool) -> Swift.Void)? = nil)
+  public enum MiniappLaunchState : Swift.Equatable {
+    case current
+    case custom
+    case background
+    public static func == (a: PropertySDK_demo.PropertySDK.MiniappLaunchState, b: PropertySDK_demo.PropertySDK.MiniappLaunchState) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  final public func getMiniappLaunchState(appID: PropertySDK_demo.PropertySDK.AppID, addressID: PropertySDK_demo.PropertySDK.AddressID) -> PropertySDK_demo.PropertySDK.MiniappLaunchState?
+  final public func loadLogo(url: Foundation.URL, completion: @escaping (Swift.Result<UIKit.UIImage, any Swift.Error>) -> Swift.Void)
+  public static var isDebugMiniappPublicLoggingEnabled: Swift.Bool {
+    get
+    set
+  }
+  public static var debugMiniappPublicLogsToLocalNotificationsRegistry: Swift.Set<Swift.String> {
+    get
+    set
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class MiniappLaunchService {
+  public static let shared: PropertySDK_demo.MiniappLaunchService
+  @objc deinit
+}
+@usableFromInline
+internal typealias AddressID = Swift.String
+extension PropertySDK_demo.PropertySDK {
+  public typealias AppID = Swift.String
+  public typealias AddressID = Swift.String
+}
+extension PropertySDK_demo.PropertySDK {
+  public enum Environment {
+    case production
+    case devevelopment
+    public var host: Swift.String {
+      get
+    }
+    public static func == (a: PropertySDK_demo.PropertySDK.Environment, b: PropertySDK_demo.PropertySDK.Environment) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  public enum Errors : Foundation.LocalizedError {
+    case loginCalledTwice
+    case sdkNotInitialized
+    case someUnderlyingError(error: any Swift.Error)
+    public var localizedDescription: Swift.String {
+      get
+    }
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  public static func login_demo(completion: @escaping (Swift.Result<PropertySDK_demo.PropertySDK, PropertySDK_demo.PropertySDK.Errors>) -> Swift.Void)
+}
+extension PropertySDK_demo.PropertySDK {
+  public enum LogLevel : Swift.String {
+    case info
+    case warn
+    case error
+    case fatal
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension PropertySDK_demo.PropertySDK {
+  public static let version: Swift.String
+}
+@_hasMissingDesignatedInitializers public class SubscriptionKey {
+  public func invalidateSubscription()
+  @objc deinit
+}
+extension PropertySDK_demo.PropertySDK {
+  public static let demoMiniappID: Swift.String
+  public static let demoMiniappAddress: Swift.String
+}
+extension PropertySDK_demo.PropertySDK.TranslationKeys : Swift.Equatable {}
+extension PropertySDK_demo.PropertySDK.TranslationKeys : Swift.Hashable {}
+extension PropertySDK_demo.PropertySDK.TranslationKeys : Swift.RawRepresentable {}
+extension PropertySDK_demo.PropertySDK.UnitType : Swift.Equatable {}
+extension PropertySDK_demo.PropertySDK.UnitType : Swift.Hashable {}
+extension PropertySDK_demo.PropertySDK.UnitType : Swift.RawRepresentable {}
+extension PropertySDK_demo.PropertySDK.MiniappLaunchError : Swift.Equatable {}
+extension PropertySDK_demo.PropertySDK.MiniappLaunchError : Swift.Hashable {}
+extension PropertySDK_demo.PropertySDK.MiniappLaunchState : Swift.Hashable {}
+extension PropertySDK_demo.PropertySDK.Environment : Swift.Equatable {}
+extension PropertySDK_demo.PropertySDK.Environment : Swift.Hashable {}
+extension PropertySDK_demo.PropertySDK.LogLevel : Swift.Equatable {}
+extension PropertySDK_demo.PropertySDK.LogLevel : Swift.Hashable {}
+extension PropertySDK_demo.PropertySDK.LogLevel : Swift.RawRepresentable {}

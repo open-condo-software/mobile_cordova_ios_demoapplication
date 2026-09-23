@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiniappSDK_demo
+import PropertySDK_demo
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -34,12 +34,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         
-        guard let sdk = MiniappsSDK.shared else {
+        guard let sdk = PropertySDK.shared else {
             return alert(title: "Installation error", subTitle: "SDK is uninitialized")
         }
         
         do {
-            try MiniappsSDK.installDebugMiniapp(filePath: urlContext.url.path)
+            try PropertySDK.installDebugMiniapp(filePath: urlContext.url.path)
         } catch {
             alert(title: "Installation error", subTitle: error.localizedDescription)
             return
@@ -49,7 +49,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return alert(title: "Launching error", subTitle: "UI not ready")
         }
         
-        MiniappsSDK.launchDebugMiniapp(
+        PropertySDK.launchDebugMiniapp(
             launchType: .present(over: rootViewController, animated: true)
         )
     }

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiniappSDK_demo
+import PropertySDK_demo
 
 class RootViewController: UIViewController {
     static let shared = RootViewController()
@@ -32,7 +32,7 @@ class RootViewController: UIViewController {
         guard !isStarting else { return }
         isStarting = true
         
-        MiniappsSDK.login_demo { [weak self] result in
+        PropertySDK.login_demo { [weak self] result in
             guard let self else { return }
             self.isStarting = false
             
@@ -40,7 +40,7 @@ class RootViewController: UIViewController {
             case .success(let sdk):
                 
                 //Demo version is restricted to 1 hardcoded address. Argument is ignored.
-                let addressDecriptor = MiniappsSDK.PartnerClientAddress(address: "Ростовская обл, г Ростов-на-Дону, ул Кудрявая, д 6", unitName: "88", unitType: .flat)
+                let addressDecriptor = PropertySDK.PartnerClientAddress(address: "Ростовская обл, г Ростов-на-Дону, ул Кудрявая, д 6", unitName: "88", unitType: .flat)
                 sdk.setAddress(addressList: [addressDecriptor]) { [weak self] addressResults in
                     guard let self else { return }
                     guard let firstAddressResult = addressResults.first?.value else {
@@ -91,7 +91,7 @@ class RootViewController: UIViewController {
         
         do {
             let archivedMiniapp = try installBundledMiniapp()
-            try MiniappsSDK.installDebugMiniapp(filePath: archivedMiniapp.path)
+            try PropertySDK.installDebugMiniapp(filePath: archivedMiniapp.path)
             
         } catch {
             showAlert(message: error.localizedDescription, actionTitle: "Ok")

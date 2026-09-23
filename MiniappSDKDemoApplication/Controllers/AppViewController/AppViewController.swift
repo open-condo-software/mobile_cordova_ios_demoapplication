@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MiniappSDK_demo
+import PropertySDK_demo
 import UniformTypeIdentifiers
 
 class AppViewController: UIViewController {
@@ -44,7 +44,7 @@ class AppViewController: UIViewController {
         guard !isStarting else { return }
         isStarting = true
         
-        try MiniappsSDK.launchDebugMiniapp(
+        try PropertySDK.launchDebugMiniapp(
             launchType: .present(over: self, animated: true)) { [weak self] error in
                 self?.isStarting = false
                 
@@ -115,18 +115,18 @@ extension AppViewController: UIDropInteractionDelegate {
             try FileManager.default.copyItem(at: fileURL, to: destinationURL)
             print("File saved to: \(destinationURL)")
             
-            guard let sdk = MiniappsSDK.shared else {
+            guard let sdk = PropertySDK.shared else {
                 return alert(title: "Installation error", subTitle: "SDK is uninitialized")
             }
             
             do {
-                try MiniappsSDK.installDebugMiniapp(filePath: destinationURL.path)
+                try PropertySDK.installDebugMiniapp(filePath: destinationURL.path)
             } catch {
                 alert(title: "Installation error", subTitle: error.localizedDescription)
                 return
             }
             
-            MiniappsSDK.launchDebugMiniapp(launchType: .present(over: self, animated: true)) { error in
+            PropertySDK.launchDebugMiniapp(launchType: .present(over: self, animated: true)) { error in
                 if let error {
                     print("Error: \(error)")
                 }
